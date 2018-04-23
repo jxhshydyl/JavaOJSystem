@@ -1,0 +1,1687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="JavaOJSystem:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="863fccc0-c841-46da-baa7-b7609be65611" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/JavaOJSystem_war.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/JavaOJSystem_war_exploded.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_dyuproject_protostuff_protostuff_api_1_0_10.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_dyuproject_protostuff_protostuff_collectionschema_1_0_10.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_dyuproject_protostuff_protostuff_core_1_0_10.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_dyuproject_protostuff_protostuff_runtime_1_0_10.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_1_0.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_0_9_5.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_4_2_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_04.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_6_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_4_5.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jstl_jstl_1_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_38.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_dozer_dozer_5_5_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_2_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_15.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_15.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_15.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_scratchpad_3_15.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_2_4_Final.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_2_1_Final.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_2_8.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_2_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_5.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_7.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_7.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_1_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_1_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_1_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_1_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_1_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_1_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_instrument_4_3_1_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_instrument_tomcat_4_3_1_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_1_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_4_3_1_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_1_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_1_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_1_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_1_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_websocket_4_3_1_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/JavaOJSystem.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/system/util/CPlusPlusCompare.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/system/util/Compare.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/system/util/CompilerAndRunUtil.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/system/util/DelComments.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/system/util/LD.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/system/util/Main.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/web/dto/MyRecord.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/web/dto/TypeDTO.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/class/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/classification/1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/classification/classification.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/classification/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/echarts.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/superman/system/util/JavaCompilerUtil.java" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/system/util/JavaCompilerUtil.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/superman/util/Log4JUtil.java" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/util/Log4JUtil.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/superman/web/controller/front/ProblemController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/web/controller/front/ProblemController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/superman/web/controller/front/ProblemTypeController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/web/controller/front/ProblemTypeController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/superman/web/controller/front/SubmitRecordController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/web/controller/front/SubmitRecordController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/superman/web/controller/front/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/web/controller/front/UserController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/superman/web/dao/ProblemDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/web/dao/ProblemDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/superman/web/dao/ProblemTypeDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/web/dao/ProblemTypeDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/superman/web/dao/SubmitRecordDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/web/dao/SubmitRecordDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/superman/web/dao/base/MyBatisRepository.java" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/web/dao/base/MyBatisRepository.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/superman/web/po/User.java" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/web/po/User.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/superman/web/service/admin/AdminManagerService.java" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/web/service/admin/AdminManagerService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/superman/web/service/front/AnswerSubmitService.java" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/web/service/front/AnswerSubmitService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/superman/web/service/front/ProblemTypeService.java" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/web/service/front/ProblemTypeService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/superman/web/service/front/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/web/service/front/UserService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/superman/web/util/mail/AttachBean.java" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/web/util/mail/AttachBean.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/superman/web/util/mail/Mail.java" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/web/util/mail/Mail.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/superman/web/util/mail/SendMailUtil.java" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/web/util/mail/SendMailUtil.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/superman/web/vo/request/ProblemAnswerVO.java" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/web/vo/request/ProblemAnswerVO.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/superman/web/vo/request/ProblemSearchByNameVO.java" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/web/vo/request/ProblemSearchByNameVO.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/superman/web/vo/response/UserLoginResponse.java" afterPath="$PROJECT_DIR$/src/main/java/cn/superman/web/vo/response/UserLoginResponse.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/configs/db/db.properties" afterPath="$PROJECT_DIR$/src/main/resources/configs/db/db.properties" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/configs/spring/springmvc.xml" afterPath="$PROJECT_DIR$/src/main/resources/configs/spring/springmvc.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/ProblemMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/ProblemMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/ProblemTypeMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/ProblemTypeMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/SubmitRecordMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/SubmitRecordMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/app.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/app.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/controllers.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/controllers.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/announcement/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/managers/announcement/index.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/competition/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/managers/competition/index.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/competitionAccount/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/managers/competitionAccount/index.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/competitionApplication/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/managers/competitionApplication/index.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/managers/css/bootstrap.min.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/css/common.css" afterPath="$PROJECT_DIR$/src/main/webapp/managers/css/common.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/css/fileinput.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/managers/css/fileinput.min.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/css/index.css" afterPath="$PROJECT_DIR$/src/main/webapp/managers/css/index.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/css/laydate.css" afterPath="$PROJECT_DIR$/src/main/webapp/managers/css/laydate.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/img/loginBg.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/managers/img/loginBg.jpg" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/managers/index.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/angular-route.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/angular-route.min.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/angular.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/angular.min.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/app.js" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/app.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/bootstrap.min.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/controllers.js" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/controllers.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/fileinput.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/fileinput.min.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/jquery.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/jquery.min.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/laydate.js" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/laydate.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/need/laydate.css" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/need/laydate.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/skins/dahong/icon.png" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/skins/dahong/icon.png" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/skins/dahong/laydate.css" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/skins/dahong/laydate.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/skins/danlan/icon.png" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/skins/danlan/icon.png" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/skins/danlan/laydate.css" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/skins/danlan/laydate.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/skins/default/icon.png" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/skins/default/icon.png" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/skins/default/laydate.css" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/skins/default/laydate.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/skins/molv/icon.png" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/skins/molv/icon.png" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/skins/molv/laydate.css" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/skins/molv/laydate.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/skins/qianhuang/icon.png" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/skins/qianhuang/icon.png" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/skins/qianhuang/laydate.css" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/skins/qianhuang/laydate.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/skins/yahui/icon.png" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/skins/yahui/icon.png" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/skins/yahui/laydate.css" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/skins/yahui/laydate.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/skins/yalan/icon.png" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/skins/yalan/icon.png" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/skins/yalan/laydate.css" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/skins/yalan/laydate.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/sockjs1.1.1.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/sockjs1.1.1.min.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/js/zh.js" afterPath="$PROJECT_DIR$/src/main/webapp/managers/js/zh.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/login.html" afterPath="$PROJECT_DIR$/src/main/webapp/managers/login.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/manager/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/managers/managers/index.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/problem/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/managers/problem/index.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/problemType/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/managers/problemType/index.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/role/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/managers/role/index.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/system/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/managers/system/index.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/user/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/managers/user/index.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/problem/detail.html" afterPath="$PROJECT_DIR$/src/main/webapp/problem/detail.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/problem/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/problem/index.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/user/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/user/index.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/constant/ConstantParameter.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/constant/ConstantParameter.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/constant/Log4JConstant.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/constant/Log4JConstant.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/commandExecutor/ResponseExecutor.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/commandExecutor/ResponseExecutor.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/communicator/Communicator.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/communicator/Communicator.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/communicator/CommunicatorManager$1.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/communicator/CommunicatorManager$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/communicator/CommunicatorManager$CommunicatorSandboxIdleListener.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/communicator/CommunicatorManager$CommunicatorSandboxIdleListener.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/communicator/CommunicatorManager.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/communicator/CommunicatorManager.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/communicator/listener/SandboxIdleListener.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/communicator/listener/SandboxIdleListener.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/communicator/messageProcessor/MessageProcessor$1.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/communicator/messageProcessor/MessageProcessor$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/communicator/messageProcessor/MessageProcessor$2.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/communicator/messageProcessor/MessageProcessor$2.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/communicator/messageProcessor/MessageProcessor.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/communicator/messageProcessor/MessageProcessor.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/dto/CommonRequest.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/dto/CommonRequest.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/dto/CommunicatorStatus.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/dto/CommunicatorStatus.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/dto/JavaSandboxStartInfo.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/dto/JavaSandboxStartInfo.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/dto/JudgeProblemRequest.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/dto/JudgeProblemRequest.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/sandbox/constant/CommunicationSignal$RequestSignal.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/sandbox/constant/CommunicationSignal$RequestSignal.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/sandbox/constant/CommunicationSignal$ResponseSignal.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/sandbox/constant/CommunicationSignal$ResponseSignal.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/sandbox/constant/CommunicationSignal.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/sandbox/constant/CommunicationSignal.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/sandbox/constant/ConstantParameter.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/sandbox/constant/ConstantParameter.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/sandbox/dto/Problem.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/sandbox/dto/Problem.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/sandbox/dto/ProblemResult.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/sandbox/dto/ProblemResult.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/sandbox/dto/ProblemResultItem.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/sandbox/dto/ProblemResultItem.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/sandbox/dto/Request.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/sandbox/dto/Request.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/sandbox/dto/Response.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/sandbox/dto/Response.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/sandbox/dto/SandBoxStatus.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/sandbox/dto/SandBoxStatus.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/sandbox/dto/SandboxInitData.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/sandbox/dto/SandboxInitData.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/service/JavaSandboxService$1.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/service/JavaSandboxService$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/service/JavaSandboxService$2.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/service/JavaSandboxService$2.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/service/JavaSandboxService$3.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/service/JavaSandboxService$3.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/service/JavaSandboxService$4.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/service/JavaSandboxService$4.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/service/JavaSandboxService$CloseSandboxResponseExecutor.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/service/JavaSandboxService$CloseSandboxResponseExecutor.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/service/JavaSandboxService$ErrorListener.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/service/JavaSandboxService$ErrorListener.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/service/JavaSandboxService$JudgeResultListener.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/service/JavaSandboxService$JudgeResultListener.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/service/JavaSandboxService$ProblemResponseExecutor.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/service/JavaSandboxService$ProblemResponseExecutor.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/service/JavaSandboxService$SandboxStatusResponseExecutor.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/service/JavaSandboxService$SandboxStatusResponseExecutor.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/service/JavaSandboxService.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/service/JavaSandboxService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/service/bean/SandboxStatus.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/service/bean/SandboxStatus.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/service/dto/JudgeProblemDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/service/dto/JudgeProblemDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/service/dto/ProblemJudgeResult.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/service/dto/ProblemJudgeResult.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/service/dto/ProblemJudgeResultItem.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/service/dto/ProblemJudgeResultItem.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/service/observer/SandboxStatusObserver.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/service/observer/SandboxStatusObserver.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/system/util/JavaCompilerUtil.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/system/util/JavaCompilerUtil.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/util/AppSystemInfoUtil$AppInfo.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/util/AppSystemInfoUtil$AppInfo.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/util/AppSystemInfoUtil.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/util/AppSystemInfoUtil.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/util/BeanMapperUtil.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/util/BeanMapperUtil.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/util/CommonUtil.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/util/CommonUtil.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/util/DateUtil.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/util/DateUtil.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/util/EncryptUtility.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/util/EncryptUtility.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/util/JsonUtil.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/util/JsonUtil.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/util/Log4JUtil.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/util/Log4JUtil.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/util/OperationSystemInfoUtil$OperationSystemInfo.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/util/OperationSystemInfoUtil$OperationSystemInfo.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/util/OperationSystemInfoUtil.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/util/OperationSystemInfoUtil.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/util/UUIDUtil.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/util/UUIDUtil.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/bean/ExcelCreator$Builder.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/bean/ExcelCreator$Builder.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/bean/ExcelCreator.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/bean/ExcelCreator.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/bean/ResponseMap.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/bean/ResponseMap.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/bean/Uploader.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/bean/Uploader.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/bean/VerificationCode.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/bean/VerificationCode.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/component/AutowireInjector.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/component/AutowireInjector.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/component/InitListener.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/component/InitListener.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/constant/MailConstant.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/constant/MailConstant.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/constant/WebConstant.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/constant/WebConstant.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/ExceptionController.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/ExceptionController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/Interceptor/AdminPermissionInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/Interceptor/AdminPermissionInterceptor.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/Interceptor/ManagerLoginInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/Interceptor/ManagerLoginInterceptor.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/Interceptor/UserLoginInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/Interceptor/UserLoginInterceptor.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/PageController.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/PageController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/admin/AdminAnnouncementController.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/admin/AdminAnnouncementController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/admin/AdminCompetitionAccountController.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/admin/AdminCompetitionAccountController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/admin/AdminCompetitionApplicationController.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/admin/AdminCompetitionApplicationController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/admin/AdminCompetitionController.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/admin/AdminCompetitionController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/admin/AdminManagerController.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/admin/AdminManagerController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/admin/AdminOJSystemController.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/admin/AdminOJSystemController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/admin/AdminProblemController.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/admin/AdminProblemController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/admin/AdminProblemTypeController.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/admin/AdminProblemTypeController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/admin/AdminRoleController.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/admin/AdminRoleController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/admin/AdminUserController.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/admin/AdminUserController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/annotation/AdminPermission.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/annotation/AdminPermission.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/front/AnnouncementController.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/front/AnnouncementController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/front/CompetitionController$1.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/front/CompetitionController$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/front/CompetitionController$2.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/front/CompetitionController$2.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/front/CompetitionController$Token.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/front/CompetitionController$Token.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/front/CompetitionController.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/front/CompetitionController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/front/ProblemController.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/front/ProblemController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/front/ProblemTypeController.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/front/ProblemTypeController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/front/SubmitRecordController.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/front/SubmitRecordController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/front/UserController.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/front/UserController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/SystemWebSocketHandler$1.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/SystemWebSocketHandler$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/SystemWebSocketHandler$2.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/SystemWebSocketHandler$2.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/SystemWebSocketHandler$3.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/SystemWebSocketHandler$3.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/SystemWebSocketHandler$4.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/SystemWebSocketHandler$4.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/SystemWebSocketHandler$5.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/SystemWebSocketHandler$5.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/SystemWebSocketHandler$6.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/SystemWebSocketHandler$6.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/SystemWebSocketHandler$7.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/SystemWebSocketHandler$7.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/SystemWebSocketHandler$OJWebSocketSession.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/SystemWebSocketHandler$OJWebSocketSession.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/SystemWebSocketHandler$Passport.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/SystemWebSocketHandler$Passport.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/SystemWebSocketHandler.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/SystemWebSocketHandler.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/WebSocketConfig.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/WebSocketConfig.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/WebSocketHandshakeInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/WebSocketHandshakeInterceptor.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/vo/JavaSandboxStatusRequestVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/vo/JavaSandboxStatusRequestVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/vo/OperationSystemInfoRequestVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/vo/OperationSystemInfoRequestVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/vo/PendingHandleProblemCountRequestVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/vo/PendingHandleProblemCountRequestVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/vo/WebSocketRequestVO$RequestType.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/vo/WebSocketRequestVO$RequestType.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/vo/WebSocketRequestVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/vo/WebSocketRequestVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/vo/WebSocketResponseVO$ResponseType.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/vo/WebSocketResponseVO$ResponseType.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/vo/WebSocketResponseVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/controller/webSocket/vo/WebSocketResponseVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/AnnouncementDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/AnnouncementDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/CompetitionAccountDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/CompetitionAccountDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/CompetitionApplicationDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/CompetitionApplicationDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/CompetitionDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/CompetitionDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/ManagerDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/ManagerDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/ProblemDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/ProblemDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/ProblemTypeDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/ProblemTypeDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/RoleDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/RoleDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/SubmitRecordDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/SubmitRecordDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/UserDao$BatchUpdateData.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/UserDao$BatchUpdateData.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/UserDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/UserDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/base/BaseDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/base/BaseDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/base/MyBatisRepository.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dao/base/MyBatisRepository.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/AddAnnouncementDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/AddAnnouncementDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/AddCompetitionDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/AddCompetitionDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/AddManagerDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/AddManagerDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/AddProblemTypeDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/AddProblemTypeDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/CompetitionApplicationEmailDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/CompetitionApplicationEmailDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/CompetitionApplyDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/CompetitionApplyDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/CompetitionProblemAnswerDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/CompetitionProblemAnswerDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/NewProblemDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/NewProblemDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/ProblemAnswerDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/ProblemAnswerDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/ProblemStandardFileDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/ProblemStandardFileDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UpdateAnnouncementDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UpdateAnnouncementDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UpdateApplicationDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UpdateApplicationDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UpdateCompetitionAccountDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UpdateCompetitionAccountDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UpdateCompetitionDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UpdateCompetitionDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UpdateManagerDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UpdateManagerDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UpdateProblemDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UpdateProblemDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UpdateProblemTypeDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UpdateProblemTypeDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UpdateUserPasswordDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UpdateUserPasswordDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UploadProblemStandardFileDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UploadProblemStandardFileDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UserBanDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UserBanDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UserLeaderboardDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UserLeaderboardDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UserLoginDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UserLoginDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UserRegisterDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UserRegisterDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UserUpdateDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/UserUpdateDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/VerificationCodeDTO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/dto/VerificationCodeDTO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/exception/ServiceLogicException.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/exception/ServiceLogicException.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/exception/UnAuthorizedException.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/exception/UnAuthorizedException.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/job/CloseCompetitionJob.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/job/CloseCompetitionJob.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/job/JudgeCompetitionJob$JobJudgeResultListener.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/job/JudgeCompetitionJob$JobJudgeResultListener.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/job/JudgeCompetitionJob$Sorce.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/job/JudgeCompetitionJob$Sorce.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/job/JudgeCompetitionJob.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/job/JudgeCompetitionJob.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/permission/Permissions.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/permission/Permissions.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/po/Announcement.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/po/Announcement.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/po/Competition.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/po/Competition.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/po/CompetitionAccount.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/po/CompetitionAccount.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/po/CompetitionApplication.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/po/CompetitionApplication.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/po/Manager.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/po/Manager.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/po/Problem.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/po/Problem.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/po/ProblemType.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/po/ProblemType.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/po/Role.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/po/Role.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/po/SubmitRecord.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/po/SubmitRecord.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/po/User.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/po/User.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/EmailService$EmailRunnable.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/EmailService$EmailRunnable.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/EmailService.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/EmailService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/JobService.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/JobService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/ScheduledService.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/ScheduledService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminAnnouncementService.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminAnnouncementService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminCompetitionAccountService.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminCompetitionAccountService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminCompetitionApplicationService.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminCompetitionApplicationService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminCompetitionService$1.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminCompetitionService$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminCompetitionService$2.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminCompetitionService$2.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminCompetitionService.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminCompetitionService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminManagerService.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminManagerService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminOJSystemService.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminOJSystemService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminProblemService.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminProblemService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminProblemTypeService.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminProblemTypeService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminRoleService.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminRoleService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminUserService.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/admin/AdminUserService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/front/AnnouncementService.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/front/AnnouncementService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/front/AnswerSubmitService$1.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/front/AnswerSubmitService$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/front/AnswerSubmitService$JudgeResultListener.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/front/AnswerSubmitService$JudgeResultListener.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/front/AnswerSubmitService.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/front/AnswerSubmitService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/front/CompetitionApplicationService.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/front/CompetitionApplicationService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/front/CompetitionService.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/front/CompetitionService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/front/ProblemService.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/front/ProblemService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/front/ProblemTypeService.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/front/ProblemTypeService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/front/SubmitRecordService.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/front/SubmitRecordService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/front/UserService.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/front/UserService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/page/PageQuery$OrderByType.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/page/PageQuery$OrderByType.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/page/PageQuery.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/page/PageQuery.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/page/PageResult.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/page/PageResult.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/service/page/PageService.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/service/page/PageService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/util/DateConvert.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/util/DateConvert.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/util/OfficeUtils$1.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/util/OfficeUtils$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/util/OfficeUtils.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/util/OfficeUtils.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/util/SerializingUtil.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/util/SerializingUtil.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/util/ThreadFactoryUtil$1$1.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/util/ThreadFactoryUtil$1$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/util/ThreadFactoryUtil$1.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/util/ThreadFactoryUtil$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/util/ThreadFactoryUtil.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/util/ThreadFactoryUtil.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/util/mail/AttachBean.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/util/mail/AttachBean.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/util/mail/Mail.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/util/mail/Mail.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/util/mail/SendMailUtil$1.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/util/mail/SendMailUtil$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/util/mail/SendMailUtil.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/util/mail/SendMailUtil.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/AddAnnouncementVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/AddAnnouncementVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/AddCompetitionVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/AddCompetitionVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/AddManagerVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/AddManagerVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/AddProblemTypeVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/AddProblemTypeVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/AddRoleVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/AddRoleVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/BeginCompetitionVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/BeginCompetitionVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/CompetitionApplicationEmailVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/CompetitionApplicationEmailVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/CompetitionApplyVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/CompetitionApplyVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/CompetitionProblemAnswerVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/CompetitionProblemAnswerVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/NewProblemVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/NewProblemVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/ProblemAnswerVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/ProblemAnswerVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/ProblemRequsetVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/ProblemRequsetVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/ProblemSearchByDifficultyVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/ProblemSearchByDifficultyVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/ProblemSearchByNameVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/ProblemSearchByNameVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/ProblemSearchByTypeVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/ProblemSearchByTypeVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/ProblemSearchByValueVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/ProblemSearchByValueVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/ProblemStandardFileVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/ProblemStandardFileVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/SubmitRecordVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/SubmitRecordVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UpdateAnnouncementVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UpdateAnnouncementVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UpdateApplicationVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UpdateApplicationVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UpdateCompetitionAccountVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UpdateCompetitionAccountVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UpdateCompetitionVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UpdateCompetitionVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UpdateManagerVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UpdateManagerVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UpdateProblemTypeVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UpdateProblemTypeVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UpdateProblemVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UpdateProblemVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UpdateRoleVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UpdateRoleVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UpdateUserPasswordVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UpdateUserPasswordVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UserLoginVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UserLoginVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UserRegisterVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UserRegisterVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UserUpdateVO.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/request/UserUpdateVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/response/AnnouncementResponse.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/response/AnnouncementResponse.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/response/CompetitionResponse.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/response/CompetitionResponse.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/response/ProblemResponse.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/response/ProblemResponse.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/response/UserLoginResponse.class" afterPath="$PROJECT_DIR$/target/classes/cn/superman/web/vo/response/UserLoginResponse.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/configs/db/db.properties" afterPath="$PROJECT_DIR$/target/classes/configs/db/db.properties" />
+      <change beforePath="$PROJECT_DIR$/target/classes/configs/spring/springmvc.xml" afterPath="$PROJECT_DIR$/target/classes/configs/spring/springmvc.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/ProblemMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mybatis/ProblemMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/ProblemTypeMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mybatis/ProblemTypeMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/SubmitRecordMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mybatis/SubmitRecordMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSandbox$1.class" afterPath="$PROJECT_DIR$/target/test-classes/TestSandbox$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSandbox.class" afterPath="$PROJECT_DIR$/target/test-classes/TestSandbox.class" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ProblemMapper.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/ProblemMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="381">
+              <caret line="25" column="45" lean-forward="true" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+              <folding>
+                <marker date="1520218559168" expanded="true" signature="2875:3458" ph="insert into problem" />
+                <marker date="1520218559168" expanded="true" signature="3538:5012" ph="update problem... " />
+                <marker date="1520218559168" expanded="true" signature="5059:5298" ph="update problem... " />
+                <marker date="1520218559168" expanded="true" signature="5379:5494" ph="update problem... " />
+                <marker date="1520218559168" expanded="true" signature="5773:5792" ph="delete from problem... " />
+                <marker date="1520218559168" expanded="true" signature="5932:5992" ph="select from problem" />
+                <marker date="1520218559168" expanded="true" signature="6380:6505" ph="select from problem" />
+                <marker date="1520218559168" expanded="true" signature="6638:6698" ph="select from problem" />
+                <marker date="1520218559168" expanded="true" signature="6827:6859" ph="select count... problem" />
+                <marker date="1520218559168" expanded="true" signature="6981:7011" ph="select count... problem" />
+                <marker date="1520218559168" expanded="true" signature="7148:7200" ph="SELECT test_... problem" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/problem/detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5250">
+              <caret line="185" column="164" lean-forward="false" selection-start-line="185" selection-start-column="164" selection-end-line="185" selection-end-column="164" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="controllers.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/controllers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29190">
+              <caret line="973" column="33" lean-forward="false" selection-start-line="973" selection-start-column="33" selection-end-line="973" selection-end-column="33" />
+              <folding>
+                <marker date="1523863716011" expanded="true" signature="699:724" ph="..." />
+                <marker date="1523863716011" expanded="true" signature="2878:2903" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProblemController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/controller/front/ProblemController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2220">
+              <caret line="107" column="22" lean-forward="false" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnswerSubmitService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/service/front/AnswerSubmitService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="8010">
+              <caret line="304" column="16" lean-forward="false" selection-start-line="304" selection-start-column="8" selection-end-line="304" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SubmitRecordDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/dao/SubmitRecordDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/po/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SubmitRecordMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/SubmitRecordMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3750">
+              <caret line="125" column="129" lean-forward="false" selection-start-line="125" selection-start-column="129" selection-end-line="125" selection-end-column="129" />
+              <folding>
+                <marker date="1523863277651" expanded="true" signature="2035:2352" ph="insert into ${submitRecordTableName}" />
+                <marker date="1523863277651" expanded="true" signature="2437:3246" ph="update ${submitRecordTableName}... " />
+                <marker date="1523863277651" expanded="true" signature="3344:3380" ph="delete from ${submitRecordTableName}... " />
+                <marker date="1523863277651" expanded="true" signature="3588:3665" ph="select from ${submitRecordTableName}" />
+                <marker date="1523863277651" expanded="true" signature="3857:3904" ph="select count... ${submitRecordTableName}" />
+                <marker date="1523863277651" expanded="true" signature="4055:4227" ph="select submi... submit_record0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PageResult.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/service/page/PageResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyRecord.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/dto/MyRecord.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="21" />
+              <folding>
+                <element signature="e#474#475#0" expanded="true" />
+                <element signature="e#505#506#0" expanded="true" />
+                <element signature="e#551#552#0" expanded="true" />
+                <element signature="e#591#592#0" expanded="true" />
+                <element signature="e#628#629#0" expanded="true" />
+                <element signature="e#661#662#0" expanded="true" />
+                <element signature="e#713#714#0" expanded="true" />
+                <element signature="e#757#758#0" expanded="true" />
+                <element signature="e#797#798#0" expanded="true" />
+                <element signature="e#835#836#0" expanded="true" />
+                <element signature="e#895#896#0" expanded="true" />
+                <element signature="e#949#950#0" expanded="true" />
+                <element signature="e#987#988#0" expanded="true" />
+                <element signature="e#1021#1022#0" expanded="true" />
+                <element signature="e#1075#1076#0" expanded="true" />
+                <element signature="e#1121#1122#0" expanded="true" />
+                <element signature="e#1158#1159#0" expanded="true" />
+                <element signature="e#1193#1194#0" expanded="true" />
+                <element signature="e#1247#1248#0" expanded="true" />
+                <element signature="e#1295#1296#0" expanded="true" />
+                <element signature="e#1330#1331#0" expanded="true" />
+                <element signature="e#1361#1362#0" expanded="true" />
+                <element signature="e#1409#1410#0" expanded="true" />
+                <element signature="e#1449#1450#0" expanded="true" />
+                <element signature="e#1480#1481#0" expanded="true" />
+                <element signature="e#1508#1509#0" expanded="true" />
+                <element signature="e#1549#1550#0" expanded="true" />
+                <element signature="e#1583#1584#0" expanded="true" />
+                <element signature="e#1620#1621#0" expanded="true" />
+                <element signature="e#1653#1654#0" expanded="true" />
+                <element signature="e#1705#1706#0" expanded="true" />
+                <element signature="e#1749#1750#0" expanded="true" />
+                <element signature="e#1783#1784#0" expanded="true" />
+                <element signature="e#1813#1814#0" expanded="true" />
+                <element signature="e#1859#1860#0" expanded="true" />
+                <element signature="e#1897#1898#0" expanded="true" />
+                <element signature="e#1936#1937#0" expanded="true" />
+                <element signature="e#1971#1972#0" expanded="true" />
+                <element signature="e#2027#2028#0" expanded="true" />
+                <element signature="e#2075#2076#0" expanded="true" />
+                <element signature="e#2106#2107#0" expanded="true" />
+                <element signature="e#2133#2134#0" expanded="true" />
+                <element signature="e#2173#2174#0" expanded="true" />
+                <element signature="e#2205#2206#0" expanded="true" />
+                <element signature="e#2243#2244#0" expanded="true" />
+                <element signature="e#2276#2277#0" expanded="true" />
+                <element signature="e#2329#2330#0" expanded="true" />
+                <element signature="e#2373#2374#0" expanded="true" />
+                <element signature="e#2410#2411#0" expanded="true" />
+                <element signature="e#2442#2443#0" expanded="true" />
+                <element signature="e#2493#2494#0" expanded="true" />
+                <element signature="e#2535#2536#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>loginDialog</find>
+      <find>leaderboar</find>
+      <find>leaderboard</find>
+      <find>changeVerificationCode</find>
+      <find>loadAllProblemType</find>
+      <find>searchByType</find>
+      <find>loadingData</find>
+      <find>angular.module('appCtrls', [])</find>
+      <find>appCtrls</find>
+      <find>submitAnswer</find>
+      <find>answerDialogShow</find>
+      <find>/list</find>
+      <find>find</find>
+      <find>findPulishProblemByLikeName</find>
+      <find>changePage</find>
+      <find>app</find>
+      <find>main</find>
+      <find>problemClass</find>
+      <find>problemClassification</find>
+      <find>problemDetailObj</find>
+      <find>problemType</find>
+      <find>managerSystemCtr</find>
+      <find>answerSubmit</find>
+      <find>getPreProcessedCode</find>
+      <find>problemCtr</find>
+      <find>loginOut</find>
+      <find>evaluateStatistics</find>
+      <find>myRecord</find>
+      <find>input_file_root_path</find>
+      <find>Base_Column_List</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/web/vo/response/UserLoginResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/web/service/front/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/web/controller/front/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/manager/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/web/service/admin/AdminManagerService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/main.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/user/index.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/class/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/web/vo/request/ProblemAnswerVO.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/configs/spring/springmvc.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/web/po/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/web/controller/front/SubmitRecordController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/web/service/front/ProblemService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/web/vo/request/ProblemSearchByNameVO.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/ProblemTypeMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/web/dao/ProblemTypeDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/web/dto/TypeDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/web/service/front/ProblemTypeService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/classification/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/web/controller/PageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/web/controller/front/ProblemTypeController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/classification/classification.html" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/web/util/mail/AttachBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/web/util/mail/Mail.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/web/util/mail/SendMailUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/system/service/LD.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/system/service/DelComments.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/system/service/CPlusPlusCompare.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/system/util/JavaCompilerUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/util/Log4JUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/system/util/DelComments.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/web/bean/ResponseMap.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/system/util/CodeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/web/dao/ProblemDao.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/problem/index.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/managers/css/index.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/managers/js/app.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/managers/index.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/app.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/ProblemMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/system/util/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/system/util/CompilerAndRunUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/web/dto/MyRecord.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/web/controller/front/ProblemController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/web/service/front/AnswerSubmitService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/superman/web/dao/SubmitRecordDao.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/SubmitRecordMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/problem/detail.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/controllers.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1922" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="JavaOJSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaOJSystem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaOJSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaOJSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaOJSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaOJSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaOJSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaOJSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaOJSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaOJSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="superman" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaOJSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaOJSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="superman" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaOJSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaOJSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="superman" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaOJSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaOJSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="superman" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaOJSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaOJSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaOJSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaOJSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="configs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaOJSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaOJSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="configs" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaOJSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaOJSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaOJSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaOJSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaOJSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaOJSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaOJSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaOJSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="problem" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="spring" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SearchEverywhereHistoryKey" value="ProblemController/myRecord/&#9;null&#9;null&#10;ProblemController/myRecord&#9;null&#9;null" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.superman.system.util" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IDEAProject\javaOJSystem\JavaOJSystem\src\main\java\cn\superman\system\service" />
+      <recent name="D:\IDEAProject\javaOJSystem\JavaOJSystem\src\main\webapp\classification" />
+      <recent name="D:\IDEAProject\javaOJSystem\JavaOJSystem\src\main\webapp\js" />
+      <recent name="D:\IDEAProject\javaOJSystem\JavaOJSystem\src\main\webapp\class" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration name="CPlusPlusCompare" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cn.superman.system.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="cn.superman.system.util.CPlusPlusCompare" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JavaOJSystem" />
+      <envs />
+    </configuration>
+    <configuration name="CompilerAndRunUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cn.superman.system.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="cn.superman.system.util.CompilerAndRunUtil" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JavaOJSystem" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.48" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="JavaOJSystem:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_JavaOJSystem" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="49644" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="JavaOJSystem:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat" />
+      <item index="1" class="java.lang.String" itemvalue="Application.CPlusPlusCompare" />
+      <item index="2" class="java.lang.String" itemvalue="Application.CompilerAndRunUtil" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Application.CompilerAndRunUtil" />
+        <item index="1" class="java.lang.String" itemvalue="Application.CPlusPlusCompare" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="863fccc0-c841-46da-baa7-b7609be65611" name="Default" comment="" />
+      <created>1517211026396</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1517211026396</updated>
+      <workItem from="1517211028690" duration="10261000" />
+      <workItem from="1517273279810" duration="1603000" />
+      <workItem from="1517562009389" duration="5343000" />
+      <workItem from="1519357137892" duration="16515000" />
+      <workItem from="1519433442429" duration="13317000" />
+      <workItem from="1519452188294" duration="11899000" />
+      <workItem from="1519606421017" duration="18602000" />
+      <workItem from="1519693689709" duration="13690000" />
+      <workItem from="1519778941039" duration="19647000" />
+      <workItem from="1519865456747" duration="20637000" />
+      <workItem from="1519951700150" duration="18241000" />
+      <workItem from="1520212067824" duration="18145000" />
+      <workItem from="1520237032682" duration="2095000" />
+      <workItem from="1520298459329" duration="5797000" />
+      <workItem from="1520417562693" duration="634000" />
+      <workItem from="1520490270192" duration="4031000" />
+      <workItem from="1520564084341" duration="1546000" />
+      <workItem from="1520823251058" duration="10506000" />
+      <workItem from="1520906307861" duration="9356000" />
+      <workItem from="1521596000228" duration="6495000" />
+      <workItem from="1521680954097" duration="6376000" />
+      <workItem from="1521767300814" duration="1885000" />
+      <workItem from="1522026577683" duration="624000" />
+      <workItem from="1523861084034" duration="3739000" />
+      <workItem from="1524230174521" duration="133000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="221117000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31601733" sideWeight="0.50852877" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39935064" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3225108" sideWeight="0.4914712" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26865673" sideWeight="0.49367088" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2553305" sideWeight="0.5063291" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/managers/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/aria.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="976" column="22" lean-forward="false" selection-start-line="976" selection-start-column="22" selection-end-line="976" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/web-forms.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="467" column="28" lean-forward="true" selection-start-line="467" selection-start-column="28" selection-end-line="467" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="379" column="1" lean-forward="false" selection-start-line="379" selection-start-column="1" selection-end-line="379" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/constant/WebConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/ManagerMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1350">
+          <caret line="57" column="32" lean-forward="false" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2640">
+          <caret line="88" column="62" lean-forward="false" selection-start-line="88" selection-start-column="62" selection-end-line="88" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.2.8/mybatis-3.2.8.jar!/org/apache/ibatis/builder/xml/mybatis-3-mapper.dtd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="30" column="28" lean-forward="true" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/managers/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/managers/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-810">
+          <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/managers/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="92" column="25" lean-forward="false" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/controller/front/SubmitRecordController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-695">
+          <caret line="34" column="46" lean-forward="false" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/po/Competition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/permission/Permissions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1029">
+          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/job/CloseCompetitionJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="58" column="25" lean-forward="true" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/controller/Interceptor/AdminPermissionInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-870">
+          <caret line="14" column="73" lean-forward="false" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/util/Log4JUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/system/util/DelComments.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/configs/mybatis/Configuration.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="22" column="15" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/controller/front/ProblemTypeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-329">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.1.RELEASE/spring-context-4.3.1.RELEASE.jar!/org/springframework/format/support/FormattingConversionServiceFactoryBean.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/configs/spring/spring-service.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/configs/spring/spring-dao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/controller/Interceptor/UserLoginInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/controller/front/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1470">
+          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/service/front/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2550">
+          <caret line="114" column="9" lean-forward="false" selection-start-line="114" selection-start-column="9" selection-end-line="114" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/system/util/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/configs/spring/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="13" column="66" lean-forward="false" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1410">
+          <caret line="47" column="22" lean-forward="false" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/controller/Interceptor/ManagerLoginInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="16" column="72" lean-forward="false" selection-start-line="16" selection-start-column="72" selection-end-line="16" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/configs/spring/springmvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="631">
+          <caret line="45" column="22" lean-forward="false" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/competition/answer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-793">
+          <caret line="48" column="49" lean-forward="true" selection-start-line="48" selection-start-column="49" selection-end-line="48" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/competition/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1080">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="261" column="95" lean-forward="true" selection-start-line="261" selection-start-column="95" selection-end-line="261" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/system/util/CompilerAndRunUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3689">
+          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/service/front/ProblemService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/dto/UpdateAnnouncementDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/dto/AddManagerDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/dto/AddProblemTypeDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/dto/MyRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="21" />
+          <folding>
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#591#592#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="true" />
+            <element signature="e#757#758#0" expanded="true" />
+            <element signature="e#797#798#0" expanded="true" />
+            <element signature="e#835#836#0" expanded="true" />
+            <element signature="e#895#896#0" expanded="true" />
+            <element signature="e#949#950#0" expanded="true" />
+            <element signature="e#987#988#0" expanded="true" />
+            <element signature="e#1021#1022#0" expanded="true" />
+            <element signature="e#1075#1076#0" expanded="true" />
+            <element signature="e#1121#1122#0" expanded="true" />
+            <element signature="e#1158#1159#0" expanded="true" />
+            <element signature="e#1193#1194#0" expanded="true" />
+            <element signature="e#1247#1248#0" expanded="true" />
+            <element signature="e#1295#1296#0" expanded="true" />
+            <element signature="e#1330#1331#0" expanded="true" />
+            <element signature="e#1361#1362#0" expanded="true" />
+            <element signature="e#1409#1410#0" expanded="true" />
+            <element signature="e#1449#1450#0" expanded="true" />
+            <element signature="e#1480#1481#0" expanded="true" />
+            <element signature="e#1508#1509#0" expanded="true" />
+            <element signature="e#1549#1550#0" expanded="true" />
+            <element signature="e#1583#1584#0" expanded="true" />
+            <element signature="e#1620#1621#0" expanded="true" />
+            <element signature="e#1653#1654#0" expanded="true" />
+            <element signature="e#1705#1706#0" expanded="true" />
+            <element signature="e#1749#1750#0" expanded="true" />
+            <element signature="e#1783#1784#0" expanded="true" />
+            <element signature="e#1813#1814#0" expanded="true" />
+            <element signature="e#1859#1860#0" expanded="true" />
+            <element signature="e#1897#1898#0" expanded="true" />
+            <element signature="e#1936#1937#0" expanded="true" />
+            <element signature="e#1971#1972#0" expanded="true" />
+            <element signature="e#2027#2028#0" expanded="true" />
+            <element signature="e#2075#2076#0" expanded="true" />
+            <element signature="e#2106#2107#0" expanded="true" />
+            <element signature="e#2133#2134#0" expanded="true" />
+            <element signature="e#2173#2174#0" expanded="true" />
+            <element signature="e#2205#2206#0" expanded="true" />
+            <element signature="e#2243#2244#0" expanded="true" />
+            <element signature="e#2276#2277#0" expanded="true" />
+            <element signature="e#2329#2330#0" expanded="true" />
+            <element signature="e#2373#2374#0" expanded="true" />
+            <element signature="e#2410#2411#0" expanded="true" />
+            <element signature="e#2442#2443#0" expanded="true" />
+            <element signature="e#2493#2494#0" expanded="true" />
+            <element signature="e#2535#2536#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/vo/request/ProblemSearchByValueVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/service/page/PageResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/po/SubmitRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/po/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/SubmitRecordMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3750">
+          <caret line="125" column="129" lean-forward="false" selection-start-line="125" selection-start-column="129" selection-end-line="125" selection-end-column="129" />
+          <folding>
+            <marker date="1523863277651" expanded="true" signature="2035:2352" ph="insert into ${submitRecordTableName}" />
+            <marker date="1523863277651" expanded="true" signature="2437:3246" ph="update ${submitRecordTableName}... " />
+            <marker date="1523863277651" expanded="true" signature="3344:3380" ph="delete from ${submitRecordTableName}... " />
+            <marker date="1523863277651" expanded="true" signature="3588:3665" ph="select from ${submitRecordTableName}" />
+            <marker date="1523863277651" expanded="true" signature="3857:3904" ph="select count... ${submitRecordTableName}" />
+            <marker date="1523863277651" expanded="true" signature="4055:4227" ph="select submi... submit_record0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/dao/SubmitRecordDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/service/front/AnswerSubmitService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8010">
+          <caret line="304" column="16" lean-forward="false" selection-start-line="304" selection-start-column="8" selection-end-line="304" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/superman/web/controller/front/ProblemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2220">
+          <caret line="107" column="22" lean-forward="false" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/problem/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5250">
+          <caret line="185" column="164" lean-forward="false" selection-start-line="185" selection-start-column="164" selection-end-line="185" selection-end-column="164" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29190">
+          <caret line="973" column="33" lean-forward="false" selection-start-line="973" selection-start-column="33" selection-end-line="973" selection-end-column="33" />
+          <folding>
+            <marker date="1523863716011" expanded="true" signature="699:724" ph="..." />
+            <marker date="1523863716011" expanded="true" signature="2878:2903" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/ProblemMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="25" column="45" lean-forward="true" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+          <folding>
+            <marker date="1520218559168" expanded="true" signature="2875:3458" ph="insert into problem" />
+            <marker date="1520218559168" expanded="true" signature="3538:5012" ph="update problem... " />
+            <marker date="1520218559168" expanded="true" signature="5059:5298" ph="update problem... " />
+            <marker date="1520218559168" expanded="true" signature="5379:5494" ph="update problem... " />
+            <marker date="1520218559168" expanded="true" signature="5773:5792" ph="delete from problem... " />
+            <marker date="1520218559168" expanded="true" signature="5932:5992" ph="select from problem" />
+            <marker date="1520218559168" expanded="true" signature="6380:6505" ph="select from problem" />
+            <marker date="1520218559168" expanded="true" signature="6638:6698" ph="select from problem" />
+            <marker date="1520218559168" expanded="true" signature="6827:6859" ph="select count... problem" />
+            <marker date="1520218559168" expanded="true" signature="6981:7011" ph="select count... problem" />
+            <marker date="1520218559168" expanded="true" signature="7148:7200" ph="SELECT test_... problem" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
