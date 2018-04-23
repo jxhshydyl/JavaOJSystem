@@ -100,11 +100,11 @@
 									<div style="margin: 0rem 1rem">输入示例</div>
 									<div style="background: #F3F4F5;color: rgba(0,0,0,.6);position: relative;background: #F3F4F5;box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);margin: 1rem 1rem;font-size: 1rem;padding: 1em;border-radius: .28571429rem;border: 1px solid rgba(34,36,38,.15);">
 										<p style="margin: 0 0 1em;line-height: 1.4285em;">
-											<textarea ng-model="exampleInput" disabled="disabled" class="bianji-textarea-l"></textarea>
+											<textarea ng-model="exampleInput" class="bianji-textarea-l"></textarea>
 											{{problemDetailObj.exampleInput}}
 											<div contenteditable="true">
-										{{problemDetailObj.exampleInput}}
-									</div>
+										        {{problemDetailObj.exampleInput}}
+									        </div>
 										</p>
 									</div>
 								</div>
@@ -231,7 +231,7 @@
 </div>
 <script>
     $(".bianji-textarea-l").height($(".bianji-textarea-l")[0].scrollHeight);
-    $(".bianji-textarea-l").on("keyup keydown", function(){
+    $(".bianji-textarea-l").on("keyup keydown blur", function(){
         $(this).height(this.scrollHeight);
     })
 </script>
