@@ -9,9 +9,7 @@
         <div class="panel-body">
             <table class="table">
                 <tr>
-                    <td>题目编号：<input type="number" ng-model="searchId">
-                        <button class="btn btn-success" type="button"
-                                ng-click="searchById()">搜索
+                    <td>
                         </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;题目名称（支持模糊查询）：<input
                                 type="text" ng-model="searchName">
                         <button class="btn btn-success" type="button"
@@ -25,14 +23,8 @@
                         <button class="btn btn-success" type="button"
                                 ng-click="searchByType()">搜索
                         </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>题目价值：<input type="number" ng-model="searchValue">
-                        <button class="btn btn-success" type="button"
-                                ng-click="searchByValue()">搜索
                         </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;题目难度：<input
-                                type="number" ng-model="searchDifficulty">
+                            type="number" ng-model="searchDifficulty">
                         <button class="btn btn-success" type="button"
                                 ng-click="searchByDifficulty()">搜索
                         </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -52,26 +44,21 @@
                     <th class="col-md-1">编号</th>
                     <th class="col-md-1">题目类型</th>
                     <th class="col-md-2">题目名字</th>
-                    <th class="col-md-1">题目价值</th>
                     <th class="col-md-1">题目难度</th>
                     <th class="col-md-1">答对率</th>
-                    <th class="col-md-3">题目标签</th>
                     <th class="col-md-1">操作</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr ng-repeat="problem in page.datas">
-                    <td class="col-md-1">{{problem.problemId}}</td>
-                    <td class="col-md-1">{{problem.problemTypeId |
-                        problemTypeFilter : allProblemType}}
+                    <td class="col-md-1">{{problem.qid}}</td>
+                    <td class="col-md-1">{{problem.qtype}}
                     </td>
-                    <td class="col-md-2">{{problem.problemName}}</td>
-                    <td class="col-md-1">{{problem.problemValue}}</td>
-                    <td class="col-md-1">{{problem.problemDifficulty}}</td>
+                    <td class="col-md-2">{{problem.qname}}</td>
+                    <td class="col-md-1">{{problem.qdegree}}</td>
                     <td class="col-md-1">{{problem.totalRightCount/problem.totalSubmitCount|
                         number:2}}({{problem.totalRightCount}}/{{problem.totalSubmitCount}})
                     </td>
-                    <td class="col-md-3">{{problem.problemLabel}}</td>
                     <td class="col-md-1"><a class="btn btn-success "
                                             type="button" href="#/problem/detail"
                                             ng-click="jumpDetail($index)">详情</a></td>

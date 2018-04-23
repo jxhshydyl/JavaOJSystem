@@ -13,7 +13,6 @@
 
 <mapper namespace="cn.superman.web.dao.CompetitionApplicationDao">
 
-	<cache />
 	<sql id="Base_Column_List">
 		competition_application_id,email,phone,application_people_count,application_summary,application_content,competition_id,level,is_have_send_email,is_have_handle,competition_account_id
 	</sql>

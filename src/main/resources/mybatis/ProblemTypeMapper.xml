@@ -13,7 +13,14 @@
 
 <mapper namespace="cn.superman.web.dao.ProblemTypeDao">
 
-	<cache />
+
+	<select id="find" resultType="cn.superman.web.po.ProblemType">
+		select
+		<include refid="Base_Column_List" />
+		from problem_type
+	</select>
+
+
 	<sql id="Base_Column_List">
 		problem_type_id,problem_type_name,problem_type_description
 	</sql>
@@ -69,12 +76,6 @@
 			<include refid="Example_Where_Clause" />
 		</where>
 	</delete>
-
-	<select id="find" resultType="cn.superman.web.po.ProblemType">
-		select
-		<include refid="Base_Column_List" />
-		from problem_type
-	</select>
 
 	<select id="findById" parameterType="Integer"
 		resultType="cn.superman.web.po.ProblemType">

@@ -49,7 +49,7 @@
 			<i class="right chevron icon divider"></i>
 			<!--<a class="section" href="">C语言基础题库</a>
             <i class="right chevron icon divider"></i>-->
-			<font style="">题目522：Hello World, WeJudge!</font>
+			<font style="">题目{{problemDetailObj.qid}}：{{problemDetailObj.qname}}!</font>
 		</div>
 	</div>
 	<h2>{{problemDetailObj.problemName}}</h2>
@@ -70,15 +70,17 @@
 				<div style="border: 1px solid rgba(34,36,38,.15);margin-right: 1%">
 					<div style="display:inline-block;width:73%;border: 1px solid rgba(34,36,38,.15);">
 						<div style="margin: 1rem 1rem;">
-							<p id="detailProblemContent">{{problemDetailObj.problemContent | formatToHtml : "detailProblemContent"}}</p>
+							<p id="detailProblemContent">
+								{{problemDetailObj.qdescribe}}
+							</p>
 						</div>
 						<div style="line-height: 2.0rem !important;font-size: 1.1rem !important;color: #333333;">
 							<div style="display: table;white-space: nowrap;height: auto;line-height: 1;margin: 0rem 1rem;">
 								<h3 style="font-size: 20px;font-weight: bold;">输入要求</h3>
 							</div>
 							<div style="background: #F3F4F5;color: rgba(0,0,0,.6);position: relative;background: #F3F4F5;box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);margin: 1rem 1rem;font-size: 1rem;padding: 1em;border-radius: .28571429rem;border: 1px solid rgba(34,36,38,.15);">
-								<p style="margin: 0 0 1em;line-height: 1.4285em;">123
-									123123123</p>
+								<p style="margin: 0 0 1em;line-height: 1.4285em;"></p>
+								{{problemDetailObj.inputDescribe}}
 							</div>
 						</div>
 						<div style="line-height: 2.0rem !important;font-size: 1.1rem !important;color: #333333;">
@@ -86,8 +88,7 @@
 								<h3 style="font-size: 20px;font-weight: bold;">输出要求</h3>
 							</div>
 							<div style="background: #F3F4F5;color: rgba(0,0,0,.6);position: relative;background: #F3F4F5;box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);margin: 1rem 1rem;font-size: 1rem;padding: 1em;border-radius: .28571429rem;border: 1px solid rgba(34,36,38,.15);">
-								<p style="margin: 0 0 1em;line-height: 1.4285em;">123
-									123123123</p>
+								<p style="margin: 0 0 1em;line-height: 1.4285em;">{{problemDetailObj.outputDescripe}}</p>
 							</div>
 						</div>
 						<div style="line-height: 2.0rem !important;font-size: 1.1rem !important;color: #333333;">
@@ -98,15 +99,21 @@
 								<div style="display: inline-block;width:49%;">
 									<div style="margin: 0rem 1rem">输入示例</div>
 									<div style="background: #F3F4F5;color: rgba(0,0,0,.6);position: relative;background: #F3F4F5;box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);margin: 1rem 1rem;font-size: 1rem;padding: 1em;border-radius: .28571429rem;border: 1px solid rgba(34,36,38,.15);">
-										<p style="margin: 0 0 1em;line-height: 1.4285em;">123
-											123123123</p>
+										<p style="margin: 0 0 1em;line-height: 1.4285em;">
+											<textarea ng-model="exampleInput" disabled="disabled" class="bianji-textarea-l"></textarea>
+											{{problemDetailObj.exampleInput}}
+											<div contenteditable="true">
+										{{problemDetailObj.exampleInput}}
+									</div>
+										</p>
 									</div>
 								</div>
 								<div style="display: inline-block;width:49%;">
 									<div style="margin: 0rem 1rem">输出示例</div>
 									<div style="background: #F3F4F5;color: rgba(0,0,0,.6);position: relative;background: #F3F4F5;box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);margin: 1rem 1rem;font-size: 1rem;padding: 1em;border-radius: .28571429rem;border: 1px solid rgba(34,36,38,.15);">
-										<p style="margin: 0 0 1em;line-height: 1.4285em;">123
-											123123123</p>
+										<p style="margin: 0 0 1em;line-height: 1.4285em;">
+											{{problemDetailObj.exampleOutput}}
+										</p>
 									</div>
 								</div>
 							</div>
@@ -127,23 +134,19 @@
     vertical-align: inherit;
     border-color: inherit;border-bottom: 1px solid rgba(0,0,0,.1);">
 								<td style="display: table-cell;vertical-align: inherit;"><strong>类型</strong></td>
-								<td>{{problemDetailObj.typeName}}</td>
-							</tr>
-							<tr>
-								<td><strong>标签</strong></td>
-								<td>{{problemDetailObj.problemLabel}}</td>
+								<td>{{problemDetailObj.qtype}}</td>
 							</tr>
 							<tr>
 								<td><strong>内存限制</strong></td>
-								<td>{{problemDetailObj.memoryLimit}}KB</td>
+								<td>{{problemDetailObj.limitMemory}}KB</td>
 							</tr>
 							<tr>
 								<td><strong>时间限制</strong></td>
-								<td>{{problemDetailObj.timeLimit}}ms</td>
+								<td>{{problemDetailObj.limitTime}}ms</td>
 							</tr>
 							<tr>
 								<td><strong>难度</strong></td>
-								<td>{{problemDetailObj.problemDifficulty}}</td>
+								<td>{{problemDetailObj.qdegree}}</td>
 							</tr>
 							</tbody>
 						</table>
@@ -226,3 +229,9 @@
 		</div>
 	</div>
 </div>
+<script>
+    $(".bianji-textarea-l").height($(".bianji-textarea-l")[0].scrollHeight);
+    $(".bianji-textarea-l").on("keyup keydown", function(){
+        $(this).height(this.scrollHeight);
+    })
+</script>

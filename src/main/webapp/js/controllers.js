@@ -745,8 +745,7 @@ appCtrls
 				'problemCtr',
 				function($rootScope, $scope, $http, sessionDataBase) {
 					$scope.loadAllProblemType = function() {
-						$http
-								.get("ProblemTypeController/findAll")
+						$http.get("ProblemTypeController/findAll")
 								.success(
 										function(response) {
 											$scope.allProblemType = response.allProblemType;
@@ -775,6 +774,7 @@ appCtrls
 							params : $scope.page
 						}).success(
                                     function(response) {
+                                    	console.log(response);
                                         $scope.page.currentPage = response.currentPage;
                                         $scope.page.totalCount = response.totalCount;
                                         $scope.page.totalPage = response.totalPage;
@@ -820,26 +820,6 @@ appCtrls
 						$scope.loadingData();
 					}
 
-					$scope.searchById = function() {
-						// 重置搜索对象
-                        if($scope.searchId==undefined || $scope.searchId==""){
-                            $scope.searchId=-1;
-                        }
-						$scope.page = {
-							currentPage : 0,
-							wantPageNumber : 1,
-							pageShowCount : 10,
-							datas : null,
-							totalCount : null,
-							totalPage : null,
-							method : "/search/" + $scope.searchId
-						}
-						if($scope.searchId==-1){
-                            $scope.searchId="";
-						}
-						$scope.loadingData();
-					}
-
 					$scope.searchByName = function() {
 						// 重置搜索对象
 
@@ -857,22 +837,6 @@ appCtrls
                             $scope.page.problemName="";
                         }
 						console.log($scope.page);
-						$scope.loadingData();
-					}
-
-					$scope.searchByValue = function() {
-						// 重置搜索对象
-						$scope.page = {
-							currentPage : 0,
-							wantPageNumber : 1,
-							pageShowCount : 10,
-							datas : null,
-							totalCount : null,
-							totalPage : null,
-							method : "/searchByValue",
-							problemValue : $scope.searchValue
-						}
-
 						$scope.loadingData();
 					}
 
@@ -935,6 +899,8 @@ appCtrls.controller('problemDetailCtr', function($scope, $http, $timeout,
     $scope.answerData.code = null;
     $scope.answerStatus.buttonText = "提交代码";
     $scope.datas=null;
+    console.log($scope.problemDetailObj.exampleInput);
+    $scope.exampleInput=$scope.problemDetailObj.exampleInput;
     /*	$scope.answerDialogShow = function() {
             $scope.answerData = {};
             $scope.answerData.codeLanguage = "java";

@@ -2,6 +2,7 @@ package cn.superman.web.service.front;
 
 import java.util.List;
 
+import cn.superman.web.dto.CodeDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,6 +30,17 @@ public class ProblemService extends PageService<Problem, Problem> {
 
         PageInfo<Problem> info = new PageInfo<Problem>(list);
         PageResult<Problem> pageResult = new PageResult<Problem>();
+        pageResult.setResult(list);
+        pageResult.setTotalCount(info.getTotal());
+        pageResult.setCurrentPage(info.getPageNum());
+        pageResult.setTotalPage(info.getPages());
+        return pageResult;
+    }
+
+    public PageResult<CodeDTO> getList(int currentPage, int pageShowCount, int wantPageNumber){
+        PageResult<CodeDTO> pageResult=new PageResult<>();
+        List<CodeDTO> list = problemDao.getList( currentPage,  pageShowCount,  wantPageNumber);
+        PageInfo<CodeDTO> info = new PageInfo<CodeDTO>(list);
         pageResult.setResult(list);
         pageResult.setTotalCount(info.getTotal());
         pageResult.setCurrentPage(info.getPageNum());

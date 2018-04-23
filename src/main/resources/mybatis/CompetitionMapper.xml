@@ -13,7 +13,6 @@
 
 <mapper namespace="cn.superman.web.dao.CompetitionDao">
 
-	<cache />
 	<sql id="Base_Column_List">
 		competition_id,competition_name,competition_description,competition_begin_time,competition_end_time,competition_players_count,is_close,is_publish,competition_problem_ids,competition_content_root_path,is_can_declare,is_judge,competition_apply_begin_time,competition_apply_end_time
 	</sql>

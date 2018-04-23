@@ -12,8 +12,6 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="cn.superman.web.dao.CompetitionAccountDao">
-
-	<cache />
 	<sql id="Base_Column_List">
 		competition_account_id,login_account,login_password,competition_id,account_remark,account_score,account_code_root_path,is_use
 	</sql>

@@ -3,6 +3,7 @@ package cn.superman.web.dao;
 import java.math.BigInteger;
 import java.util.List;
 
+import cn.superman.web.dto.CodeDTO;
 import org.apache.ibatis.annotations.Param;
 
 import cn.superman.web.dao.base.BaseDao;
@@ -18,4 +19,6 @@ public interface ProblemDao extends BaseDao<Problem, Problem> {
     List<Problem> findPulishProblemByLikeName(String problemName);
 
     String findExample(BigInteger id);
+
+    List<CodeDTO> getList(@Param("currentPage")int currentPage,@Param("pageShowCount")int pageShowCount, @Param("wantPageNumber")int wantPageNumber);
 }

@@ -13,7 +13,26 @@
 
 <mapper namespace="cn.superman.web.dao.ProblemDao">
 
-	<cache />
+	<resultMap id="code" type="cn.superman.web.dto.CodeDTO">
+		<id column="Qid" property="qid"></id>
+		<result column="Qname" property="qname"></result>
+		<result column="Qdescribe" property="qdescribe"></result>
+		<result column="Input_describe" property="inputDescribe"></result>
+		<result column="Output_descripe" property="outputDescripe"></result>
+		<result column="Example_input" property="exampleInput"></result>
+		<result column="Example_output" property="exampleOutput"></result>
+		<result column="reference_answer" property="referenceAnswer"></result>
+		<result column="Qtype" property="qtype"></result>
+		<result column="Limit_time" property="limitTime"></result>
+		<result column="Limit_memory" property="limitMemory"></result>
+		<result column="Qdegree" property="qdegree"></result>
+		<result column="Total_submit_count" property="totalSubmitCount"></result>
+		<result column="Total_right_count" property="totalRightCount"></result>
+		<result column="Qchapter" property="qchapter"></result>
+		<result column="Qparagraph" property="qparagraph"></result>
+		<result column="Cname" property="cname"></result>
+	</resultMap>
+
 	<sql id="Base_Column_List">
 		problem_id,problem_type_id,problem_name,input_file_root_path,output_file_root_path,problem_label,time_limit,memory_limit,problem_creator_id,problem_content,problem_difficulty,problem_value,problem_version,is_publish,total_submit_count,total_right_count
 	</sql>
@@ -177,7 +196,7 @@
 			<include refid="Example_Where_Clause" />
 		</where>
 	</delete>
-
+<!-- 查找所有的题目 -->
 	<select id="find" resultType="cn.superman.web.po.Problem">
 		select
 		<include refid="Base_Column_List" />
@@ -217,7 +236,7 @@
 	<select id="queryTotalCount" resultType="Long">
 		select count(*)
 		from
-		problem
+		code
 	</select>
 
 	<select id="queryTotalCountWithCondition" parameterType="cn.superman.web.po.Problem"
@@ -231,5 +250,9 @@
 
 	<select id="findExample" resultType="java.lang.String">
 		SELECT test_data from problem where problem_id=#{id}
+	</select>
+
+	<select id="getList" resultMap="code">
+		select * from code
 	</select>
 </mapper>

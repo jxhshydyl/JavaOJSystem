@@ -1,12 +1,15 @@
 package cn.superman.web.controller.front;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
+import cn.superman.web.dto.CodeDTO;
 import cn.superman.web.dto.MyRecord;
+import org.apache.xmlbeans.impl.xb.ltgfmt.Code;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -37,7 +40,7 @@ import cn.superman.web.vo.response.ProblemResponse;
 
 @Controller
 @RequestMapping("/ProblemController")
-public class ProblemController extends PageController<Problem, Problem, ProblemResponse> {
+public class ProblemController{
     @Autowired
     private ProblemService problemService;
     @Autowired
@@ -50,7 +53,11 @@ public class ProblemController extends PageController<Problem, Problem, ProblemR
         responseMap.append("problem", problemService.getProblemById(id));
         return responseMap;
     }
-
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    @ResponseBody
+    public PageResult<CodeDTO> list(@RequestParam("pageShowCount") int currentPage, @RequestParam("pageShowCount") int pageShowCount, @RequestParam("wantPageNumber") int wantPageNumber) {
+        return problemService.getList(currentPage,pageShowCount,wantPageNumber);
+    }
     /**
      * 默认进行题目名字模糊查找
      *
@@ -69,7 +76,7 @@ public class ProblemController extends PageController<Problem, Problem, ProblemR
         Problem condition = new Problem();
         condition.setIsPublish(true);
         condition.setProblemTypeId(vo.getProblemTypeId());
-        return getPageService().getPage(vo.getPageShowCount(), vo.getWantPageNumber(), condition);
+        return problemService.getPage(vo.getPageShowCount(), vo.getWantPageNumber(), condition);
     }
 
     @RequestMapping(value = "/search/{id}", method = RequestMethod.GET)
@@ -91,7 +98,7 @@ public class ProblemController extends PageController<Problem, Problem, ProblemR
         Problem condition = new Problem();
         condition.setIsPublish(true);
         condition.setProblemValue(vo.getProblemValue());
-        return getPageService().getPage(vo.getPageShowCount(), vo.getWantPageNumber(), condition);
+        return problemService.getPage(vo.getPageShowCount(), vo.getWantPageNumber(), condition);
     }
 
     @RequestMapping(value = "/searchByDifficulty", method = RequestMethod.GET)
@@ -100,7 +107,7 @@ public class ProblemController extends PageController<Problem, Problem, ProblemR
         Problem condition = new Problem();
         condition.setIsPublish(true);
         condition.setProblemDifficulty(vo.getProblemDifficulty());
-        return getPageService().getPage(vo.getPageShowCount(), vo.getWantPageNumber(), condition);
+        return problemService.getPage(vo.getPageShowCount(), vo.getWantPageNumber(), condition);
     }
 
     @RequestMapping(value = "/myRecord/{problemId}", method = RequestMethod.GET)
@@ -152,13 +159,4 @@ public class ProblemController extends PageController<Problem, Problem, ProblemR
         return responseMap;
     }
 
-    @Override
-    public PageService<Problem, Problem> getPageService() {
-        return problemService;
-    }
-
-    @Override
-    public Class<ProblemResponse> returnVoClass() {
-        return ProblemResponse.class;
-    }
 }
