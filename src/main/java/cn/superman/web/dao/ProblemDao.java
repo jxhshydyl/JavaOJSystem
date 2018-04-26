@@ -18,7 +18,7 @@ public interface ProblemDao extends BaseDao<Problem, Problem> {
 
     List<Problem> findPulishProblemByLikeName(String problemName);
 
-    String findExample(BigInteger id);
+    CodeDTO findExample(BigInteger id);
 
     List<CodeDTO> getList(@Param("currentPage")int currentPage,@Param("pageShowCount")int pageShowCount, @Param("wantPageNumber")int wantPageNumber);
 }

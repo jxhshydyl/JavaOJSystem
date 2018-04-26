@@ -9,6 +9,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import cn.superman.system.util.CompilerAndRunUtil;
+import cn.superman.web.dto.CodeDTO;
 import cn.superman.web.dto.MyRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,6 +34,7 @@ import cn.superman.web.exception.ServiceLogicException;
 import cn.superman.web.po.Problem;
 import cn.superman.web.po.SubmitRecord;
 import cn.superman.web.po.User;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.servlet.http.HttpServletRequest;
@@ -64,11 +66,10 @@ public class AnswerSubmitService {
     public String dealCode(ProblemAnswerDTO dto){
     	String code=dto.getCode();//得到代码
         //得到题目的测试数据
-        String testData = problemDao.findExample(dto.getSubmitProblemId());
-
-        String[] arr=testData.split("输入：|输出：");
-
-        checkCodeStandard(code);//判断代码，只能判断java代码
+		CodeDTO codeDTO = problemDao.findExample(dto.getSubmitProblemId());
+		if("java".equals(dto.getCodeLanguage())){
+			checkCodeStandard(code);//判断代码，只能判断java代码
+		}
         //得到文件名
         String className = CompilerAndRunUtil.getClassName(code);
         //创建文件
@@ -88,15 +89,50 @@ public class AnswerSubmitService {
             String compileCommand ="javac -encoding utf-8 -d F:\\class  F:\\test\\"+className+".java";
             message= CompilerAndRunUtil.compileCode(compileCommand);
             //运行文件
-            if("".equals(message)||message==null){
+            if(message==null||"".equals(message)){
                 String runCommand ="java -cp f:\\class "+className+"";
-                message= CompilerAndRunUtil.runCode(runCommand,arr);
+                message= CompilerAndRunUtil.runCode(runCommand,codeDTO);
+				SubmitRecord submitRecord=new SubmitRecord();
+				if(message!=null && message.indexOf("测试数据通过率：100")!=-1){
+					submitRecord.setIsAccepted(1);
+					submitRecord.setAcceptedTime(3000);
+				}else{
+					submitRecord.setIsAccepted(0);
+					submitRecord.setAcceptedTime(-1);
+				}
+				submitRecord.setSubmitTime(new Date());
+				submitRecord.setSubmitProblemId(dto.getSubmitProblemId());
+				submitRecord.setSubmitUserId(dto.getUser().getUserId());
+				submitRecord.setScore(0.0);
+				submitRecord.setDetails("");
+				submitRecord.setCodeLanguage(dto.getCodeLanguage());
+				submitRecord.setCode(dto.getCode());
+				submitRecord.setSubmitRecordTableName("submit_record0");
+				submitRecord.setIsCompetition(dto.getCompetitionId());
+				submitRecord.setCompetitionPeoblemNumber(dto.getCompetitionPeoblemNumber());
+				submitRecord.setSubmitCount(1);
+				submitRecordDao.add(submitRecord);
+				return message;
             }
+			SubmitRecord submitRecord=new SubmitRecord();
+			submitRecord.setIsAccepted(0);
+			submitRecord.setAcceptedTime(-1);
+			submitRecord.setSubmitTime(new Date());
+			submitRecord.setSubmitProblemId(dto.getSubmitProblemId());
+			submitRecord.setSubmitUserId(dto.getUser().getUserId());
+			submitRecord.setScore(0.0);
+			submitRecord.setDetails("");
+			submitRecord.setCodeLanguage(dto.getCodeLanguage());
+			submitRecord.setCode(dto.getCode());
+			submitRecord.setSubmitRecordTableName("submit_record0");
+			submitRecord.setIsCompetition(dto.getCompetitionId());
+			submitRecord.setCompetitionPeoblemNumber(dto.getCompetitionPeoblemNumber());
+			submitRecord.setSubmitCount(1);
+			submitRecordDao.add(submitRecord);
             return message;
         }catch (IOException e){
-            e.printStackTrace();
+            return null;
         }
-        return message;
     }
 	/**
 	 *
@@ -131,9 +167,9 @@ public class AnswerSubmitService {
 			outputStream.write(code.getBytes());
 
 			SubmitRecord record = new SubmitRecord();
-			record.setIsAccepted(false);
+			record.setIsAccepted(0);
 			record.setCodeLanguage(dto.getCodeLanguage());
-			record.setCodeFilePath(javaFilePath);
+			record.setCode(javaFilePath);
 			record.setDetails("编译运行中");
 			record.setScore(new Double(0));
 			record.setSubmitProblemId(dto.getSubmitProblemId());
@@ -251,14 +287,14 @@ public class AnswerSubmitService {
 			userDao.update(user);
 
 			if (problemJudgeResult.getCorrectRate() >= 1.0) {
-				record.setIsAccepted(true);
+				record.setIsAccepted(1);
 				// 更新这道题目的答对者总数，提交者总数，以及答对者ID编号集合
 				// TODO 感觉现在这样做还是很消耗数据库资源的，以后在想想怎么优化吧
 				problemDao.userSloveProblem(userId
 						+ WebConstant.PROBLEM_RIGHT_USER_ID_GAP,
 						problem.getProblemId());
 			} else {
-				record.setIsAccepted(false);
+				record.setIsAccepted(0);
 				// 提交者总数
 				problemDao.increaseSubmitProblemCount(problem.getProblemId());
 			}

@@ -112,19 +112,19 @@ public class ProblemController{
 
     @RequestMapping(value = "/myRecord/{problemId}", method = RequestMethod.GET)
     @ResponseBody
-    public PageResult<MyRecord> queryMyRecord(@PathVariable Integer problemId,HttpServletRequest request) {
+    public MyRecord queryMyRecord(@PathVariable("problemId") Integer problemId,HttpSession session) {
         //得到登录的用户
-        User user= (User)request.getSession().getAttribute(WebConstant.USER_SESSION_ATTRIBUTE_NAME);
+        User user = (User) session.getAttribute(WebConstant.USER_SESSION_ATTRIBUTE_NAME);
         MyRecord myRecord = answerSubmitService.queryMyRecord(user,problemId);
-        return null;
+        return myRecord ;
     }
 
 
     @RequestMapping(value = "/evaluateStatistics/{problemId}", method = RequestMethod.GET)
     @ResponseBody
-    public PageResult<Problem> queryEvaluateStatistics(@PathVariable Integer problemId,HttpServletRequest request) {
+    public PageResult<Problem> queryEvaluateStatistics(@PathVariable Integer problemId,HttpSession session) {
         //得到登录的用户
-        User user= (User)request.getSession().getAttribute(WebConstant.USER_SESSION_ATTRIBUTE_NAME);
+        User user = (User) session.getAttribute(WebConstant.USER_SESSION_ATTRIBUTE_NAME);
         System.out.println(user);
         System.out.println(problemId);
         return null;
@@ -143,6 +143,7 @@ public class ProblemController{
         }
 
         User user = (User) session.getAttribute(WebConstant.USER_SESSION_ATTRIBUTE_NAME);
+        System.out.println(user);
         ProblemAnswerDTO dto = BeanMapperUtil.map(problemAnswerVO, ProblemAnswerDTO.class);
         dto.setUser(user);
         String message=answerSubmitService.dealCode(dto);
@@ -151,10 +152,14 @@ public class ProblemController{
         session.setAttribute(ConstantParameter.SUBMIT_RECORD_TOKEN_NAME, System.currentTimeMillis() + ConstantParameter.SUBMIT_RECORD_GAP);
         // TODO 返回个人历史提交显示页面
         ResponseMap responseMap = new ResponseMap();
-        if(false){
-            responseMap.append("message","测试通过");
+        if(message != null && message != ""){
+            if(message.indexOf("测试数据通过率：100")==-1){
+                responseMap.append("message",message);
+            }else{
+                responseMap.append("message","测试通过");
+            }
         }else{
-            responseMap.append("message",message);
+            responseMap.append("message","请重新提交！");
         }
         return responseMap;
     }

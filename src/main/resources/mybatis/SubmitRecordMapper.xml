@@ -46,8 +46,8 @@
 			<if test="codeLanguage != null">
 				and code_language = #{codeLanguage}
 			</if>
-			<if test="codeFilePath != null">
-				and code_file_path = #{codeFilePath}
+			<if test="code != null">
+				and code_file_path = #{code}
 			</if>
 			<if test="submitRecordTableName != null">
 				and submit_record_table_name = #{submitRecordTableName}
@@ -58,8 +58,10 @@
 		useGeneratedKeys="true" keyProperty="submitId">
 		insert into
 		${submitRecordTableName}(submit_time,
-		submit_problem_id,submit_user_id,score,is_accepted,details,code_language,code_file_path,submit_record_table_name)
-		values(#{submitTime},#{submitProblemId},#{submitUserId},#{score},#{isAccepted},#{details},#{codeLanguage},#{codeFilePath},#{submitRecordTableName})
+		submit_problem_id,submit_user_id,score,is_accepted,details,code_language,code,submit_record_table_name,
+		is_competition,competition_peoblem_number,submit_count,accepted_time)
+		values(#{submitTime},#{submitProblemId},#{submitUserId},#{score},#{isAccepted},#{details},#{codeLanguage},#{code},#{submitRecordTableName},
+		#{isCompetition},#{competitionPeoblemNumber},#{submitCount},#{acceptedTime})
 	</insert>
 
 	<update id="update" parameterType="cn.superman.web.po.SubmitRecord">
@@ -67,12 +69,6 @@
 		<set>
 			<if test="submitTime != null">
 				submit_time = #{submitTime},
-			</if>
-			<if test="submitProblemId != null">
-				submit_problem_id = #{submitProblemId},
-			</if>
-			<if test="submitUserId != null">
-				submit_user_id = #{submitUserId},
 			</if>
 			<if test="score != null">
 				score = #{score},
@@ -86,14 +82,18 @@
 			<if test="codeLanguage != null">
 				code_language = #{codeLanguage},
 			</if>
-			<if test="codeFilePath != null">
-				code_file_path = #{codeFilePath},
+			<if test="code != null">
+				code = #{code},
 			</if>
 			<if test="submitRecordTableName != null">
 				submit_record_table_name = #{submitRecordTableName},
 			</if>
+			<if test="acceptedTime != null">
+				accepted_time = #{acceptedTime},
+			</if>
+			submit_count = submit_count +1
 		</set>
-		where submit_id = #{submitId}
+		where submit_problem_id=#{submitProblemId} and submit_user_id=#{submitUserId} and is_competition=#{isCompetition}
 	</update>
 
 	<delete id="deleteWithCondition" parameterType="cn.superman.web.po.SubmitRecord">
@@ -123,6 +123,10 @@
 	</select>
 
 	<select id="queryMyRecord" resultType="cn.superman.web.dto.MyRecord">
-		select submit_record0.*,problem.problem_name,user.nickname from submit_record0,problem,user where submit_user_id=#{userId} and user_id=#{userId} and problem_id=#{problemId}
+		select submit_record0.*,code.Qname,user.nickname from submit_record0,code,user where submit_user_id=#{user.userId} and user_id=#{user.userId} and Qid=#{problemId} and is_competition=-1
 	</select>
+
+    <select id="queryMyRecords" resultType="cn.superman.web.po.SubmitRecord">
+        select * from submit_record0 where submit_user_id=#{user.userId} and is_competition=#{competitionId} and submit_problem_id=#{problemId}
+    </select>
 </mapper>

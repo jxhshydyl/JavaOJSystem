@@ -4,7 +4,7 @@ public class MyRecord {
     private Long submitId;
     private String submitTime;
     private Long submitProblemId;
-    private String problemName;
+    private String qname;
     private Long submitUserId;
     private String nickname;
     private Float score;
@@ -39,12 +39,12 @@ public class MyRecord {
         this.submitProblemId = submitProblemId;
     }
 
-    public String getProblemName() {
-        return problemName;
+    public String getQname() {
+        return qname;
     }
 
-    public void setProblemName(String problemName) {
-        this.problemName = problemName;
+    public void setQname(String qname) {
+        this.qname = qname;
     }
 
     public Long getSubmitUserId() {
@@ -125,7 +125,7 @@ public class MyRecord {
                 "submitId=" + submitId +
                 ", submitTime='" + submitTime + '\'' +
                 ", submitProblemId=" + submitProblemId +
-                ", problemName='" + problemName + '\'' +
+                ", qname='" + qname + '\'' +
                 ", submitUserId=" + submitUserId +
                 ", nickname='" + nickname + '\'' +
                 ", score=" + score +

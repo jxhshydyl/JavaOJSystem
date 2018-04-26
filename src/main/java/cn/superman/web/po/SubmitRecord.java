@@ -14,11 +14,15 @@ public class SubmitRecord implements Serializable {
 	private BigInteger submitProblemId;
 	private Integer submitUserId;
 	private Double score;
-	private Boolean isAccepted;
+	private Integer isAccepted;
 	private String details;
 	private String codeLanguage;
-	private String codeFilePath;
+	private String code;
 	private String submitRecordTableName;
+	private Integer isCompetition;//是否为比赛（非比赛为-1 比赛为比赛id）
+	private String competitionPeoblemNumber;//问题序号  （非比赛为-1）
+	private Integer submitCount;//提交次数
+	private Integer acceptedTime;//通过时间
 
 	public BigInteger getSubmitId() {
 		return submitId;
@@ -60,11 +64,11 @@ public class SubmitRecord implements Serializable {
 		this.score = score;
 	}
 
-	public Boolean getIsAccepted() {
+	public Integer getIsAccepted() {
 		return isAccepted;
 	}
 
-	public void setIsAccepted(Boolean isAccepted) {
+	public void setIsAccepted(Integer isAccepted) {
 		this.isAccepted = isAccepted;
 	}
 
@@ -84,14 +88,6 @@ public class SubmitRecord implements Serializable {
 		this.codeLanguage = codeLanguage;
 	}
 
-	public String getCodeFilePath() {
-		return codeFilePath;
-	}
-
-	public void setCodeFilePath(String codeFilePath) {
-		this.codeFilePath = codeFilePath;
-	}
-
 	public String getSubmitRecordTableName() {
 		return submitRecordTableName;
 	}
@@ -100,4 +96,51 @@ public class SubmitRecord implements Serializable {
 		this.submitRecordTableName = submitRecordTableName;
 	}
 
+	public Integer getAccepted() {
+		return isAccepted;
+	}
+
+	public void setAccepted(Integer accepted) {
+		isAccepted = accepted;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	public Integer getIsCompetition() {
+		return isCompetition;
+	}
+
+	public void setIsCompetition(Integer isCompetition) {
+		this.isCompetition = isCompetition;
+	}
+
+	public String getCompetitionPeoblemNumber() {
+		return competitionPeoblemNumber;
+	}
+
+	public void setCompetitionPeoblemNumber(String competitionPeoblemNumber) {
+		this.competitionPeoblemNumber = competitionPeoblemNumber;
+	}
+
+	public Integer getSubmitCount() {
+		return submitCount;
+	}
+
+	public void setSubmitCount(Integer submitCount) {
+		this.submitCount = submitCount;
+	}
+
+	public Integer getAcceptedTime() {
+		return acceptedTime;
+	}
+
+	public void setAcceptedTime(Integer acceptedTime) {
+		this.acceptedTime = acceptedTime;
+	}
 }

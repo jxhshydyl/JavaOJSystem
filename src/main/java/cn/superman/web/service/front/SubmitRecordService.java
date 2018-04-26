@@ -49,7 +49,7 @@ public class SubmitRecordService {
 
         // 取出具体代码内容放到VO中
         try {
-            String code = FileUtils.readFileToString(new File(submitRecord.getCodeFilePath()));
+            String code = FileUtils.readFileToString(new File(submitRecord.getCode()));
             // 格式清洗一下， 因为运行的时候，将其动态修改了类名，这里要统一返回用户提交时的类名：Main
             Pattern p = Pattern.compile("class (.*)Main");
             Matcher matcher = p.matcher(code);

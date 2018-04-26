@@ -898,6 +898,8 @@ appCtrls.controller('problemDetailCtr', function($scope, $http, $timeout,
     $scope.answerData.codeLanguage = "java";
     $scope.answerData.code = null;
     $scope.answerStatus.buttonText = "提交代码";
+    $scope.answerData.competitionId = -1;
+    $scope.answerData.competitionPeoblemNumber="-1";
     $scope.datas=null;
     var reg=new RegExp(/[\r\n]+/gi);
     console.log($scope.problemDetailObj.exampleInput.split(reg).length);
@@ -945,9 +947,10 @@ appCtrls.controller('problemDetailCtr', function($scope, $http, $timeout,
     $scope.myRecord = function(){
         $http({
             method : "get",
-            url : "ProblemController/myRecord/"+$scope.problemDetailObj.problemId,
+            url : "ProblemController/myRecord/"+$scope.problemDetailObj.qid,
         }).success(
             function(response) {
+            	console.log(response);
                 $scope.datas = response.result;
                 console.log($scope.datas);
             }).error(function(response) {
