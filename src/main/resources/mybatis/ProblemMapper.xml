@@ -248,8 +248,8 @@
 		</where>
 	</select>
 
-	<select id="findExample" resultType="java.lang.String">
-		SELECT test_data from problem where problem_id=#{id}
+	<select id="findExample" resultMap="code">
+		SELECT * from code where Qid=#{id}
 	</select>
 
 	<select id="getList" resultMap="code">

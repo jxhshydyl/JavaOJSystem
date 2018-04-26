@@ -16,7 +16,7 @@ public final class ConstantParameter {
     public static final int SUBMIT_RECORD_TABLE_CREATE_GAP = 10;
     public static final String SUBMIT_RECORD_TOKEN_NAME = "token";
     // 代码提交间隔时间
-    public static final int SUBMIT_RECORD_GAP = 5000;
+    public static final int SUBMIT_RECORD_GAP = 3000;
     public static final String DEFAULT_CHARSET_CODE = "UTF-8";
     // 对外显示的系统名字
     public static final String SYSTEM_NAME = "Online Judge";

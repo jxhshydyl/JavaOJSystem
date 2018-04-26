@@ -899,8 +899,12 @@ appCtrls.controller('problemDetailCtr', function($scope, $http, $timeout,
     $scope.answerData.code = null;
     $scope.answerStatus.buttonText = "提交代码";
     $scope.datas=null;
-    console.log($scope.problemDetailObj.exampleInput);
+    var reg=new RegExp(/[\r\n]+/gi);
+    console.log($scope.problemDetailObj.exampleInput.split(reg).length);
+    $("#exampleInput").attr("rows",$scope.problemDetailObj.exampleInput.split(reg).length);
+    $("#exampleOutput").attr("rows",$scope.problemDetailObj.exampleOutput.split(reg).length);
     $scope.exampleInput=$scope.problemDetailObj.exampleInput;
+    $scope.exampleOutput=$scope.problemDetailObj.exampleOutput;
     /*	$scope.answerDialogShow = function() {
             $scope.answerData = {};
             $scope.answerData.codeLanguage = "java";
@@ -909,7 +913,7 @@ appCtrls.controller('problemDetailCtr', function($scope, $http, $timeout,
             //$("#answerDialog").modal("show");
         }*/
     $scope.answerSubmit = function() {
-        $scope.answerData.submitProblemId = $scope.problemDetailObj.problemId;
+        $scope.answerData.submitProblemId = $scope.problemDetailObj.qid;
         $scope.answerStatus.disabled = true;
         $scope.message=null;
         $scope.answerStatus.buttonText = "稍后才能再提交……";
@@ -917,6 +921,7 @@ appCtrls.controller('problemDetailCtr', function($scope, $http, $timeout,
             $scope.answerStatus.disabled = false;
             $scope.answerStatus.buttonText = "提交代码";
         }, 1000);
+        console.log($scope.answerData);
         $http({
             method : "post",
             data : jQuery.param($scope.answerData),

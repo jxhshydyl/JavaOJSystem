@@ -1,9 +1,11 @@
 package cn.superman.system.util;
 
+import cn.superman.web.dto.CodeDTO;
 import org.springframework.stereotype.Service;
 import java.io.*;
 import java.nio.charset.Charset;
 import java.util.Date;
+import java.util.Scanner;
 
 @Service
 public class CompilerAndRunUtil {
@@ -29,7 +31,7 @@ public class CompilerAndRunUtil {
             //运行文件
             if("".equals(message)||message==null){
                 String runCommand ="java -cp f:\\class "+className+"";
-                message= CompilerAndRunUtil.runCode(runCommand,arr);
+                //message= CompilerAndRunUtil.runCode(runCommand,arr);
             }
             return message;
         }catch (IOException e){
@@ -80,17 +82,21 @@ public class CompilerAndRunUtil {
      * @param command
      * @return
      */
-    public static String runCode(String command,String[] useCase){
+    public static String runCode(String command, CodeDTO codeDTO){
         BufferedReader br = null;
         int key=0;
         long time=3000;
+        String[] useCase=codeDTO.getExampleInput().split("======");
+        String[] exampleOutput=codeDTO.getExampleOutput().split("======");
         try{
             StringBuilder sb=new StringBuilder();
-            for(int i=1;i<(useCase.length-1)/2+1;i++){
+            System.out.println("长度========");
+            System.out.println(useCase.length);
+            for(int i=0;i<useCase.length;i++){
                 long startTime=new Date().getTime();
                 Process p = Runtime.getRuntime().exec(command);
                 BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(p.getOutputStream()));
-                bw.write(useCase[2*i-1].trim());
+                bw.write(useCase[i].trim());
                 bw.newLine();
                 bw.flush();
                 bw.close();
@@ -103,6 +109,8 @@ public class CompilerAndRunUtil {
                     while ((line = br.readLine()) != null) {
                         sb.append(line + "\n");
                     }
+                    System.out.println("无错误信息=======");
+                    System.out.println(sb.toString());
                 }else{
                     String line = null;
                     sb = new StringBuilder();
@@ -114,15 +122,31 @@ public class CompilerAndRunUtil {
                     return sb.toString();
                 }
                 p.destroy();
-                System.out.println(sb);
+                System.out.println("xinxi===================================");
+                System.out.println(sb.toString());
                 if(time<new Date().getTime()-startTime){
                     return "超时";
                 }
-                if(useCase[2*i].trim().equals(sb.toString().trim())){
+                System.out.println("xinxidsadsa===================================");
+                System.out.println(exampleOutput[i].trim());
+                System.out.println("===================================");
+                System.out.println(sb.toString().trim());
+                System.out.println("1\n" +
+                        "5\n" +
+                        "40");
+                String str="1\n" +
+                        "5\n" +
+                        "40";
+                System.out.println(str.equals(sb.toString().trim()));
+                System.out.println(exampleOutput[i].trim()==sb.toString().trim());
+                System.out.println(exampleOutput[i].trim().equals(sb.toString().trim()));
+                if(exampleOutput[i].trim().equals(sb.toString().trim())){
                     key++;
                 }
+                System.out.println(key);
             }
-            float sim=(float)((key*1.0)/(useCase.length/2))*100;
+            float sim=(float)(((key*1.0)/(useCase.length/2.0))*100);
+            System.out.println(sim);
            return "测试数据通过率："+sim+"%";
         }catch (IOException e){
             e.printStackTrace();
@@ -169,7 +193,16 @@ public class CompilerAndRunUtil {
                 "5\n" +
                 "40\n" ;
 
-        String message=codeService.dealCode(code,str.split("用例：|结果："));
-        System.out.println(message);
+        //String message=codeService.dealCode(code,str.split("用例：|结果："));
+        System.out.println("1");
+        System.out.println("5");
+        System.out.println("40");
+        Scanner in=new Scanner(System.in);
+        System.out.println("获取字符串:"+in.next());
+        System.out.println("获取一行数据："+in.nextLine());
+        //System.out.println(sdr1.equals(sdr2));
+        float sim=(float)(((0)/(1/2.0)));
+        System.out.println(sim);
+        //System.out.println(message);
     }
 }
