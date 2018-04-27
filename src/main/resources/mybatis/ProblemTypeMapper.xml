@@ -130,5 +130,9 @@
 		select pt.*,count(pt.problem_type_id) counts from problem p,problem_type pt  where p.problem_type_id=pt.problem_type_id  GROUP BY pt.problem_type_id;
 	</select>
 
+	<select id="queryAllType" resultType="cn.superman.web.dto.TypeDTO">
+		select Qtype problemTypeName, count(1) counts from code GROUP BY Qtype
+	</select>
+
 
 </mapper>

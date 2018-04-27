@@ -11,4 +11,5 @@ import cn.superman.web.po.ProblemType;
 public interface ProblemTypeDao extends BaseDao<ProblemType, ProblemType> {
     List<ProblemType> findWithSomeIds(List<Integer> ids);
     List<TypeDTO> findAllType();
+    List<TypeDTO> queryAllType();
 }

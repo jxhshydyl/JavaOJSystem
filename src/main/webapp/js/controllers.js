@@ -1008,9 +1008,7 @@ appCtrls.controller('problemDetailCtr', function($scope, $http, $timeout,
 });
 
 //题目分类
-appCtrls
-    .controller(
-        'problemClass',
+appCtrls.controller('problemClass',
         function($rootScope, $scope, $http, sessionDataBase) {
             $scope.loadAllProblemType = function() {
                 $http
@@ -1030,9 +1028,7 @@ appCtrls
         });
 
 //分类题目列表
-appCtrls
-    .controller(
-        'problemClassification',
+appCtrls.controller('problemClassification',
         function($rootScope, $scope, $http, sessionDataBase) {
             $scope.problemTypeId = sessionDataBase.getObject("problemType").problemTypeId;
             $scope.problemTypeName = sessionDataBase.getObject("problemType").problemTypeName;
@@ -1046,7 +1042,7 @@ appCtrls
                 totalCount : null,
                 totalPage : null,
                 method : "/searchByType",
-                problemTypeId : $scope.problemTypeId
+                problemTypeName : $scope.problemTypeName
             }
 
             $scope.loadingData = function() {
@@ -1098,6 +1094,17 @@ appCtrls
                 sessionDataBase.setObject("problemDetailObj",
                     problemDetailObj);
                 return true;
+            }
+            $scope.evaluateHistory = function(){
+                $http({
+                    method : "get",
+                    url : "ProblemController/evaluateHistory/"+$scope.problemDetailObj.qid,
+                }).success(
+                    function(response) {
+                        $scope.datas = response;
+                    }).error(function(response) {
+                    alert("数据加载失败");
+                });
             }
         });
 

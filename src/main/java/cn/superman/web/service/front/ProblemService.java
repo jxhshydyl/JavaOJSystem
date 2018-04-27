@@ -47,9 +47,9 @@ public class ProblemService extends PageService<Problem, Problem> {
         return pageResult;
     }
 
-    public PageResult<CodeDTO> getList(int currentPage, int pageShowCount, int wantPageNumber){
+    public PageResult<CodeDTO> getList(int currentPage, int pageShowCount, int wantPageNumber,String problemTypeName){
         PageResult<CodeDTO> pageResult=new PageResult<>();
-        List<CodeDTO> list = problemDao.getList( currentPage,  pageShowCount,  wantPageNumber);
+        List<CodeDTO> list = problemDao.getList( currentPage,  pageShowCount,  wantPageNumber,problemTypeName);
         PageInfo<CodeDTO> info = new PageInfo<CodeDTO>(list);
         pageResult.setResult(list);
         pageResult.setTotalCount(info.getTotal());

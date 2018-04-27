@@ -254,5 +254,10 @@
 
 	<select id="getList" resultMap="code">
 		select * from code
+		<where>
+			<if test="problemTypeName!=null">
+				and Qtype=#{problemTypeName}
+			</if>
+		</where>
 	</select>
 </mapper>

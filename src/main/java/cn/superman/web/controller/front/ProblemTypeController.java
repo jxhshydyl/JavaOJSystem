@@ -38,9 +38,9 @@ public class ProblemTypeController extends PageController<ProblemType, ProblemTy
 
     @RequestMapping(value = "/findAllType", method = RequestMethod.GET)
     @ResponseBody
-    public ResponseMap findAllType() {
+    public ResponseMap queryAllType() {
         ResponseMap responseMap = new ResponseMap().buildSucessResponse();
-        responseMap.append("allProblemType", problemTypeService.findAllType());
+        responseMap.append("allProblemType", problemTypeService.queryAllType());
         return responseMap;
     }
 

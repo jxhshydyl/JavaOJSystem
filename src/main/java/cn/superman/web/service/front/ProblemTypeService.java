@@ -23,8 +23,8 @@ public class ProblemTypeService extends PageService<ProblemType, ProblemType> {
 	public List<ProblemType> findAll() {
 		return problemTypeDao.find();
 	}
-	public List<TypeDTO> findAllType() {
-		return problemTypeDao.findAllType();
+	public List<TypeDTO> queryAllType() {
+		return problemTypeDao.queryAllType();
 	}
 	@Override
 	public BaseDao<ProblemType, ProblemType> getUseDao() {

@@ -8,7 +8,7 @@ public class ProblemSearchByTypeVO {
     @NotNull(message = "请选择想查看的页数")
     private Integer wantPageNumber;
     @NotNull(message = "请选择具体的题目类型")
-    private Integer problemTypeId;
+    private String problemTypeName;
 
     public Integer getPageShowCount() {
         return pageShowCount;
@@ -26,12 +26,11 @@ public class ProblemSearchByTypeVO {
         this.wantPageNumber = wantPageNumber;
     }
 
-    public Integer getProblemTypeId() {
-        return problemTypeId;
+    public String getProblemTypeName() {
+        return problemTypeName;
     }
 
-    public void setProblemTypeId(Integer problemTypeId) {
-        this.problemTypeId = problemTypeId;
+    public void setProblemTypeName(String problemTypeName) {
+        this.problemTypeName = problemTypeName;
     }
-
 }

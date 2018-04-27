@@ -58,7 +58,7 @@ public class ProblemController{
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     @ResponseBody
     public PageResult<CodeDTO> list(@RequestParam("pageShowCount") int currentPage, @RequestParam("pageShowCount") int pageShowCount, @RequestParam("wantPageNumber") int wantPageNumber) {
-        return problemService.getList(currentPage,pageShowCount,wantPageNumber);
+        return problemService.getList(currentPage,pageShowCount,wantPageNumber,null);
     }
     /**
      * 默认进行题目名字模糊查找
@@ -74,11 +74,8 @@ public class ProblemController{
 
     @RequestMapping(value = "/searchByType", method = RequestMethod.GET)
     @ResponseBody
-    public PageResult<Problem> searchByType(@Valid ProblemSearchByTypeVO vo) {
-        Problem condition = new Problem();
-        condition.setIsPublish(true);
-        condition.setProblemTypeId(vo.getProblemTypeId());
-        return problemService.getPage(vo.getPageShowCount(), vo.getWantPageNumber(), condition);
+    public PageResult<CodeDTO> searchByType(@Valid ProblemSearchByTypeVO vo) {
+        return problemService.getList(vo.getPageShowCount(), vo.getWantPageNumber(),0, vo.getProblemTypeName());
     }
 
     @RequestMapping(value = "/search/{id}", method = RequestMethod.GET)

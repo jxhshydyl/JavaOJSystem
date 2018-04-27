@@ -40,29 +40,29 @@
         <div class="panel-body">
             <table class="table table-striped">
                 <thead>
-                <tr>
-                    <th class="col-md-1">编号</th>
-                    <th class="col-md-1">题目类型</th>
-                    <th class="col-md-2">题目名字</th>
-                    <th class="col-md-1">题目难度</th>
-                    <th class="col-md-1">答对率</th>
-                    <th class="col-md-1">操作</th>
-                </tr>
+                    <tr>
+                        <th class="col-md-1">编号</th>
+                        <th class="col-md-1">题目类型</th>
+                        <th class="col-md-2">题目名字</th>
+                        <th class="col-md-1">题目难度</th>
+                        <th class="col-md-1">答对率</th>
+                        <th class="col-md-1">操作</th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="problem in page.datas">
-                    <td class="col-md-1">{{problem.qid}}</td>
-                    <td class="col-md-1">{{problem.qtype}}
-                    </td>
-                    <td class="col-md-2">{{problem.qname}}</td>
-                    <td class="col-md-1">{{problem.qdegree}}</td>
-                    <td class="col-md-1">{{problem.totalRightCount/problem.totalSubmitCount|
-                        number:2}}({{problem.totalRightCount}}/{{problem.totalSubmitCount}})
-                    </td>
-                    <td class="col-md-1"><a class="btn btn-success "
-                                            type="button" href="#/problem/detail"
-                                            ng-click="jumpDetail($index)">详情</a></td>
-                </tr>
+                    <tr ng-repeat="problem in page.datas">
+                        <td class="col-md-1">{{problem.qid}}</td>
+                        <td class="col-md-1">{{problem.qtype}}
+                        </td>
+                        <td class="col-md-2">{{problem.qname}}</td>
+                        <td class="col-md-1">{{problem.qdegree}}</td>
+                        <td class="col-md-1">{{problem.totalRightCount/problem.totalSubmitCount|
+                            number:2}}({{problem.totalRightCount}}/{{problem.totalSubmitCount}})
+                        </td>
+                        <td class="col-md-1"><a class="btn btn-success "
+                                                type="button" href="#/problem/detail"
+                                                ng-click="jumpDetail($index)">详情</a></td>
+                    </tr>
                 </tbody>
             </table>
         </div>

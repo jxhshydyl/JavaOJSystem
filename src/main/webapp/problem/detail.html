@@ -199,7 +199,7 @@
 				</thead>
 				<tbody ng-if="datas.length!=0">
 					<tr ng-repeat="problem in datas" >
-						<td>{{proble.msubmitProblemId}}</td>
+						<td>{{$index+1}}</td>
 						<td>{{problem.submitProblemId}}</td>
 						<td>{{problem.submitProblemId}}</td>
 						<td>{{problem.isAccepted==1?"通过":"没通过"}}</td>
