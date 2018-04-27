@@ -2,6 +2,7 @@ package cn.superman.web.dao;
 
 import java.math.BigInteger;
 import java.util.List;
+import java.util.Map;
 
 import cn.superman.web.dao.base.MyBatisRepository;
 import cn.superman.web.dto.MyRecord;
@@ -23,5 +24,7 @@ public interface SubmitRecordDao {
 
 	MyRecord queryMyRecord(@Param("user") User user, @Param("problemId") Integer problemId);
 
-    SubmitRecord queryMyRecords(@Param("user") User user, @Param("problemId") BigInteger problemId, @Param("competitionId") Integer competitionId);
+	List<SubmitRecord> queryMyRecords(Map<String,Object> map);
+
+	List<MyRecord> querySubmitCount(@Param("user")User user,@Param("problemId") BigInteger problemId);
 }

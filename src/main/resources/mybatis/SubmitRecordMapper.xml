@@ -13,7 +13,6 @@
 
 <mapper namespace="cn.superman.web.dao.SubmitRecordDao">
 
-	<cache />
 	<sql id="Base_Column_List">
 		submit_id,submit_time,submit_problem_id,submit_user_id,score,is_accepted,details,code_language,code_file_path,submit_record_table_name
 	</sql>
@@ -127,6 +126,27 @@
 	</select>
 
     <select id="queryMyRecords" resultType="cn.superman.web.po.SubmitRecord">
-        select * from submit_record0 where submit_user_id=#{user.userId} and is_competition=#{competitionId} and submit_problem_id=#{problemId}
+        select * from submit_record0
+        <where>
+			<if test="user.userId != null">
+				and submit_user_id=#{user.userId}
+			</if>
+			<if test="competitionId != null">
+				and is_competition=#{competitionId}
+			</if>
+			<if test="problemId != null">
+				and submit_problem_id=#{problemId}
+			</if>
+			<if test="weekStartTime != null">
+				and submit_time &gt; #{weekStartTime}
+			</if>
+			<if test="weekEndTime != null">
+				and submit_time &lt; #{weekEndTime}
+			</if>
+		</where>
     </select>
+
+	<select id="querySubmitCount" resultType="cn.superman.web.dto.MyRecord">
+		select count(1) submit_count,is_accepted  from submit_record0 where submit_user_id=#{user.userId} and is_competition=-1 and submit_problem_id=#{problemId} GROUP BY is_accepted
+	</select>
 </mapper>
