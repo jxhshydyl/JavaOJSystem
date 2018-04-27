@@ -22,9 +22,9 @@ public interface SubmitRecordDao {
 
 	long querySubmitRecordotalCountWithCondition(SubmitRecord condition);
 
-	MyRecord queryMyRecord(@Param("user") User user, @Param("problemId") Integer problemId);
+	List<MyRecord> queryMyRecord(@Param("userId") Integer userId, @Param("problemId") Integer problemId);
 
 	List<SubmitRecord> queryMyRecords(Map<String,Object> map);
 
-	List<MyRecord> querySubmitCount(@Param("user")User user,@Param("problemId") BigInteger problemId);
+	List<MyRecord> querySubmitCount(@Param("userId")Integer userId,@Param("problemId") BigInteger problemId);
 }

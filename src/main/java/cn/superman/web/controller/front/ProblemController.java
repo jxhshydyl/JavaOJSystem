@@ -114,11 +114,11 @@ public class ProblemController{
 
     @RequestMapping(value = "/myRecord/{problemId}", method = RequestMethod.GET)
     @ResponseBody
-    public MyRecord queryMyRecord(@PathVariable("problemId") Integer problemId,HttpSession session) {
+    public List<MyRecord> queryMyRecord(@PathVariable("problemId") Integer problemId,HttpSession session) {
         //得到登录的用户
         User user = (User) session.getAttribute(WebConstant.USER_SESSION_ATTRIBUTE_NAME);
-        MyRecord myRecord = answerSubmitService.queryMyRecord(user,problemId);
-        return myRecord ;
+        List<MyRecord> myRecords = answerSubmitService.queryMyRecord(user,problemId);
+        return myRecords ;
     }
 
 
@@ -127,11 +127,6 @@ public class ProblemController{
     public Map<String, Object> queryEvaluateStatistics(@PathVariable("problemId") BigInteger problemId, HttpSession session) {
         //得到登录的用户
         User user = (User) session.getAttribute(WebConstant.USER_SESSION_ATTRIBUTE_NAME);
-        if(user==null){
-            return null;
-        }
-        System.out.println(user);
-        System.out.println(problemId);
         Map<String, Object> map = problemService.querySubmitCount(user, problemId);
         return map;
     }

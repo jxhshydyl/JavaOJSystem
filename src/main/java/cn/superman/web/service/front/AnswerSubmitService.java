@@ -337,8 +337,12 @@ public class AnswerSubmitService {
 		}
 	}
 
-	public MyRecord queryMyRecord(User user,Integer problemId){
-		MyRecord myRecord=submitRecordDao.queryMyRecord(user,problemId);
-		return myRecord;
+	public List<MyRecord> queryMyRecord(User user,Integer problemId){
+		Integer userId=null;
+		if(user!=null){
+			userId=user.getUserId();
+		}
+		List<MyRecord> myRecords = submitRecordDao.queryMyRecord(userId, problemId);
+		return myRecords;
 	}
 }

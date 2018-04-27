@@ -893,9 +893,7 @@ appCtrls.controller('problemDetailCtr', function($scope, $http, $timeout,
             url : "ProblemController/myRecord/"+$scope.problemDetailObj.qid,
         }).success(
             function(response) {
-            	console.log(response);
-                $scope.datas = response.result;
-                console.log($scope.datas);
+                $scope.datas = response;
             }).error(function(response) {
             alert("数据加载失败");
         });

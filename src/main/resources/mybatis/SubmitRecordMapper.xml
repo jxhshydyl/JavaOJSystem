@@ -122,14 +122,14 @@
 	</select>
 
 	<select id="queryMyRecord" resultType="cn.superman.web.dto.MyRecord">
-		select submit_record0.*,code.Qname,user.nickname from submit_record0,code,user where submit_user_id=#{user.userId} and user_id=#{user.userId} and Qid=#{problemId} and is_competition=-1
+		select submit_record0.*,code.Qname,user.nickname from submit_record0,code,user where submit_user_id=#{userId} and user_id=#{userId} and Qid=#{problemId} and Qid=submit_problem_id and is_competition=-1
 	</select>
 
     <select id="queryMyRecords" resultType="cn.superman.web.po.SubmitRecord">
         select * from submit_record0
         <where>
-			<if test="user.userId != null">
-				and submit_user_id=#{user.userId}
+			<if test="userId != null">
+				and submit_user_id=#{userId}
 			</if>
 			<if test="competitionId != null">
 				and is_competition=#{competitionId}
@@ -147,6 +147,17 @@
     </select>
 
 	<select id="querySubmitCount" resultType="cn.superman.web.dto.MyRecord">
-		select count(1) submit_count,is_accepted  from submit_record0 where submit_user_id=#{user.userId} and is_competition=-1 and submit_problem_id=#{problemId} GROUP BY is_accepted
+		select count(1) submit_count,is_accepted  from submit_record0
+		<where>
+			<if test="userId!=null">
+				and submit_user_id=#{userId}
+			</if>
+			<if test="problemId!=null">
+				and submit_problem_id=#{problemId}
+			</if>
+			and is_competition=-1
+
+		</where>
+		 GROUP BY is_accepted
 	</select>
 </mapper>

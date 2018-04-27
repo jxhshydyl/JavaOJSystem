@@ -73,7 +73,11 @@ public class ProblemService extends PageService<Problem, Problem> {
     }
 
     public Map<String,Object> querySubmitCount(User user,BigInteger problemId){
-        List<MyRecord> myRecords = submitRecordDao.querySubmitCount(user, problemId);
+        Integer userId=null;
+        if(user!=null){
+            userId=user.getUserId();
+        }
+        List<MyRecord> myRecords = submitRecordDao.querySubmitCount(userId, problemId);
         MyRecord myRecord1=null;
         if(myRecords!=null){
             Integer rightSubmitCount=0;
@@ -90,7 +94,7 @@ public class ProblemService extends PageService<Problem, Problem> {
         }
         List<String> recentlyWeekDate = getRecentlyWeekDate();
         Map<String,Object> map=new HashMap<>();
-        map.put("user",user);
+        map.put("userId",userId);
         map.put("problemId",problemId);
         map.put("competitionId",-1);
         map.put("weekStartTime",recentlyWeekDate.get(recentlyWeekDate.size()-1));
