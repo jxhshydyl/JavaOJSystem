@@ -14,7 +14,8 @@ appCtrls
 										$scope.sloveProblemTotalValueTop50 = response.sloveProblemTotalValueTop50;
 									});
 				});
-
+var line;
+var histogram;
 appCtrls.directive('line', function() {
     return {
         scope: {
@@ -27,122 +28,64 @@ appCtrls.directive('line', function() {
         template: '<div style="height:400px;width:600px;"></div>',
         replace: true,
         link: function($scope, element, attrs, controller) {
-            $scope.legend = ["Berlin", "London",'New York','Tokyo'];
-            $scope.item = ['Jan', 'Feb', 'Mar', 'Apr', 'Mar', 'Jun', 'Jul'];
-            $scope.data = [
-                [1, 1, 3, 7, 13, 16, 18], //Berlin
-                [0, 1, 4, 7, 12, 15, 16], //London
-                [4, 4, 5, 10, 16, 22, 25],    //New York
-                [7, 6, 8, 14, 17, 22, 25]   //Tokyo
-            ];
             var option = {
-                title: {
-                    text: '最近七天题数',
-                },
-                // 提示框，鼠标悬浮交互时的信息提示
-                tooltip: {
-                    show: true,
-                    trigger: 'axis',
-                    axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-                        type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-                    }
-                },
-                // 图例
-                legend: {
-                    data: $scope.legend
-                },
-                // 横轴坐标轴
-                xAxis: [{
-                    type: 'category',
-                    data: $scope.item
-                }],
-                // 纵轴坐标轴
-                yAxis: [{
-                    type: 'value'
-                }],
-                // 数据内容数组
-                series: function(){
-                    var serie=[];
-                    for(var i=0;i<$scope.legend.length;i++){
-                        var item = {
-                            name : $scope.legend[i],
-                            type: 'line',
-                            data: $scope.data[i]
-                        };
-                        serie.push(item);
-                    }
-                    return serie;
-                }()
+                noDataLoadingOption:
+                    {
+                        text: '暂无数据',
+                        effect: 'bubble',
+                        effectOption:
+                            {
+                                effect:
+                                    {
+                                        n: 0
+                                    }
+                            }
+                    },
             };
-            var myChart = echarts.init(document.getElementById($scope.id),'macarons');
-            myChart.setOption(option);
+            line = echarts.init(document.getElementById($scope.id),'macarons');
+            line.setOption(option);
         }
     };
 });
+    appCtrls.directive('histogram', function() {
+        return {
+            scope: {
+                id: "@",
+                legend: "=",
+                item: "=",
+                data: "="
+            },
+            restrict: 'E',
+            template: '<div style="height:400px;width:600px;"></div>',
+            replace: true,
+            link: function($scope, element, attrs, controller) {
+                $scope.MyRecord=null;
+                console.log($scope.scope);
+                $scope.legend = ["次数"];
+                $scope.item = ['提交', '通过'];
+                $scope.data = [
+                    [4,2], //Berlin
+                ];
+                var option = {
+                    noDataLoadingOption:
+                        {
+                            text: '暂无数据',
+                            effect: 'bubble',
+                            effectOption:
+                                {
+                                    effect:
+                                        {
+                                            n: 0
+                                        }
+                                }
+                        },
+                };
+                histogram = echarts.init(document.getElementById($scope.id),'macarons');
+                histogram.setOption(option);
+            }
+        };
+    });
 
-appCtrls.directive('histogram', function() {
-    return {
-        scope: {
-            id: "@",
-            legend: "=",
-            item: "=",
-            data: "="
-        },
-        restrict: 'E',
-        template: '<div style="height:400px;width:600px;"></div>',
-        replace: true,
-        link: function($scope, element, attrs, controller) {
-            console.log($scope.scope);
-            $scope.legend = ["次数"];
-            $scope.item = ['提交', '通过'];
-            $scope.data = [
-                [4,2], //Berlin
-            ];
-            var option = {
-                title: {
-                    text: '编程题',
-                },
-                // 提示框，鼠标悬浮交互时的信息提示
-                tooltip: {
-                    show: true,
-                    trigger: 'axis',
-                    axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-                        type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-                    }
-                },
-                // 图例
-/*                legend: {
-                    data: ""
-                },*/
-                // 横轴坐标轴
-                xAxis: [{
-                    type: 'category',
-                    data: $scope.item
-                }],
-                // 纵轴坐标轴
-                yAxis: [{
-                    type: 'value'
-                }],
-                // 数据内容数组
-                series: function(){
-                    var serie=[];
-                    for(var i=0;i<$scope.legend.length;i++){
-                        var item = {
-                            name : $scope.legend[i],
-                            type: 'bar',
-                            barWidth: '40%',
-                            data: $scope.data[i]
-                        };
-                        serie.push(item);
-                    }
-                    return serie;
-                }()
-            };
-            var myChart = echarts.init(document.getElementById($scope.id),'macarons');
-            myChart.setOption(option);
-        }
-    };
-});
 // 省略显示过滤器
 appCtrls.filter("omitDisplay", function() {
 	return function(data, length) {
@@ -958,12 +901,108 @@ appCtrls.controller('problemDetailCtr', function($scope, $http, $timeout,
         });
     }
     $scope.evaluateStatistics = function(){
+        console.log($scope.problemDetailObj.qid);
+        //histogram($scope.problemDetailObj.qid);
         $http({
             method : "get",
-            url : "ProblemController/evaluateStatistics/"+$scope.problemDetailObj.problemId,
+            url : "ProblemController/evaluateStatistics/"+$scope.problemDetailObj.qid,
         }).success(
             function(response) {
-
+                console.log(response);
+                $scope.legend = ["次数"];
+                $scope.item = ['提交', '通过'];
+                $scope.data = [
+                    [response.myRecord.totalSubmitCount,response.myRecord.rightSubmitCount], //Berlin
+                ];
+                //柱状图
+                var option = {
+                    title: {
+                        text: '编程题',
+                    },
+                    // 提示框，鼠标悬浮交互时的信息提示
+                    tooltip: {
+                        show: true,
+                        trigger: 'axis',
+                        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                        }
+                    },
+                    // 图例
+                    /*                legend: {
+                                        data: ""
+                                    },*/
+                    // 横轴坐标轴
+                    xAxis: [{
+                        type: 'category',
+                        data: $scope.item
+                    }],
+                    // 纵轴坐标轴
+                    yAxis: [{
+                        type: 'value'
+                    }],
+                    // 数据内容数组
+                    series: function(){
+                        var serie=[];
+                        for(var i=0;i<$scope.legend.length;i++){
+                            var item = {
+                                name : $scope.legend[i],
+                                type: 'bar',
+                                barWidth: '40%',
+                                data: $scope.data[i]
+                            };
+                            serie.push(item);
+                        }
+                        return serie;
+                    }()
+                };
+                histogram.setOption(option);
+                //折线图
+                $scope.legend = ["提交次数", "正确次数"];
+                $scope.item = response.item;
+                $scope.data = [
+                    response.submitCount, //Berlin
+                    response.rightCount, //London
+                ];
+                var option = {
+                    title: {
+                        text: '最近七天题数',
+                    },
+                    // 提示框，鼠标悬浮交互时的信息提示
+                    tooltip: {
+                        show: true,
+                        trigger: 'axis',
+                        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                        }
+                    },
+                    // 图例
+                    legend: {
+                        data: $scope.legend
+                    },
+                    // 横轴坐标轴
+                    xAxis: [{
+                        type: 'category',
+                        data: $scope.item
+                    }],
+                    // 纵轴坐标轴
+                    yAxis: [{
+                        type: 'value'
+                    }],
+                    // 数据内容数组
+                    series: function(){
+                        var serie=[];
+                        for(var i=0;i<$scope.legend.length;i++){
+                            var item = {
+                                name : $scope.legend[i],
+                                type: 'line',
+                                data: $scope.data[i]
+                            };
+                            serie.push(item);
+                        }
+                        return serie;
+                    }()
+                };
+                line.setOption(option);
             }).error(function(response) {
             alert("数据加载失败");
         });

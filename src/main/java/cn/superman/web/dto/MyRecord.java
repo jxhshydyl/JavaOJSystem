@@ -14,6 +14,9 @@ public class MyRecord {
     private String code;
     private Integer maxRuntime;
     private Integer maxMemory;
+    private Integer totalSubmitCount;
+    private Integer rightSubmitCount;
+    private Integer submitCount;
 
     public Long getSubmitId() {
         return submitId;
@@ -119,6 +122,30 @@ public class MyRecord {
         this.maxMemory = maxMemory;
     }
 
+    public Integer getTotalSubmitCount() {
+        return totalSubmitCount;
+    }
+
+    public void setTotalSubmitCount(Integer totalSubmitCount) {
+        this.totalSubmitCount = totalSubmitCount;
+    }
+
+    public Integer getRightSubmitCount() {
+        return rightSubmitCount;
+    }
+
+    public void setRightSubmitCount(Integer rightSubmitCount) {
+        this.rightSubmitCount = rightSubmitCount;
+    }
+
+    public Integer getSubmitCount() {
+        return submitCount;
+    }
+
+    public void setSubmitCount(Integer submitCount) {
+        this.submitCount = submitCount;
+    }
+
     @Override
     public String toString() {
         return "MyRecord{" +
@@ -135,6 +162,9 @@ public class MyRecord {
                 ", code='" + code + '\'' +
                 ", maxRuntime=" + maxRuntime +
                 ", maxMemory=" + maxMemory +
+                ", totalSubmitCount=" + totalSubmitCount +
+                ", rightSubmitCount=" + rightSubmitCount +
+                ", submitCount=" + submitCount +
                 '}';
     }
 }

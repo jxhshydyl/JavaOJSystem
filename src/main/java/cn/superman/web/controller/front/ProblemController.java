@@ -1,6 +1,8 @@
 package cn.superman.web.controller.front;
 
+import java.math.BigInteger;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import javax.servlet.http.HttpServletRequest;
@@ -122,12 +124,16 @@ public class ProblemController{
 
     @RequestMapping(value = "/evaluateStatistics/{problemId}", method = RequestMethod.GET)
     @ResponseBody
-    public PageResult<Problem> queryEvaluateStatistics(@PathVariable Integer problemId,HttpSession session) {
+    public Map<String, Object> queryEvaluateStatistics(@PathVariable("problemId") BigInteger problemId, HttpSession session) {
         //得到登录的用户
         User user = (User) session.getAttribute(WebConstant.USER_SESSION_ATTRIBUTE_NAME);
+        if(user==null){
+            return null;
+        }
         System.out.println(user);
         System.out.println(problemId);
-        return null;
+        Map<String, Object> map = problemService.querySubmitCount(user, problemId);
+        return map;
     }
 
     @RequestMapping(value = "/submitAnswer", method = RequestMethod.POST)
@@ -141,8 +147,10 @@ public class ProblemController{
                 throw new ServiceLogicException("请" + TimeUnit.MILLISECONDS.toSeconds(nextSubmitTime.longValue() - System.currentTimeMillis()) + "秒后再提交代码");
             }
         }
-
         User user = (User) session.getAttribute(WebConstant.USER_SESSION_ATTRIBUTE_NAME);
+        if(user==null){
+            return null;
+        }
         System.out.println(user);
         ProblemAnswerDTO dto = BeanMapperUtil.map(problemAnswerVO, ProblemAnswerDTO.class);
         dto.setUser(user);
