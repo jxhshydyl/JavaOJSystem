@@ -1098,7 +1098,7 @@ appCtrls.controller('problemClassification',
             $scope.evaluateHistory = function(){
                 $http({
                     method : "get",
-                    url : "ProblemController/evaluateHistory/"+$scope.problemDetailObj.qid,
+                    url : "ProblemController/evaluateHistory",
                 }).success(
                     function(response) {
                         $scope.datas = response;

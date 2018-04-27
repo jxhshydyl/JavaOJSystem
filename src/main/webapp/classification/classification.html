@@ -12,7 +12,7 @@
             <i class="right chevron icon divider"></i>
             <!--<a class="section" href="">C语言基础题库</a>
             <i class="right chevron icon divider"></i>-->
-            <font style="">题目522：Hello World, WeJudge!</font>
+            <font style=""></font>
         </div>
     </div>
 
@@ -69,30 +69,30 @@
         <div class="tab-pane fade" id="evaluateHistory" style="margin-right: 1%">
             <table class="table table-striped">
                 <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>题目ID</th>
-                    <th>提交者</th>
-                    <th>评测结果</th>
-                    <th>最大运行时长</th>
-                    <th>最大内存用量</th>
-                    <th>代码长度</th>
-                    <th>代码语言</th>
-                    <th>提交时间</th>
-                </tr>
+                    <tr>
+                        <th>ID</th>
+                        <th>题目ID</th>
+                        <th>提交者</th>
+                        <th>评测结果</th>
+                        <th>最大运行时长</th>
+                        <th>最大内存用量</th>
+                        <th>代码长度</th>
+                        <th>代码语言</th>
+                        <th>提交时间</th>
+                    </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <td>Tanmay</td>
-                    <td>Bangalore</td>
-                    <td>560001</td>
-                    <td>Sachin</td>
-                    <td>Mumbai</td>
-                    <td>400003</td>
-                    <td>Uma</td>
-                    <td>Pune</td>
-                    <td>411027</td>
-                </tr>
+                <tbody ng-if="datas.length!=0">
+                    <tr ng-repeat="problem in datas" >
+                        <td>{{$index+1}}</td>
+                        <td>{{problem.submitProblemId}}</td>
+                        <td>{{problem.submitProblemId}}</td>
+                        <td>{{problem.isAccepted==1?"通过":"没通过"}}</td>
+                        <td>{{problem.submitProblemId}}</td>
+                        <td>{{problem.submitProblemId}}</td>
+                        <td>{{problem.code.length}}</td>
+                        <td>{{problem.codeLanguage}}</td>
+                        <td>{{problem.submitProblemId}}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>

@@ -5,6 +5,7 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -345,4 +346,9 @@ public class AnswerSubmitService {
 		List<MyRecord> myRecords = submitRecordDao.queryMyRecord(userId, problemId);
 		return myRecords;
 	}
+	public List<SubmitRecord> queryMyRecords(Map<String,Object> map){
+		List<SubmitRecord> submitRecords = submitRecordDao.queryMyRecords(map);
+		return submitRecords;
+	}
+
 }

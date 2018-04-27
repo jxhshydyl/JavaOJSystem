@@ -1,6 +1,7 @@
 package cn.superman.web.controller.front;
 
 import java.math.BigInteger;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -11,6 +12,7 @@ import javax.validation.Valid;
 
 import cn.superman.web.dto.CodeDTO;
 import cn.superman.web.dto.MyRecord;
+import cn.superman.web.po.SubmitRecord;
 import org.apache.xmlbeans.impl.xb.ltgfmt.Code;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -127,6 +129,16 @@ public class ProblemController{
         Map<String, Object> map = problemService.querySubmitCount(user, problemId);
         return map;
     }
+
+    @RequestMapping(value = "/evaluateHistory", method = RequestMethod.GET)
+    @ResponseBody
+    public List<SubmitRecord> queryEvaluateHistory(@PathVariable("problemId") BigInteger problemId, HttpSession session) {
+        //得到登录的用户
+        Map<String,Object> map=new HashMap<>();
+        List<SubmitRecord> submitRecords = answerSubmitService.queryMyRecords(map);
+        return submitRecords;
+    }
+
 
     @RequestMapping(value = "/submitAnswer", method = RequestMethod.POST)
     @ResponseBody
