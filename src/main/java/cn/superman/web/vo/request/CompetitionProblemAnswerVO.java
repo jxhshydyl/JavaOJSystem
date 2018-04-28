@@ -4,6 +4,8 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotBlank;
 
+import java.math.BigInteger;
+
 public class CompetitionProblemAnswerVO {
 	@NotBlank(message = "不能提交空代码")
 	private String code;
@@ -12,6 +14,8 @@ public class CompetitionProblemAnswerVO {
 	private String codeType;
 	@NotNull(message = "题目编号不能为空，请选中题目")
 	private Integer problemId;
+
+	private BigInteger competitionId;
 
 	public String getCode() {
 		return code;
@@ -37,4 +41,21 @@ public class CompetitionProblemAnswerVO {
 		this.problemId = problemId;
 	}
 
+	public BigInteger getCompetitionId() {
+		return competitionId;
+	}
+
+	public void setCompetitionId(BigInteger competitionId) {
+		this.competitionId = competitionId;
+	}
+
+	@Override
+	public String toString() {
+		return "CompetitionProblemAnswerVO{" +
+				"code='" + code + '\'' +
+				", codeType='" + codeType + '\'' +
+				", problemId=" + problemId +
+				", competitionId=" + competitionId +
+				'}';
+	}
 }

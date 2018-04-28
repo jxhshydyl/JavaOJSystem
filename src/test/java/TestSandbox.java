@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 import java.net.Socket;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -6,9 +7,22 @@ import cn.superman.system.sandbox.constant.CommunicationSignal;
 import cn.superman.system.sandbox.dto.Problem;
 import cn.superman.system.sandbox.dto.Request;
 
+import cn.superman.web.dto.ProblemAnswerDTO;
+import cn.superman.web.service.front.AnswerSubmitService;
 import com.google.gson.Gson;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit4.SpringRunner;
 
-public class TestSandbox {
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {"classpath*:configs/spring/applicationContext.xml","classpath*:configs/spring/springmvc.xml"})
+public class TestSandbox{
+
+	@Autowired
+	AnswerSubmitService answerSubmitService;
 
 	public static void main(String[] args) throws Exception {
 
@@ -59,6 +73,36 @@ public class TestSandbox {
 		}
 
 		scanner.close();
+	}
+
+	@Test
+	public void test(){
+		ProblemAnswerDTO dto=new ProblemAnswerDTO();
+		dto.setCodeLanguage("java");
+		dto.setCode("import java.util.*;\n" +
+				"public class Main {\n" +
+				"\tpublic static void main(String[] args){\n" +
+				"\t\tScanner sc=new Scanner(System.in);\n" +
+				"\t\twhile(sc.hasNext()){\n" +
+				"\t\t\tint n=sc.nextInt();//空汽水瓶数\n" +
+				"\t\t\tint count=0;//能喝汽水瓶数\n" +
+				"\t\t\tif(n>0){\n" +
+				"\t\t\t\twhile(n>1){\n" +
+				"\t\t\t\t\tcount+=n/3;\n" +
+				"\t\t\t\t\tn=n%3+n/3;\n" +
+				"\t\t\t\t\tif(n==2){\n" +
+				"\t\t\t\t\t\tn++;\n" +
+				"\t\t\t\t\t}\n" +
+				"\t\t\t\t}\n" +
+				"\t\t\t\tSystem.out.println(count);\n" +
+				"\t\t\t}\n" +
+				"\t\t}\n" +
+				"\t\tsc.close();\n" +
+				"\t}\n" +
+				"}");
+		dto.setSubmitProblemId(BigInteger.valueOf(129));
+		answerSubmitService.dealCode(dto);
+
 	}
 
 }

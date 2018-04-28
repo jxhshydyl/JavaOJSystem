@@ -12,6 +12,8 @@ import java.util.concurrent.TimeUnit;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
+import cn.superman.web.dto.CodeDTO;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -237,13 +239,17 @@ public class CompetitionController extends PageController<Competition, Competiti
         if (endTime <= Calendar.getInstance().getTime().getTime()) {
             throw new ServiceLogicException("比赛已经结束");
         }
-
+        // 得到比赛基本信息
         Competition competition = competitionService.getCompetitionById(competitionAccount.getCompetitionId());
-        List<Problem> competitionProblems = competitionService.getCompetitionProblems(competition.getCompetitionProblemIds());
-        List<ProblemResponse> problemResponses = BeanMapperUtil.mapList(competitionProblems, ProblemResponse.class);
+        //得到比赛问题信息
+        List<CodeDTO> codeDTOS=null;
+        System.out.println(competition.getCompetitionProblemIds());;
+        if(!StringUtils.isBlank(competition.getCompetitionProblemIds())){
+            codeDTOS = competitionService.getCompetitionProblems(competition.getCompetitionProblemIds());
+        }
         ResponseMap responseMap = new ResponseMap().buildSucessResponse();
-        responseMap.append("competitionId", competitionAccount.getCompetitionId())//
-                .append("competitionProblems", problemResponses)//
+        responseMap.append("competitionId", competitionAccount.getCompetitionId())
+                .append("competitionProblems", codeDTOS)
                 .append("accountRemark", competitionAccount.getAccountRemark());
         return responseMap;
     }
@@ -252,6 +258,7 @@ public class CompetitionController extends PageController<Competition, Competiti
     @ResponseBody
     public ResponseMap submitCompetitionProblemAnswer(@Valid CompetitionProblemAnswerVO vo, HttpSession session) {
 
+        System.out.println(vo);
         // 判断是否超时了
         long endTime = (long) session.getAttribute(WebConstant.COMPETITION_TIME_OUT_ATTRIBUTE_NAME);
         if (endTime <= Calendar.getInstance().getTime().getTime()) {

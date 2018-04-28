@@ -22,6 +22,8 @@ public class Competition implements Serializable {
 	private Boolean isJudge;
 	private String competitionProblemIds;
 	private String competitionContentRootPath;
+	private String competitionApprove;
+	private String competitionProblemCount;
 
 	public Integer getCompetitionId() {
 		return competitionId;
@@ -70,6 +72,7 @@ public class Competition implements Serializable {
 	public void setCompetitionPlayersCount(Integer competitionPlayersCount) {
 		this.competitionPlayersCount = competitionPlayersCount;
 	}
+
 
 	public Boolean getIsClose() {
 		return isClose;
@@ -133,6 +136,22 @@ public class Competition implements Serializable {
 
 	public void setCompetitionApplyEndTime(Date competitionApplyEndTime) {
 		this.competitionApplyEndTime = competitionApplyEndTime;
+	}
+
+	public String getCompetitionApprove() {
+		return competitionApprove;
+	}
+
+	public void setCompetitionApprove(String competitionApprove) {
+		this.competitionApprove = competitionApprove;
+	}
+
+	public String getCompetitionProblemCount() {
+		return competitionProblemCount;
+	}
+
+	public void setCompetitionProblemCount(String competitionProblemCount) {
+		this.competitionProblemCount = competitionProblemCount;
 	}
 
 	@Override

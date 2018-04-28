@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.superman.web.dto.CodeDTO;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -68,17 +69,19 @@ public class CompetitionService extends PageService<Competition, Competition> {
 		return list.get(0);
 	}
 
-	public List<Problem> getCompetitionProblems(String problemIds) {
-		String[] ids = problemIds.split(WebConstant.COMPETITION_PROBLEM_ID_GAP);
-		List<Problem> problems = new ArrayList<Problem>();
+	public List<CodeDTO> getCompetitionProblems(String problemIds) {
+		//String[] ids = problemIds.split(WebConstant.COMPETITION_PROBLEM_ID_GAP);
+		/*List<Problem> problems = new ArrayList<Problem>();
 		Problem problem;
 		for (String id : ids) {
 			problem = problemDao.findById(Integer.parseInt(id));
 			if (problem != null) {
 				problems.add(problem);
 			}
-		}
-		return problems;
+		}*/
+		System.out.println("zhixing=======");
+		List<CodeDTO> codeDTOS = problemDao.getCompetitionProblems(problemIds);
+		return codeDTOS;
 	}
 
 	public void submitCompetitionProblemAnswer(CompetitionProblemAnswerDTO dto) {

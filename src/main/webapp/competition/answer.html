@@ -55,7 +55,7 @@
 						ng-repeat="problem in competitionData.competitionProblems"
 						ng-click="detail($index)">
 						<h4 class="list-group-item-heading">
-							{{problem.problemName}} <label ng-if="problem.isHaveSubmit">(已提交)</label>
+							{{problem.qname}} <label ng-if="problem.isHaveSubmit">(已提交)</label>
 						</h4>
 					</a>
 				</div>
@@ -69,39 +69,88 @@
 				<div class="alert alert-success alert-dismissable"
 					ng-if="isLoadingData">加载数据中，请稍等</div>
 				<div ng-if="!isLoadingData && detailProblemObj != null">
-					<h2>{{detailProblemObj.problemName}}</h2>
-					<p>标签：{{detailProblemObj.problemLabel}}</p>
-					<p>内存限制：{{detailProblemObj.memoryLimit}}KB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;时间限制：{{detailProblemObj.timeLimit}}毫秒</p>
+					<p>内存限制：{{detailProblemObj.limitMemory}}KB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;时间限制：{{detailProblemObj.limitTime}}ms</p>
 					<br />
-					<p id="detailProblemContent">{{detailProblemObj.problemContent
-						| formatToHtml : "detailProblemContent"}}</p>
-					<br />
-					<p>
-						<button class="btn btn-success" type="button"
-							ng-click="answerDialogShow()">提交答案</button>
-						</td>
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- 提交代码弹出框 开始-->
-	<div class="modal fade dialog" id="competitionAnswerDialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">
-						<span aria-hidden="true">&times;</span><span class="sr-only"></span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<p>题目名字：{{detailProblemObj.problemName}}</p>
-					<p>代码语言：java</p>
-					<textarea rows="20" cols="100" ng-model="answerData.code"></textarea>
-					<br /> <br /> <br />
-					<button class="btn btn-success" type="button"
-						ng-click="answerSubmit()">提交代码</button>
+					<div>
+						<div style="border: 1px solid rgba(34,36,38,.15);margin-right: 1%">
+							<div style="display:inline-block;">
+								<div style="margin: 1rem 1rem;">
+									<p id="detailProblemContent">
+										{{detailProblemObj.qdescribe}}
+									</p>
+								</div>
+								<div style="line-height: 2.0rem !important;font-size: 1.1rem !important;color: #333333;">
+									<div style="display: table;white-space: nowrap;height: auto;line-height: 1;margin: 0rem 1rem;">
+										<h3 style="font-size: 20px;font-weight: bold;">输入要求</h3>
+									</div>
+									<div style="background: #F3F4F5;color: rgba(0,0,0,.6);position: relative;background: #F3F4F5;box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);margin: 1rem 1rem;font-size: 1rem;padding: 1em;border-radius: .28571429rem;border: 1px solid rgba(34,36,38,.15);">
+										<p style="margin: 0 0 1em;line-height: 1.4285em;"></p>
+										{{detailProblemObj.inputDescribe}}
+									</div>
+								</div>
+								<div style="line-height: 2.0rem !important;font-size: 1.1rem !important;color: #333333;">
+									<div style="display: table;white-space: nowrap;height: auto;line-height: 1;margin: 0rem 1rem;">
+										<h3 style="font-size: 20px;font-weight: bold;">输出要求</h3>
+									</div>
+									<div style="background: #F3F4F5;color: rgba(0,0,0,.6);position: relative;background: #F3F4F5;box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);margin: 1rem 1rem;font-size: 1rem;padding: 1em;border-radius: .28571429rem;border: 1px solid rgba(34,36,38,.15);">
+										<p style="margin: 0 0 1em;line-height: 1.4285em;">{{detailProblemObj.outputDescripe}}</p>
+									</div>
+								</div>
+								<div style="line-height: 2.0rem !important;font-size: 1.1rem !important;color: #333333;">
+									<div style="display: table;white-space: nowrap;height: auto;line-height: 1;margin: 0rem 1rem;">
+										<h3 style="font-size: 20px;font-weight: bold;">测试数据</h3>
+									</div>
+									<div>
+										<div style="display: inline-block;width:49%;">
+											<div style="margin: 0rem 1rem">输入示例</div>
+											<div>
+												<textarea style="resize: none;background: #F3F4F5;color: rgba(0,0,0,.6);position: relative;background: #F3F4F5;box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);margin: 1rem 1rem;font-size: 1rem;padding: 1em;border-radius: .28571429rem;border: 1px solid rgba(34,36,38,.15);" ng-model="exampleInput" id="exampleInput" ></textarea>
+											</div>
+										</div>
+										<div style="display: inline-block;width:49%;">
+											<div style="margin: 0rem 1rem">输出示例</div>
+											<div>
+												<textarea style="resize: none;background: #F3F4F5;color: rgba(0,0,0,.6);position: relative;background: #F3F4F5;box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);margin: 1rem 1rem;font-size: 1rem;padding: 1em;border-radius: .28571429rem;border: 1px solid rgba(34,36,38,.15);" id="exampleOutput" ng-model="exampleOutput" ></textarea>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<br/>
+							<div>
+								<div style="display: table;white-space: nowrap;height: auto;line-height: 1;margin: 0rem 1rem;">
+									<h3 style="font-size: 20px;font-weight: bold;">提交代码</h3>
+								</div>
+							</div>
+							<div style="border: 1px solid rgba(34,36,38,.15);margin-right: 1%">
+								<div style="width:70%;display: inline-block">
+									<div style="margin: 1% 1%">
+										<select ng-model="answerData.codeLanguage">
+											<option value="java">java</option>
+											<option value="c">c</option>
+											<option value="c++">c++</option>
+										</select>
+									</div>
+									<div style="margin: 1% 1%">
+										<strong>代码</strong>
+									</div>
+									<div style="margin: 1% 1%;background-color: #cccccc" contenteditable=true id="code">
+										<!--<textarea rows="20" cols="100" ng-model="answerData.code"  style="width: 100%;resize: none;"></textarea>-->
+									</div>
+								</div>
+								<div style="width:28%;display: inline-block">
+									<div style="margin: 1% 1%">
+										<strong>评测详情</strong>
+									</div>
+									<div style="margin: 0% 1%;" contenteditable=true id="message">
+									</div>
+								</div>
+							</div>
+						</div>
+						<button class="btn btn-success" type="button" ng-click="answerDialogShow()">提交答案</button>
+					</div>
 				</div>
 			</div>
 		</div>
