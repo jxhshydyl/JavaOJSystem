@@ -1083,6 +1083,7 @@ appCtrls.controller('problemClassification',
             };
 
             $scope.jumpDetail = function(index) {
+            	console.log(index);
                 var problemDetailObj = $scope.page.datas[index];
                 problemDetailObj.typeName = null;
                 for ( var n in $scope.allProblemType) {
@@ -1096,9 +1097,11 @@ appCtrls.controller('problemClassification',
                 return true;
             }
             $scope.evaluateHistory = function(){
+            	console.log($scope.problemTypeName);
                 $http({
                     method : "get",
                     url : "ProblemController/evaluateHistory",
+                    params : {"problemTypeName":$scope.problemTypeName}
                 }).success(
                     function(response) {
                         $scope.datas = response;

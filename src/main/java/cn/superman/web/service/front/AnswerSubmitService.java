@@ -351,4 +351,8 @@ public class AnswerSubmitService {
 		return submitRecords;
 	}
 
+	public List<SubmitRecord> queryMyRecordsByType(Map<String,Object> map){
+		List<SubmitRecord> submitRecords = submitRecordDao.queryMyRecordsByType(map);
+		return submitRecords;
+	}
 }

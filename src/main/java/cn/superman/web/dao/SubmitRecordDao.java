@@ -27,4 +27,6 @@ public interface SubmitRecordDao {
 	List<SubmitRecord> queryMyRecords(Map<String,Object> map);
 
 	List<MyRecord> querySubmitCount(@Param("userId")Integer userId,@Param("problemId") BigInteger problemId);
+	
+	List<SubmitRecord> queryMyRecordsByType(Map<String,Object> map);
 }

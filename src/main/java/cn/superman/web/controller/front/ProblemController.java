@@ -132,10 +132,11 @@ public class ProblemController{
 
     @RequestMapping(value = "/evaluateHistory", method = RequestMethod.GET)
     @ResponseBody
-    public List<SubmitRecord> queryEvaluateHistory(@PathVariable("problemId") BigInteger problemId, HttpSession session) {
+    public List<SubmitRecord> queryEvaluateHistory(String problemTypeName, HttpSession session) {
         //得到登录的用户
         Map<String,Object> map=new HashMap<>();
-        List<SubmitRecord> submitRecords = answerSubmitService.queryMyRecords(map);
+        map.put("problemTypeName",problemTypeName);
+        List<SubmitRecord> submitRecords = answerSubmitService.queryMyRecordsByType(map);
         return submitRecords;
     }
 

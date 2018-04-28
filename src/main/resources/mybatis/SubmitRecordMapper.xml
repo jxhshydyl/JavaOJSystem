@@ -160,4 +160,13 @@
 		</where>
 		 GROUP BY is_accepted
 	</select>
+
+	<select id="queryMyRecordsByType" resultType="cn.superman.web.po.SubmitRecord">
+		select * from submit_record0
+		<where>
+			<if test="problemTypeName != null">
+				and submit_problem_id in (select Qid from code where Qtype=#{problemTypeName})
+			</if>
+		</where>
+	</select>
 </mapper>
