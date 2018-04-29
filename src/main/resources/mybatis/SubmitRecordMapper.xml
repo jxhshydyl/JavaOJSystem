@@ -104,11 +104,11 @@
 
 	<select id="findWithCondition" parameterType="cn.superman.web.po.SubmitRecord"
 		resultType="cn.superman.web.po.SubmitRecord">
-		select
-		<include refid="Base_Column_List" />
-		from ${submitRecordTableName}
+		select record.* , code.Qname problem_name from ${submitRecordTableName} as record,code
 		<where>
 			<include refid="Example_Where_Clause" />
+			and code.Qid=record.submit_problem_id
+			and record.is_competition=-1
 		</where>
 	</select>
 

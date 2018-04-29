@@ -93,25 +93,21 @@ p {
 					<table class="table table-striped">
 						<thead>
 						<tr>
-							<th class="col-md-1">编号</th>
-							<th class="col-md-1">题目编号</th>
+							<th class="col-md-1"></th>
+							<th class="col-md-1">题目名称</th>
 							<th class="col-md-2">提交时间</th>
-							<th class="col-md-2">信息</th>
 							<th class="col-md-1">通过</th>
-							<th class="col-md-1">分数</th>
 							<th class="col-md-1">操作</th>
 						</tr>
 						</thead>
 						<tbody>
 						<tr ng-repeat="record in page.datas">
-							<td class="col-md-1">{{record.submitId}}</td>
-							<td class="col-md-1">{{record.submitProblemId}}</td>
+							<td class="col-md-1">{{$index+1+(page.pageShowCount*(page.currentPage-1))}}</td>
+							<td class="col-md-1">{{record.problemName}}</td>
 							<td class="col-md-2">{{record.submitTime |
 								stringDateFormat:'yyyy-MM-dd HH:mm:ss' }}</td>
-							<td class="col-md-2">{{record.details | omitDisplay : 10}}</td>
 							<td class="col-md-1">{{record.isAccepted == true ? "通过" :
 								"未通过"}}</td>
-							<td class="col-md-1">{{record.score}}</td>
 							<td class="col-md-1">
 								<button class="btn btn-success " type="button"
 										ng-click="detail($index)">详情</button>
@@ -153,8 +149,7 @@ p {
 						<div>分数：{{submitDetails.score}}</div>
 						<div>
 							代码：<br />
-							<div id="userContentCode">{{submitDetails.code |
-								formatToHtml : "userContentCode"}}</div>
+							<textarea id="userContentCode">{{submitDetails.code}}</textarea>
 						</div>
 						<div ng-if="submitDetails.items">
 							<table class="table table-striped ">

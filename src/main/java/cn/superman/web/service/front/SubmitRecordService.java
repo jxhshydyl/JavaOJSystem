@@ -36,7 +36,7 @@ public class SubmitRecordService {
     @Autowired
     private SubmitRecordDao submitRecordDao;
 
-    public SubmitRecordVO getSubmitDetails(BigInteger submitId, String tableName) {
+    public SubmitRecord getSubmitDetails(BigInteger submitId, String tableName) {
         SubmitRecord record = new SubmitRecord();
         record.setSubmitId(submitId);
         record.setSubmitRecordTableName(tableName);
@@ -45,9 +45,9 @@ public class SubmitRecordService {
             throw new RuntimeException("无法找到该提交记录");
         }
         SubmitRecord submitRecord = list.get(0);
-        SubmitRecordVO vo = BeanMapperUtil.map(submitRecord, SubmitRecordVO.class);
+        //SubmitRecordVO vo = BeanMapperUtil.map(submitRecord, SubmitRecordVO.class);
 
-        // 取出具体代码内容放到VO中
+/*        // 取出具体代码内容放到VO中
         try {
             String code = FileUtils.readFileToString(new File(submitRecord.getCode()));
             // 格式清洗一下， 因为运行的时候，将其动态修改了类名，这里要统一返回用户提交时的类名：Main
@@ -63,16 +63,16 @@ public class SubmitRecordService {
         } catch (IOException e) {
             Log4JUtil.logError(e);
             vo.setCode("代码文件丢失");
-        }
+        }*/
 
-        // 解释details中的内容，封装到相应的item中,如果题目还没判定的话，这里是无法转换的，将会报错
+/*        // 解释details中的内容，封装到相应的item中,如果题目还没判定的话，这里是无法转换的，将会报错
         try {
             List<ProblemJudgeResultItem> items = JsonUtil.toListBean(submitRecord.getDetails(), ProblemJudgeResultItem[].class);
             vo.setItems(items);
         } catch (Exception e) {
-        }
+        }*/
 
-        return vo;
+        return submitRecord;
     }
 
     public File decodeToFileByFilePath(String filePath) {
@@ -117,7 +117,8 @@ public class SubmitRecordService {
         }
 
         List<SubmitRecord> list = submitRecordDao.findWithCondition(pageQuery.getConditionEntity());
-
+        System.out.println("shuju==========");
+        System.out.println(list);
         PageInfo<SubmitRecord> info = new PageInfo<SubmitRecord>(list);
         pageResult.setResult(list);
         pageResult.setTotalCount(info.getTotal());

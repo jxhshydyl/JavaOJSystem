@@ -112,7 +112,7 @@ appCtrls.controller('userCtr',
                 totalCount: null,
                 totalPage: null
             }
-
+            console.log();
             // 首次加载数据
             $pageService.loadingData($scope, $scope.page.currentPage,
                 "SubmitRecordController/list");
@@ -177,18 +177,18 @@ appCtrls.controller('userCtr',
 
             $scope.detail = function (index) {
                 var detailObj = $scope.page.datas[index];
-                $http
-                    .get(
-                        "SubmitRecordController/submitDetail?submitId="
+                $http.get("SubmitRecordController/submitDetail?submitId="
                         + detailObj.submitId
                         + "&tableName="
                         + detailObj.submitRecordTableName)
-                    .success(
-                        function (response) {
+                    .success(function (response) {
                             if (response.success) {
+                                var reg = new RegExp(/[\r\n]+/gi);
+                                console.log(response.submitDetails);
+                                console.log(response.submitDetails.code.split(reg).length);
+                                $("#userContentCode").attr("rows", response.submitDetails.code.split(reg).length);
                                 $scope.submitDetails = response.submitDetails;
-                                $("#detailDialog")
-                                    .modal("show");
+                                $("#detailDialog").modal("show");
                             } else {
                                 alert(response.message);
                             }

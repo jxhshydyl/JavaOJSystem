@@ -12,6 +12,7 @@ public class SubmitRecord implements Serializable {
 	private BigInteger submitId;
 	private String submitTime;
 	private BigInteger submitProblemId;
+	private String problemName;
 	private Integer submitUserId;
 	private Double score;
 	private Integer isAccepted;
@@ -23,6 +24,14 @@ public class SubmitRecord implements Serializable {
 	private String competitionPeoblemNumber;//问题序号  （非比赛为-1）
 	private Integer submitCount;//提交次数
 	private Integer acceptedTime;//通过时间
+
+	public String getProblemName() {
+		return problemName;
+	}
+
+	public void setProblemName(String problemName) {
+		this.problemName = problemName;
+	}
 
 	public BigInteger getSubmitId() {
 		return submitId;

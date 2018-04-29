@@ -63,7 +63,7 @@ public class SubmitRecordController {
     @RequestMapping(value = "/submitDetail", method = RequestMethod.GET)
     @ResponseBody
     public ResponseMap showSubmitCode(@RequestParam(value = "submitId") BigInteger submitId, @RequestParam(value = "tableName") String tableName) {
-        SubmitRecordVO submitDetails = submitRecordService.getSubmitDetails(submitId, tableName);
+        SubmitRecord submitDetails = submitRecordService.getSubmitDetails(submitId, tableName);
         ResponseMap responseMap = new ResponseMap().buildSucessResponse();
         responseMap.append("submitDetails", submitDetails);
         return responseMap;
