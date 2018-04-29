@@ -138,12 +138,13 @@
 				and submit_problem_id=#{problemId}
 			</if>
 			<if test="weekStartTime != null">
-				and submit_time &gt; #{weekStartTime}
+				and submit_time &gt;= #{weekStartTime}
 			</if>
 			<if test="weekEndTime != null">
-				and submit_time &lt; #{weekEndTime}
+				and submit_time &lt;= #{weekEndTime}
 			</if>
 		</where>
+		ORDER BY submit_time desc
     </select>
 
 	<select id="querySubmitCount" resultType="cn.superman.web.dto.MyRecord">
@@ -168,5 +169,6 @@
 				and submit_problem_id in (select Qid from code where Qtype=#{problemTypeName})
 			</if>
 		</where>
+		ORDER BY submit_time desc
 	</select>
 </mapper>

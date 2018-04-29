@@ -10,7 +10,7 @@ public class SubmitRecord implements Serializable {
 	 */
 	private static final long serialVersionUID = 3525247058399149957L;
 	private BigInteger submitId;
-	private Date submitTime;
+	private String submitTime;
 	private BigInteger submitProblemId;
 	private Integer submitUserId;
 	private Double score;
@@ -32,11 +32,11 @@ public class SubmitRecord implements Serializable {
 		this.submitId = submitId;
 	}
 
-	public Date getSubmitTime() {
+	public String getSubmitTime() {
 		return submitTime;
 	}
 
-	public void setSubmitTime(Date submitTime) {
+	public void setSubmitTime(String submitTime) {
 		this.submitTime = submitTime;
 	}
 

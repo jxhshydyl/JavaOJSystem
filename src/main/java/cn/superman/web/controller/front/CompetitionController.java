@@ -1,5 +1,6 @@
 package cn.superman.web.controller.front;
 
+import java.math.BigInteger;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -13,6 +14,9 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import cn.superman.web.dto.CodeDTO;
+import cn.superman.web.dto.ProblemAnswerDTO;
+import cn.superman.web.po.User;
+import cn.superman.web.service.front.AnswerSubmitService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,6 +56,9 @@ public class CompetitionController extends PageController<Competition, Competiti
     private CompetitionService competitionService;
     @Autowired
     private CompetitionApplicationService competitionApplicationService;
+    @Autowired
+    private AnswerSubmitService answerSubmitService;
+
     private ScheduledExecutorService scheduledExecutor = Executors
             .newScheduledThreadPool(2, ThreadFactoryUtil.getLogThreadFactory(CompetitionController.class + " token cache thread "));
     private Map<Integer, Token> loginTokenCache = new ConcurrentHashMap<Integer, Token>();
@@ -257,25 +264,42 @@ public class CompetitionController extends PageController<Competition, Competiti
     @RequestMapping(value = "/submitCompetitionProblemAnswer", method = RequestMethod.POST)
     @ResponseBody
     public ResponseMap submitCompetitionProblemAnswer(@Valid CompetitionProblemAnswerVO vo, HttpSession session) {
-
         System.out.println(vo);
         // 判断是否超时了
         long endTime = (long) session.getAttribute(WebConstant.COMPETITION_TIME_OUT_ATTRIBUTE_NAME);
         if (endTime <= Calendar.getInstance().getTime().getTime()) {
             throw new ServiceLogicException("比赛已经结束");
         }
-
         // 本来这种验证，应该是用拦截器来写的，但是这里省事就不写了
         CompetitionAccount competitionAccount = (CompetitionAccount) session.getAttribute(WebConstant.COMPETITION_ACCOUNT_ATTRIBUTE_NAME);
+        System.out.println(competitionAccount);
         if (competitionAccount == null) {
             throw new ServiceLogicException("请登录");
         }
 
-        CompetitionProblemAnswerDTO dto = BeanMapperUtil.map(vo, CompetitionProblemAnswerDTO.class);
-        dto.setCompetitionAccount(competitionAccount);
-        competitionService.submitCompetitionProblemAnswer(dto);
-
-        ResponseMap responseMap = new ResponseMap().buildSucessResponse();
+        ProblemAnswerDTO problemAnswerDTO=new ProblemAnswerDTO();
+        User user=new User();
+        user.setUserId(competitionAccount.getCompetitionAccountId());
+        problemAnswerDTO.setCode(vo.getCode());
+        problemAnswerDTO.setUser(user);
+        problemAnswerDTO.setCompetitionId(Integer.valueOf(vo.getCompetitionId()));
+        problemAnswerDTO.setCodeLanguage(vo.getCodeType());
+        problemAnswerDTO.setSubmitProblemId(BigInteger.valueOf(Long.valueOf(vo.getProblemId())));
+        problemAnswerDTO.setCompetitionPeoblemNumber(vo.getCompetitionPeoblemNumber());
+        System.out.println(problemAnswerDTO);
+        String message = answerSubmitService.dealCode(problemAnswerDTO);
+        //competitionService.submitCompetitionProblemAnswer(dto);
+        System.out.println(message);
+        ResponseMap responseMap = new ResponseMap();
+        if(message != null && message != ""){
+            if(message.indexOf("测试数据通过率：100")==-1){
+                responseMap.append("message",message);
+            }else{
+                responseMap.append("message","测试通过");
+            }
+        }else{
+            responseMap.append("message",message);
+        }
         return responseMap;
     }
 

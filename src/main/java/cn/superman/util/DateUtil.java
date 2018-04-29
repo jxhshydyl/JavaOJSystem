@@ -20,7 +20,7 @@ public class DateUtil {
 	}
 
 	public static String formatToYYYYMMddHHmm(Date time) {
-		SimpleDateFormat format = new SimpleDateFormat("YYYY-MM-dd HH:mm");
+		SimpleDateFormat format = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
 		return format.format(time);
 	}
 }

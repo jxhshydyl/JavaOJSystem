@@ -29,6 +29,7 @@
 #competitionAnswerDialog textarea {
 	width: 90%;
 }
+
 </style>
 <div id="competitionAnswerCtr" ng-controller="competitionAnswerCtr">
 	<div class="col-md-4">
@@ -54,7 +55,8 @@
 					<a href="javascript:;" class="list-group-item"
 						ng-repeat="problem in competitionData.competitionProblems"
 						ng-click="detail($index)">
-						<h4 class="list-group-item-heading">
+						<h3 style="display: inline-block;">{{$index+1}}.</h3>
+						<h4 class="list-group-item-heading" style="display: inline-block;">
 							{{problem.qname}} <label ng-if="problem.isHaveSubmit">(已提交)</label>
 						</h4>
 					</a>
@@ -125,9 +127,9 @@
 								</div>
 							</div>
 							<div style="border: 1px solid rgba(34,36,38,.15);margin-right: 1%">
-								<div style="width:70%;display: inline-block">
+								<div style="width:100%;display: inline-block">
 									<div style="margin: 1% 1%">
-										<select ng-model="answerData.codeLanguage">
+										<select ng-model="codeLanguage">
 											<option value="java">java</option>
 											<option value="c">c</option>
 											<option value="c++">c++</option>
@@ -136,19 +138,20 @@
 									<div style="margin: 1% 1%">
 										<strong>代码</strong>
 									</div>
-									<div style="margin: 1% 1%;background-color: #cccccc" contenteditable=true id="code">
-										<!--<textarea rows="20" cols="100" ng-model="answerData.code"  style="width: 100%;resize: none;"></textarea>-->
-									</div>
-								</div>
-								<div style="width:28%;display: inline-block">
 									<div style="margin: 1% 1%">
-										<strong>评测详情</strong>
-									</div>
-									<div style="margin: 0% 1%;" contenteditable=true id="message">
+										<textarea  ng-model="answerData.code" id="code"  style="width: 100%;height: 500px;resize: none;"></textarea>
 									</div>
 								</div>
 							</div>
+							<div style="width:100%;display: inline-block">
+								<div style="margin: 1% 1%">
+									<strong>评测详情</strong>
+								</div>
+								<div style="margin: 0% 1%;" id="message">
+								</div>
+							</div>
 						</div>
+						<br>
 						<button class="btn btn-success" type="button" ng-click="answerDialogShow()">提交答案</button>
 					</div>
 				</div>

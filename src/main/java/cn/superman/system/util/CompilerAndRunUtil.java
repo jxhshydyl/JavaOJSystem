@@ -28,6 +28,10 @@ public class CompilerAndRunUtil {
             //编译文件
             String compileCommand ="javac -encoding utf-8 -d F:\\class  F:\\test\\"+className+".java";
             message= CompilerAndRunUtil.compileCode(compileCommand);
+            if("不可映射字符".indexOf(message) != -1){
+                compileCommand = "javac -encoding gbk -d F:\\class  F:\\test\\"+className+".java";
+                message= CompilerAndRunUtil.compileCode(compileCommand);
+            }
             //运行文件
             if("".equals(message)||message==null){
                 String runCommand ="java -cp f:\\class "+className+"";

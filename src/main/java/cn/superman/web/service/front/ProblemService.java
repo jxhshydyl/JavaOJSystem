@@ -98,7 +98,7 @@ public class ProblemService extends PageService<Problem, Problem> {
         map.put("problemId",problemId);
         map.put("competitionId",-1);
         map.put("weekStartTime",recentlyWeekDate.get(recentlyWeekDate.size()-1));
-        map.put("weekEndTime",recentlyWeekDate.get(0));
+        map.put("weekEndTime",recentlyWeekDate.get(0)+" 23:59:59");
         List<SubmitRecord> submitRecords = submitRecordDao.queryMyRecords(map);
         List<Integer> submitCount=new ArrayList<>();
         List<Integer> rightCount=new ArrayList<>();
@@ -106,10 +106,9 @@ public class ProblemService extends PageService<Problem, Problem> {
             submitCount.add(0);
             rightCount.add(0);
         }
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         for(SubmitRecord submitRecord:submitRecords){
             for(int i=0;i<recentlyWeekDate.size();i++){
-                if(recentlyWeekDate.get(i).equals(formatter.format(submitRecord.getSubmitTime()))){
+                if(submitRecord.getSubmitTime().indexOf(recentlyWeekDate.get(i))!=-1){
                     submitCount.set(i,submitCount.get(i)+1);
                     if(submitRecord.getIsAccepted()==1){
                         rightCount.set(i,rightCount.get(i)+1);

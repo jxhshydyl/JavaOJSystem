@@ -10,12 +10,14 @@ public class CompetitionProblemAnswerVO {
 	@NotBlank(message = "不能提交空代码")
 	private String code;
 	// 用于记录提交的代码语言，不过现在默认都是java
-	@NotBlank(message = "请选中其中一个代码语言")
+	@NotBlank(message = "请选择其中一个代码语言")
 	private String codeType;
 	@NotNull(message = "题目编号不能为空，请选中题目")
-	private Integer problemId;
+	private String problemId;
 
-	private BigInteger competitionId;
+	private String competitionId;
+
+	private String competitionPeoblemNumber;
 
 	public String getCode() {
 		return code;
@@ -33,20 +35,28 @@ public class CompetitionProblemAnswerVO {
 		this.codeType = codeType;
 	}
 
-	public Integer getProblemId() {
+	public String getProblemId() {
 		return problemId;
 	}
 
-	public void setProblemId(Integer problemId) {
+	public void setProblemId(String problemId) {
 		this.problemId = problemId;
 	}
 
-	public BigInteger getCompetitionId() {
+	public String getCompetitionId() {
 		return competitionId;
 	}
 
-	public void setCompetitionId(BigInteger competitionId) {
+	public void setCompetitionId(String competitionId) {
 		this.competitionId = competitionId;
+	}
+
+	public String getCompetitionPeoblemNumber() {
+		return competitionPeoblemNumber;
+	}
+
+	public void setCompetitionPeoblemNumber(String competitionPeoblemNumber) {
+		this.competitionPeoblemNumber = competitionPeoblemNumber;
 	}
 
 	@Override
@@ -54,8 +64,9 @@ public class CompetitionProblemAnswerVO {
 		return "CompetitionProblemAnswerVO{" +
 				"code='" + code + '\'' +
 				", codeType='" + codeType + '\'' +
-				", problemId=" + problemId +
-				", competitionId=" + competitionId +
+				", problemId='" + problemId + '\'' +
+				", competitionId='" + competitionId + '\'' +
+				", competitionPeoblemNumber='" + competitionPeoblemNumber + '\'' +
 				'}';
 	}
 }

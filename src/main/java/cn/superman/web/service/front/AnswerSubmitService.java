@@ -75,7 +75,7 @@ public class AnswerSubmitService {
         String className = CompilerAndRunUtil.getClassName(code);
         //创建文件
         String message="";
-        File file=new File("F:\\test\\"+className+".java");
+        File file=new File("e:\\test\\"+className+".java");
         try{
             if(!file.exists()){
                 file.createNewFile();
@@ -87,11 +87,11 @@ public class AnswerSubmitService {
             bufferedWriter.close();
             fileWriter.close();
             //编译文件
-            String compileCommand ="javac -encoding utf-8 -d F:\\class  F:\\test\\"+className+".java";
+            String compileCommand ="javac  -encoding gbk -d e:\\class  e:\\test\\"+className+".java";
             message= CompilerAndRunUtil.compileCode(compileCommand);
             //运行文件
             if(message==null||"".equals(message)){
-                String runCommand ="java -cp f:\\class "+className+"";
+                String runCommand ="java -cp e:\\class "+className+"";
                 message= CompilerAndRunUtil.runCode(runCommand,codeDTO);
 				SubmitRecord submitRecord=new SubmitRecord();
 				if(message!=null && message.indexOf("测试数据通过率：100")!=-1){
@@ -101,7 +101,7 @@ public class AnswerSubmitService {
 					submitRecord.setIsAccepted(0);
 					submitRecord.setAcceptedTime(-1);
 				}
-				submitRecord.setSubmitTime(new Date());
+				submitRecord.setSubmitTime(DateUtil.formatToYYYYMMddHHmm(new Date()));
 				submitRecord.setSubmitProblemId(dto.getSubmitProblemId());
 				submitRecord.setSubmitUserId(dto.getUser().getUserId());
 				submitRecord.setScore(0.0);
@@ -118,7 +118,7 @@ public class AnswerSubmitService {
 			SubmitRecord submitRecord=new SubmitRecord();
 			submitRecord.setIsAccepted(0);
 			submitRecord.setAcceptedTime(-1);
-			submitRecord.setSubmitTime(new Date());
+			submitRecord.setSubmitTime(DateUtil.formatToYYYYMMddHHmm(new Date()));
 			submitRecord.setSubmitProblemId(dto.getSubmitProblemId());
 			submitRecord.setSubmitUserId(dto.getUser().getUserId());
 			submitRecord.setScore(0.0);
@@ -132,6 +132,7 @@ public class AnswerSubmitService {
 			submitRecordDao.add(submitRecord);
             return message;
         }catch (IOException e){
+        	e.printStackTrace();
             return null;
         }
     }
@@ -174,7 +175,7 @@ public class AnswerSubmitService {
 			record.setDetails("编译运行中");
 			record.setScore(new Double(0));
 			record.setSubmitProblemId(dto.getSubmitProblemId());
-			record.setSubmitTime(new Date());
+			record.setSubmitTime(DateUtil.formatToYYYYMMddHHmm(new Date()));
 			record.setSubmitUserId(user.getUserId());
 			record.setSubmitRecordTableName(user.getSubmitRecordTableName());
 			submitRecordDao.add(record);

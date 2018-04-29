@@ -98,9 +98,7 @@ appCtrls.filter("omitDisplay", function () {
 });
 
 //个人信息
-appCtrls
-    .controller(
-        'userCtr',
+appCtrls.controller('userCtr',
         function ($rootScope, $scope, $http, $pageService,
                   sessionDataBase) {
             $scope.isUpdate = false;
@@ -473,9 +471,10 @@ appCtrls.controller('competitionAnswerCtr',
 
         $scope.answerData = {};
         $scope.answerData.submitProblemId = null;
-        $scope.answerData.codeLanguage = "java";
+        $scope.codeLanguage = "java";
         $scope.answerData.code = null;
         $scope.detailProblemObj=null;
+        $scope.competitionPeoblemNumber=null;
 
         if ($scope.competitionData == null
             || $scope.loginObj.competitionId != $scope.competitionData.competitionId) {
@@ -500,6 +499,8 @@ appCtrls.controller('competitionAnswerCtr',
         }
 
         $scope.detail = function (index) {
+            $("#code").val("");
+            $scope.competitionPeoblemNumber=index+1;
             $scope.detailProblemObj = $scope.competitionData.competitionProblems[index];
             var reg = new RegExp(/[\r\n]+/gi);
             $("#exampleInput").attr("rows", $scope.detailProblemObj.exampleInput.split(reg).length);
@@ -511,41 +512,40 @@ appCtrls.controller('competitionAnswerCtr',
 
         $scope.answerDialogShow = function () {
             $scope.answerData = {};
-            $scope.answerData.codeType = "java";
-            $scope.answerData.code = $("#code").text();
-            $scope.answerData.problemId = $scope.detailProblemObj.qid;
-            $scope.answerData.competitionId = $scope.competitionData.competitionId;
-            console.log("比赛提交代码");
-            console.log($scope.answerData);
-            $http({
-                method: "post",
-                data: jQuery.param($scope.answerData),
-                url: "CompetitionController/submitCompetitionProblemAnswer",
-                headers: {
-                    "Content-Type": "application/x-www-form-urlencoded"
-                }
-            }).success(function (data, status, headers, config) {
+            $scope.answerData.codeType = $scope.codeLanguage;
+            $scope.answerData.competitionPeoblemNumber=$scope.competitionPeoblemNumber;
+            $scope.answerData.code=$("#code").val();
+            if($("#code").val()==null ||$("#code").val()==""){
+                alert("代码不能为空！");
+            }else{
+                $scope.answerData.problemId = $scope.detailProblemObj.qid;
+                $scope.answerData.competitionId = $scope.competitionData.competitionId;
+                console.log($scope.answerData);
+                $http({
+                    method: "post",
+                    data: jQuery.param($scope.answerData),
+                    url: "CompetitionController/submitCompetitionProblemAnswer",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    }
+                }).success(function (data, status, headers, config) {
                     console.log(data);
-                console.log("比赛提交代码");
-                    if (data.success) {
-                        alert("提交成功");
-                        $("#competitionAnswerDialog").modal("hide");
-                        $scope.detailProblemObj.isHaveSubmit = true;
-                        // 更新一下存储的数据，避免刷新后已经提交的状态就没了
-                        sessionDataBase.setObject("competitionData",$scope.competitionData);
-                    } else {
-                        alert("提交失败：" + data.message);
-                    }
+                    console.log("比赛提交代码");
+                    $("#message").text(data.message);
+                    $scope.detailProblemObj.isHaveSubmit = true;
+                    // 更新一下存储的数据，避免刷新后已经提交的状态就没了
+                    sessionDataBase.setObject("competitionData",$scope.competitionData);
                 }).error(
-                function (response, status, headers,
-                          config) {
-                    if (response.message != null) {
-                        alert(response.message);
-                    } else {
-                        $scope.error = {};
-                        $scope.error = response;
-                    }
-                });
+                    function (response, status, headers,
+                              config) {
+                        if (response.message != null) {
+                            alert(response.message);
+                        } else {
+                            $scope.error = {};
+                            $scope.error = response;
+                        }
+                    });
+            }
         }
 
         $scope.logout = function () {
