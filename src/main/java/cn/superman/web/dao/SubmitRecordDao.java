@@ -29,4 +29,7 @@ public interface SubmitRecordDao {
 	List<MyRecord> querySubmitCount(@Param("userId")Integer userId,@Param("problemId") BigInteger problemId);
 	
 	List<SubmitRecord> queryMyRecordsByType(Map<String,Object> map);
+
+	List<SubmitRecord> queryRecord(@Param("userId")Integer userId,@Param("competitionId")Integer competitionId,@Param("competitionPeoblemNumber")String competitionPeoblemNumber);
+	int updateRecord(SubmitRecord submitRecord);
 }

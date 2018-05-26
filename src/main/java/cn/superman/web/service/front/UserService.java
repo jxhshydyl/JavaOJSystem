@@ -1,10 +1,15 @@
 package cn.superman.web.service.front;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import cn.superman.web.dto.*;
+import cn.superman.web.util.GetVerifyCode;
+import cn.superman.web.util.SendEmail;
+import cn.superman.web.vo.request.UserUpdateVO;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.InitializingBean;
@@ -20,11 +25,6 @@ import cn.superman.util.EncryptUtility;
 import cn.superman.util.Log4JUtil;
 import cn.superman.web.dao.UserDao;
 import cn.superman.web.dao.base.BaseDao;
-import cn.superman.web.dto.UpdateUserPasswordDTO;
-import cn.superman.web.dto.UserLeaderboardDTO;
-import cn.superman.web.dto.UserLoginDTO;
-import cn.superman.web.dto.UserRegisterDTO;
-import cn.superman.web.dto.UserUpdateDTO;
 import cn.superman.web.exception.ServiceLogicException;
 import cn.superman.web.po.User;
 import cn.superman.web.service.EmailService;
@@ -38,7 +38,7 @@ public class UserService extends PageService<User, User> implements Initializing
     @Autowired
     private EmailService emailService;
     // TODO 以后加上一个过期移除功能吧
-    private static Map<Integer, String> updateCodeCache = new HashMap<Integer, String>();
+    private static Map<String, String> updateCodeCache = new HashMap<String, String>();
     // TODO 以后加上一个过期移除功能吧
     private static Map<String, String> forgetPasswordCodeCache = new HashMap<String, String>();
     private List<UserLeaderboardDTO> haveDoneProblemTop50Cache = null;
@@ -117,6 +117,10 @@ public class UserService extends PageService<User, User> implements Initializing
         return user;
     }
 
+    /**
+     * 注册发送验证码
+     * @param account
+     */
     public void sendForgetPasswordEmail(String account) {
         User condition = new User();
         condition.setAccount(account);
@@ -137,7 +141,16 @@ public class UserService extends PageService<User, User> implements Initializing
         String emailSubject = ConstantParameter.SYSTEM_NAME + "重新设置密码验证码";
         String emailContent = "验证码为：" + code;
         String emailReceiver = user.getEmail();
-        emailService.sendEmail(new EmailRunnable(emailSubject, emailContent, emailReceiver));
+        SendEmail se = new SendEmail();
+        if(emailReceiver != null && !"".equals(emailReceiver)){
+            List<String> recipients=new ArrayList<String>();
+            recipients.add(emailReceiver);
+            try {
+                se.send(recipients,"邮箱验证码","验证码："+code+",为保障您的帐号安全，请勿泄漏！");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public void updateUserPassword(UpdateUserPasswordDTO dto) throws ServiceLogicException {
@@ -206,26 +219,75 @@ public class UserService extends PageService<User, User> implements Initializing
     public void sendUpdateCodeEmail(User user) {
         // 生成一个4位随机验证码
         String code = RandomStringUtils.randomNumeric(4);
-        updateCodeCache.put(user.getUserId(), code);
+        updateCodeCache.put(String.valueOf(user.getUserId()), code);
 
         String emailSubject = ConstantParameter.SYSTEM_NAME + "用户信息修改验证码";
         String emailContent = "验证码为：" + code;
         String emailReceiver = user.getEmail();
-        emailService.sendEmail(new EmailRunnable(emailSubject, emailContent, emailReceiver));
+
+        SendEmail se = new SendEmail();
+        if(emailReceiver != null && !"".equals(emailReceiver)){
+            List<String> recipients=new ArrayList<String>();
+            recipients.add(emailReceiver);
+            try {
+                se.send(recipients,"邮箱验证码","验证码："+code+",为保障您的帐号安全，请勿泄漏！");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public String sendConfirmEmail(String sno){
+        Students students = userDao.queryStudent(sno);
+        String code = RandomStringUtils.randomNumeric(4);
+        updateCodeCache.put(students.getSno(), code);
+
+        String emailSubject = ConstantParameter.SYSTEM_NAME + "验证学生验证码";
+        String emailContent = "验证码为：" + code;
+        String emailReceiver = students.getEmail();
+        SendEmail se = new SendEmail();
+        System.out.println("验证学生验证码为："+code);
+        if(emailReceiver != null && !"".equals(emailReceiver)){
+            List<String> recipients=new ArrayList<String>();
+            recipients.add(emailReceiver);
+            try {
+                se.send(recipients,"邮箱验证码","验证码："+code+",为保障您的帐号安全，请勿泄漏！");
+                return "1";
+            } catch (Exception e) {
+                e.printStackTrace();
+                return null;
+            }
+        }
+        return null;
     }
 
     public void update(UserUpdateDTO dto) {
-        if (!dto.getEmailVerificationCode().equals(updateCodeCache.get(dto.getUserId()))) {
+        System.out.println(dto.getEmailVerificationCode());
+        System.out.println(updateCodeCache.get(String.valueOf(dto.getUserId())));
+        if (!dto.getEmailVerificationCode().equals(updateCodeCache.get(String.valueOf(dto.getUserId())))) {
             throw new ServiceLogicException("邮件验证码不正确,或者验证码已经失效");
         }
 
-        updateCodeCache.remove(dto.getUserId());
+        updateCodeCache.remove(String.valueOf(dto.getUserId()));
 
         User user = BeanMapperUtil.map(dto, User.class);
         if (user.getPassword() != null) {
             user.setPassword(EncryptUtility.Md5Encoding(user.getPassword()));
         }
         userDao.update(user);
+    }
+
+    public int confirm(UserUpdateVO dto, Integer userId) {
+        System.out.println(dto.getEmailVerificationCode());
+        System.out.println(updateCodeCache.get(String.valueOf(dto.getSno())));
+        if (!dto.getEmailVerificationCode().equals(updateCodeCache.get(String.valueOf(dto.getSno())))) {
+            throw new ServiceLogicException("邮件验证码不正确,或者验证码已经失效");
+        }
+
+        updateCodeCache.remove(String.valueOf(dto.getSno()));
+
+        int i = userDao.updateConfirmStudents(userId, dto.getSno());
+        return i;
     }
 
     public User find(Integer userId) {

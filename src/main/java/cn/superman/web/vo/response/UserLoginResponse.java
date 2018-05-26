@@ -8,6 +8,7 @@ public class UserLoginResponse {
     private Integer haveDoneProblem;
     // 改用户一共解决的问题总价值
     private Integer totalSolveValue;
+    private String isStudent;
 
     public String getAccount() {
         return account;
@@ -57,5 +58,11 @@ public class UserLoginResponse {
         this.totalSolveValue = totalSolveValue;
     }
 
+    public String getIsStudent() {
+        return isStudent;
+    }
 
+    public void setIsStudent(String isStudent) {
+        this.isStudent = isStudent;
+    }
 }

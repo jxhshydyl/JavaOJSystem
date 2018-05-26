@@ -99,13 +99,13 @@
 								<div style="display: inline-block;width:49%;">
 									<div style="margin: 0rem 1rem">输入示例</div>
 									<div>
-										<textarea style="resize: none;background: #F3F4F5;color: rgba(0,0,0,.6);position: relative;background: #F3F4F5;box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);margin: 1rem 1rem;font-size: 1rem;padding: 1em;border-radius: .28571429rem;border: 1px solid rgba(34,36,38,.15);" ng-model="exampleInput" id="exampleInput" ></textarea>
+										<textarea disabled style="resize: none;background: #F3F4F5;color: rgba(0,0,0,.6);position: relative;background: #F3F4F5;box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);margin: 1rem 1rem;font-size: 1rem;padding: 1em;border-radius: .28571429rem;border: 1px solid rgba(34,36,38,.15);" ng-model="exampleInput" id="exampleInput" ></textarea>
 									</div>
 								</div>
 								<div style="display: inline-block;width:49%;">
 									<div style="margin: 0rem 1rem">输出示例</div>
 									<div>
-										<textarea style="resize: none;background: #F3F4F5;color: rgba(0,0,0,.6);position: relative;background: #F3F4F5;box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);margin: 1rem 1rem;font-size: 1rem;padding: 1em;border-radius: .28571429rem;border: 1px solid rgba(34,36,38,.15);" id="exampleOutput" ng-model="exampleOutput" ></textarea>
+										<textarea disabled style="resize: none;background: #F3F4F5;color: rgba(0,0,0,.6);position: relative;background: #F3F4F5;box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);margin: 1rem 1rem;font-size: 1rem;padding: 1em;border-radius: .28571429rem;border: 1px solid rgba(34,36,38,.15);" id="exampleOutput" ng-model="exampleOutput" ></textarea>
 									</div>
 								</div>
 							</div>
@@ -142,10 +142,6 @@
 							</tr>
 							</tbody>
 						</table>
-						<p>类型：{{problemDetailObj.typeName}}</p>
-						<p>标签：{{problemDetailObj.problemLabel}}</p>
-						<p>内存限制：{{problemDetailObj.memoryLimit}}KB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;时间限制：{{problemDetailObj.timeLimit}}毫秒</p>
-						<p>难度：{{problemDetailObj.problemDifficulty}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价值：{{problemDetailObj.problemValue}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;版本：{{problemDetailObj.problemVersion}}</p>
 					</div>
 				</div>
 				<div>
@@ -188,10 +184,8 @@
 					<tr>
 						<th>ID</th>
 						<th>题目ID</th>
-						<th>提交者</th>
 						<th>评测结果</th>
 						<th>最大运行时长</th>
-						<th>最大内存用量</th>
 						<th>代码长度</th>
 						<th>代码语言</th>
 						<th>提交时间</th>
@@ -201,10 +195,8 @@
 					<tr ng-repeat="problem in datas" >
 						<td>{{$index+1}}</td>
 						<td>{{problem.submitProblemId}}</td>
-						<td>{{problem.submitProblemId}}</td>
 						<td>{{problem.isAccepted==1?"通过":"没通过"}}</td>
-						<td>{{problem.submitProblemId}}</td>
-						<td>{{problem.submitProblemId}}</td>
+						<td>{{problem.acceptedTime==-1?"":problem.acceptedTime+"ms"}}</td>
 						<td>{{problem.code.length}}</td>
 						<td>{{problem.codeLanguage}}</td>
 						<td>{{problem.submitTime}}</td>

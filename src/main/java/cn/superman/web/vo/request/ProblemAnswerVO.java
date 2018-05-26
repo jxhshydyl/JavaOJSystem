@@ -1,5 +1,7 @@
 package cn.superman.web.vo.request;
 
+import cn.superman.web.dto.CodeDTO;
+
 import java.math.BigInteger;
 
 import javax.validation.constraints.NotNull;

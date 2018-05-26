@@ -1,8 +1,7 @@
 var appCtrls = angular.module('appCtrls', []);
 
 //排行榜
-appCtrls
-    .controller(
+appCtrls.controller(
         'leaderboardCtr',
         function ($scope, $http) {
             $http
@@ -101,7 +100,9 @@ appCtrls.filter("omitDisplay", function () {
 appCtrls.controller('userCtr',
         function ($rootScope, $scope, $http, $pageService,
                   sessionDataBase) {
+    console.log($rootScope.userData);
             $scope.isUpdate = false;
+            $scope.confirms =false;
             $scope.updateButtonText = "修改信息";
             $scope.isCanPre = false;
             $scope.isCanNext = false;
@@ -131,10 +132,52 @@ appCtrls.controller('userCtr',
                     $scope.updateButtonText = "修改信息";
                 }
             }
+            $scope.confirmStudent = function () {
+                $scope.confirmData = {};
+                $scope.confirms = !$scope.confirms;
+            }
+
+            $scope.sendConfirmEmail = function () {
+                $http.get("UserController/sendConfirmEmail?sno="+$scope.confirmData.sno)
+                    .success(function (response) {
+                        if (response.success) {
+                            alert("邮件发送成功，请尽快查看邮件中的验证码");
+
+                        } else {
+                            alert("系统错误，发送失败！");
+
+                        }
+                    });
+            }
+            $scope.confirmSubmit = function () {
+                $http({
+                    method: "post",
+                    data: jQuery.param($scope.confirmData),
+                    url: "UserController/confirmSubmit",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    }
+                }).success(
+                    function (data, status, headers, config) {
+                        if (data.success) {
+                            $rootScope.userData=data.user;
+                            alert("认证成功");
+                        } else {
+                            alert("系统错误，认证失败！");
+                        }
+                    }).error(
+                    function (response, status, headers, config) {
+                        if (response.message != null) {
+                            alert(response.message);
+                        } else {
+                            $scope.error = {};
+                            $scope.error = response;
+                        }
+                    });
+            }
 
             $scope.editSubmit = function () {
-                $http(
-                    {
+                $http({
                         method: "post",
                         data: jQuery.param($scope.editData),
                         url: "UserController/updateSubmit",
@@ -144,12 +187,7 @@ appCtrls.controller('userCtr',
                     }).success(
                     function (data, status, headers, config) {
                         if (data.success) {
-                            $rootScope.userData = data.user;
-                            sessionDataBase.setObject("user",
-                                $scope.userData);
-                            $scope.isUpdate = false;
-                            $scope.updateButtonText = "修改信息";
-                            alert("修改成功");
+                            alert("邮件发送成功，请尽快查看邮件中的验证码");
                         } else {
                             alert(data.message);
                         }
@@ -498,15 +536,81 @@ appCtrls.controller('competitionAnswerCtr',
             $scope.isLoadingData = false;
         }
 
+        $scope.competitionRanking =function(){
+            console.log("bisiapaimig");
+            console.log($scope.competitionData.competitionId);
+            $.ajax({
+                url: "CompetitionController/queryCompetitionRanking",
+                type: "POST",
+                data: {"competitionId":$scope.competitionData.competitionId},
+                dataType: "JSON",
+                success: function(data){
+                    console.log(data);
+                    if(data.length>0){
+                        var hangshu=data.length;
+                        var leishu=data[0].competitionProblemCount;
+                        var theadTh='';
+                        var tbodyTr='';
+                        var tbodyTd='';
+                        for(var i=0;i<leishu;i++){
+                            theadTh+="<th>"+(i+1)+"</th>";
+                        }
+                        $("#thead").html("<tr id=\"totalTR\">\n" +
+                            "               <th>名次</th>\n" +
+                            "                <th>用户名</th>\n" +
+                            "                 <th>通过题目数量</th>\n" +
+                            "                 <th>总时间</th>\n" +
+                            "                  "+theadTh+"" +
+                            "                </tr>");
+
+                        for(var i=0;i<hangshu;i++){
+                            tbodyTd='';
+                            for(var j=0;j<leishu;j++){
+                                tbodyTd+="<td></td>";
+                            }
+                            tbodyTr+="<tr>\n" +
+                                "    <td>"+(i+1)+"</td>\n" +
+                                "    <td>"+data[i].loginAccount+"</td>\n" +
+                                "    <td>"+data[i].totalCount+"</td>\n" +
+                                "    <td>"+data[i].totalTime+"</td>\n" +
+                                "     "+tbodyTd+"" +
+                                "     </tr>";
+                        }
+                        console.log(tbodyTr);
+                        $("#tbody").html(tbodyTr);
+                        for(var i=0;i<hangshu;i++){
+                            for(var j=0;j<leishu;j++){
+                                var num=data[i].problemSubmitInfos.length;
+                                for(var k=0;k<num;k++){
+                                    var competitionPeoblemNumber=data[i].problemSubmitInfos[k].competitionPeoblemNumber;
+                                    if(competitionPeoblemNumber==(j+1)){
+                                        console.log(j);
+                                        var _tab = document.getElementById('table'); // 获取table对象
+                                        var _row = _tab.rows; //获取table的行
+                                        var _cell = _row[(i+1)].cells; //获取第二行的列
+                                        _cell[(4+j)].innerHTML=data[i].problemSubmitInfos[k].acceptedTime+(data[i].problemSubmitInfos[k].submitCount-1)*20*60; //获取第三列的值
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            });
+        }
+
         $scope.detail = function (index) {
             $("#code").val("");
             $scope.competitionPeoblemNumber=index+1;
             $scope.detailProblemObj = $scope.competitionData.competitionProblems[index];
             var reg = new RegExp(/[\r\n]+/gi);
-            $("#exampleInput").attr("rows", $scope.detailProblemObj.exampleInput.split(reg).length);
-            $("#exampleOutput").attr("rows", $scope.detailProblemObj.exampleOutput.split(reg).length);
-            $scope.exampleInput = $scope.detailProblemObj.exampleInput;
-            $scope.exampleOutput = $scope.detailProblemObj.exampleOutput;
+            var exampleInput=$scope.detailProblemObj.exampleInput.split("======");
+            var exampleOutput=$scope.detailProblemObj.exampleOutput.split("======");
+
+            $("#exampleInput").attr("rows", exampleInput[0].split(reg).length);
+            $("#exampleOutput").attr("rows", exampleOutput[0].split(reg).length);
+            $scope.exampleInput = exampleInput[0];
+            $scope.exampleOutput = exampleOutput[0];
         }
 
 
@@ -558,76 +662,46 @@ appCtrls.controller('competitionAnswerCtr',
         }
     });
 
-//班级
-appCtrls
-    .controller(
-        'classCtr',
+//作业
+appCtrls.controller('taskCtr',
         function ($scope, $http, $location, sessionDataBase) {
             $scope.isLoadingData = true;
             $scope.loginObj = sessionDataBase.getObject("loginObj");
-            $scope.competitionData = sessionDataBase
-                .getObject("competitionData");
+            $scope.competitionData = sessionDataBase.getObject("competitionData");
+            $scope.course;
+            $scope.task;
 
-            if ($scope.competitionData == null
-                || $scope.loginObj.competitionId != $scope.competitionData.competitionId) {
-                $http
-                    .get("CompetitionController/getCompetitionData")
-                    .success(
-                        function (response) {
-                            $scope.isLoadingData = false;
-                            if (response.success) {
-                                $scope.competitionData = response;
-                                sessionDataBase.setObject(
-                                    "competitionData",
-                                    $scope.competitionData);
-                            } else {
-                                alert(response.message);
-                            }
-                        }).error(function (response) {
-                    $scope.isLoadingData = false;
-                    alert(response.message);
-                });
-            } else {
+            $http.get("taskController/getCourse")
+                .success( function (response) {
+                        if (response.success) {
+                            $scope.course = response.course;
+                            console.log($scope.course);
+                        } else {
+                            alert(response.message);
+                        }
+                    }).error(function (response) {
                 $scope.isLoadingData = false;
-            }
+                alert(response.message);
+            });
 
             $scope.detail = function (index) {
-                $scope.detailProblemObj = $scope.competitionData.competitionProblems[index];
-            }
-
-            $scope.answerDialogShow = function () {
-                $scope.answerData = {};
-                $scope.answerData.codeType = "java";
-                $scope.answerData.problemId = $scope.detailProblemObj.problemId;
-                $scope.answerData.code = null;
-                $("#competitionAnswerDialog").modal("show");
-            }
-
-            $scope.answerSubmit = function () {
-                $http(
-                    {
-                        method: "post",
-                        data: jQuery.param($scope.answerData),
-                        url: "CompetitionController/submitCompetitionProblemAnswer",
-                        headers: {
-                            "Content-Type": "application/x-www-form-urlencoded"
+                $scope.detailProblemObj = $scope.course[index];
+                $http({
+                    method: "post",
+                    data: jQuery.param($scope.detailProblemObj),
+                    url: "taskController/getTask",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    }
+                }).success(
+                    function (data, status, headers, config) {
+                        if (data.success) {
+                            $scope.task = data.task;
+                            console.log($scope.task);
+                        } else {
+                            alert("提交失败：" + data.message);
                         }
-                    })
-                    .success(
-                        function (data, status, headers, config) {
-                            if (data.success) {
-                                alert("提交成功");
-                                $("#competitionAnswerDialog")
-                                    .modal("hide");
-                                $scope.detailProblemObj.isHaveSubmit = true;
-                                // 更新一下存储的数据，避免刷新后已经提交的状态就没了
-                                sessionDataBase.setObject(
-                                    "competitionData",
-                                    $scope.competitionData);
-                            } else {
-                                alert("提交失败：" + data.message);
-                            }
-                        }).error(
+                    }).error(
                     function (response, status, headers,
                               config) {
                         if (response.message != null) {
@@ -639,15 +713,122 @@ appCtrls
                     });
             }
 
-            $scope.logout = function () {
-                if (window.confirm('你确定要退出登录吗？')) {
-                    $http.get("CompetitionController/logout");
-                    sessionDataBase.remove("loginObj");
-                    sessionDataBase.remove("competitionData");
-                    $location.path("/competition/index");
+            $scope.Taskdetail =function(index){
+                var stringTime = $scope.task[index].endTime;
+                console.log($scope.task[index].endTime);
+                var timestamp2 = Date.parse(new Date(stringTime));
+                var timestamp1 = Date.parse(new Date());
+                console.log(timestamp1);
+                console.log(timestamp2);
+                if(timestamp1>timestamp2){
+                    alert("作业提交时间结束！");
+                }else{
+                    sessionDataBase.setObject("task",$scope.task[index]);
+                    $location.path("/task/detail");
                 }
             }
         });
+//作业详情
+appCtrls.controller('taskDetailCtr',
+    function ($scope, $http, $location, sessionDataBase) {
+        $scope.taskData = sessionDataBase.getObject("task");
+        console.log("taskDetailCtr");
+        console.log($scope.taskData);
+        $scope.taskDetailData;
+        $scope.answerData = {};
+        $scope.answerData.submitProblemId = null;
+        $scope.codeLanguage = "java";
+        $scope.answerData.code = null;
+        $scope.detailProblemObj=null;
+        $scope.competitionPeoblemNumber=null;
+
+        $http.get("taskController/getDetailTask?tid="+$scope.taskData.tid)
+            .success(function (response) {
+                console.log(response);
+                if (response.success) {
+                    $scope.taskDetailData = response.taskDetail;
+                    console.log($scope.taskDetailData);
+                } else {
+                    alert(response.message);
+                }
+            }).error(function (response) {
+            alert(response.message);
+        });
+
+        $scope.detail = function (index) {
+            $("#code").val("");
+            $scope.competitionPeoblemNumber=index+1;
+            $scope.detailProblemObj = $scope.taskDetailData[index];
+            var reg = new RegExp(/[\r\n]+/gi);
+            var exampleInput=$scope.detailProblemObj.exampleInput.split("======");
+            var exampleOutput=$scope.detailProblemObj.exampleOutput.split("======");
+
+            $("#exampleInput").attr("rows", exampleInput[0].split(reg).length);
+            $("#exampleOutput").attr("rows", exampleOutput[0].split(reg).length);
+            $scope.exampleInput = exampleInput[0];
+            $scope.exampleOutput = exampleOutput[0];
+        }
+
+
+        $scope.answerDialogShow = function () {
+            $scope.answerData = {};
+            $scope.answerData.codeType = $scope.codeLanguage;
+            $scope.answerData.tid=$scope.taskData.tid;
+            $scope.answerData.cno=$scope.taskData.cno;
+            $scope.answerData.code=$("#code").val();
+            if($("#code").val()==null ||$("#code").val()==""){
+                alert("代码不能为空！");
+            }else{
+                $scope.answerData.problemId = $scope.detailProblemObj.qid;
+                console.log($scope.answerData);
+                $http({
+                    method: "post",
+                    data: jQuery.param($scope.answerData),
+                    url: "taskController/submitTaskProblemAnswer",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    }
+                }).success(function (data, status, headers, config) {
+                    console.log(data);
+                    if(data.sim.sim!=undefined){
+                        $("#sim").text("相似度："+data.sim.sim+"%");
+                    }
+                    $("#message").text(data.message);
+                }).error(
+                    function (response, status, headers,
+                              config) {
+                        if (response.message != null) {
+                            alert(response.message);
+                        } else {
+                            $scope.error = {};
+                            $scope.error = response;
+                        }
+                    });
+            }
+        }
+    });
+
+
+//资料下载
+appCtrls.controller('corpusCtr', function ($scope, $http, $pageService,
+                                                $location, sessionDataBase) {
+    $scope.corpus;
+    $http.get("corpusController/getCorpus")
+        .success(function (response) {
+            console.log(response);
+            if (response.success) {
+                $scope.corpus = response.corpus;
+                console.log($scope.corpus);
+            } else {
+                alert(response.message);
+            }
+        }).error(function (response) {
+        alert(response.message);
+    });
+
+
+});
+
 
 // 编译文件内容为html元素的的过滤器
 appCtrls.filter("imageRandom",
@@ -706,7 +887,7 @@ appCtrls
                 totalCount: null,
                 totalPage: null,
                 method: "/list"
-            }
+            };
 
             $scope.loadingData = function () {
                 console.log($scope.page);
@@ -834,6 +1015,7 @@ appCtrls
 appCtrls.controller('problemDetailCtr', function ($scope, $http, $timeout,
                                                   sessionDataBase) {
     $scope.problemDetailObj = sessionDataBase.getObject("problemDetailObj");
+    console.log($scope.problemDetailObj);
     $scope.answerStatus = {};
     $scope.answerStatus.disabled = false;
     $scope.answerData = {};
@@ -844,11 +1026,14 @@ appCtrls.controller('problemDetailCtr', function ($scope, $http, $timeout,
     $scope.answerData.competitionId = -1;
     $scope.answerData.competitionPeoblemNumber = "-1";
     $scope.datas = null;
+    var exampleInput=$scope.problemDetailObj.exampleInput.split("======");
+    var exampleOutput=$scope.problemDetailObj.exampleOutput.split("======");
     var reg = new RegExp(/[\r\n]+/gi);
-    $("#exampleInput").attr("rows", $scope.problemDetailObj.exampleInput.split(reg).length);
-    $("#exampleOutput").attr("rows", $scope.problemDetailObj.exampleOutput.split(reg).length);
-    $scope.exampleInput = $scope.problemDetailObj.exampleInput;
-    $scope.exampleOutput = $scope.problemDetailObj.exampleOutput;
+
+    $("#exampleInput").attr("rows", exampleInput[0].split(reg).length);
+    $("#exampleOutput").attr("rows", exampleOutput[0].split(reg).length);
+    $scope.exampleInput = exampleInput[0];
+    $scope.exampleOutput = exampleOutput[0];
     /*	$scope.answerDialogShow = function() {
             $scope.answerData = {};
             $scope.answerData.codeLanguage = "java";
@@ -857,6 +1042,7 @@ appCtrls.controller('problemDetailCtr', function ($scope, $http, $timeout,
             //$("#answerDialog").modal("show");
         }*/
     $scope.answerSubmit = function () {
+        $scope.problemDetail=$scope.problemDetailObj;
         $scope.answerData.submitProblemId = $scope.problemDetailObj.qid;
         $scope.answerStatus.disabled = true;
         $scope.message = null;
@@ -868,7 +1054,7 @@ appCtrls.controller('problemDetailCtr', function ($scope, $http, $timeout,
         console.log($scope.answerData);
         $http({
             method: "post",
-            data: jQuery.param($scope.answerData),
+            data:jQuery.param($scope.answerData),
             url: "ProblemController/submitAnswer",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
@@ -893,6 +1079,7 @@ appCtrls.controller('problemDetailCtr', function ($scope, $http, $timeout,
         }).success(
             function (response) {
                 $scope.datas = response;
+                console.log($scope.datas);
             }).error(function (response) {
             alert("数据加载失败");
         });

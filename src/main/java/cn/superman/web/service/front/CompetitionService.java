@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.superman.web.dto.CodeDTO;
+import cn.superman.web.dto.CompetitionRanking;
+import cn.superman.web.dto.ProblemSubmitInfo;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -117,5 +119,30 @@ public class CompetitionService extends PageService<Competition, Competition> {
 		} catch (IOException e) {
 			Log4JUtil.logError(e);
 		}
+	}
+
+
+	public List<CompetitionRanking> queryCompetitionRanking(Long competitionId){
+		List<CompetitionRanking> competitionRankings = CompetitionDao.queryCompetitionRanking(competitionId);
+		System.out.println(competitionRankings);
+		for(CompetitionRanking competitionRanking:competitionRankings){
+			System.out.println(competitionRanking);
+			List<ProblemSubmitInfo> problemSubmitInfos=competitionRanking.getProblemSubmitInfos();
+			if(problemSubmitInfos!=null){
+				competitionRanking.setTotalCount(problemSubmitInfos.size());
+				int totalTime=0;
+				for(ProblemSubmitInfo problemSubmitInfo:problemSubmitInfos){
+					System.out.println(problemSubmitInfo);
+					if(problemSubmitInfo!=null){
+						totalTime+=problemSubmitInfo.getAcceptedTime()+(problemSubmitInfo.getSubmitCount()-1)*20*60;
+					}
+				}
+				competitionRanking.setTotalTime(totalTime);
+			}else{
+				competitionRanking.setTotalCount(0);
+			}
+		}
+		//todo 进行排序
+		return competitionRankings;
 	}
 }

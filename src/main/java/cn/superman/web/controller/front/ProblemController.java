@@ -15,6 +15,7 @@ import cn.superman.web.dto.MyRecord;
 import cn.superman.web.po.SubmitRecord;
 import org.apache.xmlbeans.impl.xb.ltgfmt.Code;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -143,7 +144,7 @@ public class ProblemController{
 
     @RequestMapping(value = "/submitAnswer", method = RequestMethod.POST)
     @ResponseBody
-    public ResponseMap submitAnswer(HttpSession session, @Valid ProblemAnswerVO problemAnswerVO) {
+    public ResponseMap submitAnswer(HttpSession session,  ProblemAnswerVO problemAnswerVO) {
         Long nextSubmitTime = (Long) session.getAttribute(ConstantParameter.SUBMIT_RECORD_TOKEN_NAME);
         System.out.println(problemAnswerVO);
         // 如果为空，就表明是第一次提交
@@ -159,15 +160,13 @@ public class ProblemController{
         System.out.println(user);
         ProblemAnswerDTO dto = BeanMapperUtil.map(problemAnswerVO, ProblemAnswerDTO.class);
         dto.setUser(user);
-        String message=answerSubmitService.dealCode(dto);
-        System.out.println(message);
+        Map<String, Object> map = answerSubmitService.dealCode(dto, null);
         // 5秒后才能允许再一次提交代码
         session.setAttribute(ConstantParameter.SUBMIT_RECORD_TOKEN_NAME, System.currentTimeMillis() + ConstantParameter.SUBMIT_RECORD_GAP);
-        // TODO 返回个人历史提交显示页面
         ResponseMap responseMap = new ResponseMap();
-        if(message != null && message != ""){
-            if(message.indexOf("测试数据通过率：100")==-1){
-                responseMap.append("message",message);
+        if(map.get("message") != null && map.get("message") != ""){
+            if(((String)map.get("message")).indexOf("测试数据通过率：100")==-1){
+                responseMap.append("message",map.get("message"));
             }else{
                 responseMap.append("message","测试通过");
             }

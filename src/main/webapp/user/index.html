@@ -31,7 +31,7 @@ p {
 }
 </style>
 <div ng-if="userData == null">
-	<a href="#">请登录</a>
+	<a >请登录</a>
 </div>
 <div ng-if="userData != null">
 	<div id="userContent" ng-controller="userCtr">
@@ -45,17 +45,17 @@ p {
 					<br />
 					<p>邮箱：{{userData.email}}</p>
 					<br />
-					<p>做过的题目：{{userData.haveDoneProblem}}(每天1点更新一次)</p>
+<!--					<p>做过的题目：{{userData.haveDoneProblem}}</p>
 					<br />
-					<p>做对的题目：{{userData.rightProblemCount}}(每天1点更新一次)</p>
-					<br />
-					<p>一共解决的总价值：{{userData.totalSolveValue}}(每天1点更新一次)</p>
+					<p>做对的题目：{{userData.rightProblemCount}}</p>
+					<br />-->
+<!--					<p>一共解决的总价值：{{userData.totalSolveValue}}(每天1点更新一次)</p>-->
 					<br />
 					<button class="btn btn-success " type="button" ng-click="edit()">
 						{{updateButtonText}}</button>
 					<div ng-if="isUpdate">
 						<form class="form-horizontal" ng-submit="editSubmit()">
-							<span class="heading">信息修改</span>
+							<br>
 							<div class="form-group">
 								<i class="icon-key"></i><input type="password"
 															   class="form-control" placeholder="新密码：长度为6-20位的，数字或者英文字母"
@@ -75,6 +75,7 @@ p {
 								<i class="icon-envelope"></i><input type="text"
 																	class="form-control" placeholder="邮件验证码"
 																	ng-model="editData.emailVerificationCode" required>
+								<br>
 								<button type="button" class="btn btn-info" ng-click="sendEmail()">发送验证码</button>
 							</div>
 							<div class="form-group">
@@ -84,7 +85,39 @@ p {
 					</div>
 				</div>
 			</div>
+			<div ng-if="userData.isStudent == null || userData.isStudent == ''">
+				<div class="panel panel-info">
+					<div class="panel-heading">学生认证</div>
+					<div class="panel-body">
+						<button class="btn btn-success " type="button" ng-click="confirmStudent()">
+							学生认证</button>
+						<div ng-if="confirms">
+							<br>
+							<form class="form-horizontal" ng-submit="confirmSubmit()">
+								<div class="form-group">
+									<i class="icon-key"></i><input type="text"
+																   class="form-control" placeholder="学号"
+																   ng-model="confirmData.sno" required>{{error.passwordError}}
+								</div>
+								<div class="form-group">
+									<i class="icon-envelope"></i><input type="text"
+																		class="form-control" placeholder="邮件验证码"
+																		ng-model="confirmData.emailVerificationCode" required>
+									<br>
+									<button type="button" class="btn btn-info" ng-click="sendConfirmEmail()">发送验证码</button>
+								</div>
+								<div class="form-group">
+									<button type="submit" class="btn btn-success form-control">提交认证</button>
+								</div>
+								<div style="color:red">*学生信息录入时的邮箱</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
 		</div>
+
 
 		<div class="col-md-8">
 			<div class="panel panel-success">

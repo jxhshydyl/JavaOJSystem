@@ -246,12 +246,10 @@ html, body {
 						<li role="presentation">
 							<a role="menuitem" tabindex="-1" href="#/user/index">个人信息</a>
 						</li>
-						<li role="presentation">
-							<a role="menuitem" tabindex="-1" href="#/class/index">班级信息</a>
+						<li ng-if="userData.isStudent !=null && userData.isStudent !=''" role="presentation">
+							<a role="menuitem" tabindex="-1" href="#/task/index">作业信息</a>
+							<!--<a role="menuitem" tabindex="-1" href="#/corpus/index">资料下载</a>-->
 						</li>
-                        <li role="presentation">
-                            <a role="menuitem" tabindex="-1">通知信息</a>
-                        </li>
 						<li role="presentation" class="divider"></li>
 						<li role="presentation">
 							<a role="menuitem" tabindex="-1" style="cursor: pointer" ng-click="loginOut()">退出登录</a>

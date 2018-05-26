@@ -91,7 +91,7 @@ div {
 						</div>
 						<div class="templatemo_mainservice templatemo_botgap"
 							ng-click="goBack()">
-							<div class="templatemo_linkservice hand">返回</div>
+							<div  class="templatemo_linkservice hand">返回</div>
 						</div>
 					</div>
 
@@ -100,7 +100,7 @@ div {
 							<div>
 								<h2 id="announcementTitle">标题：{{currentDetailObj.announcementTitle}}</h2>
 								<div class="clear"></div>
-								内容：<br />
+								<div style="color: white">内容：</div>
 								<p id="announcementContent">
 									{{currentDetailObj.announcementContent| formatToHtml :
 									"announcementContent"}}</p>
@@ -113,14 +113,6 @@ div {
 	</div>
 	<!--detail end -->
 	<!-- logo start -->
-	<div class="logocontainer">
-		<div class="row">
-			<div class="templatemo_footer">
-				Copyright © liang - <a href="http://www.supermanl.cn/">Personal
-					Homepage</a>
-			</div>
-		</div>
-	</div>
 </div>
 <!-- logo end -->
 <div load-Script ng-src="js/jquery.lightbox.js"></div>

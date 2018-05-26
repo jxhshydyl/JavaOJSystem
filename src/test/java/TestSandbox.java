@@ -101,7 +101,7 @@ public class TestSandbox{
 				"\t}\n" +
 				"}");
 		dto.setSubmitProblemId(BigInteger.valueOf(129));
-		answerSubmitService.dealCode(dto);
+		answerSubmitService.dealCode(dto,null);
 
 	}
 

@@ -115,12 +115,57 @@ public class UserController {
         return responseMap;
     }
 
+    /**
+     * 更新验证码
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "/sendUpdateCodeEmail", method = RequestMethod.GET)
     @ResponseBody
     public ResponseMap sendUpdateCodeEmail(HttpServletRequest request) {
         User user = getLoginUser(request);
         userService.sendUpdateCodeEmail(user);
         ResponseMap responseMap = new ResponseMap().buildSucessResponse();
+
+        return responseMap;
+    }
+
+    /**
+     * 认证学号
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/sendConfirmEmail")
+    @ResponseBody
+    public ResponseMap sendConfirmEmail(HttpServletRequest request,String sno) {
+        //User user = getLoginUser(request);
+        System.out.println(sno);
+        String s = userService.sendConfirmEmail(sno);
+        ResponseMap responseMap;
+        if("1".equals(s)){
+            responseMap = new ResponseMap().buildSucessResponse();
+        }else{
+            responseMap = new ResponseMap().append("message","发送失败！");
+        }
+
+        return responseMap;
+    }
+    @RequestMapping(value = "/confirmSubmit", method = RequestMethod.POST)
+    @ResponseBody
+    public ResponseMap confirmSubmit(@Valid UserUpdateVO vo, HttpServletRequest request) {
+
+        int confirm = userService.confirm(vo, getLoginUser(request).getUserId());
+        ResponseMap responseMap;
+        if (confirm==1) {
+            User user = userService.find(getLoginUser(request).getUserId());
+            UserLoginResponse response = BeanMapperUtil.map(user, UserLoginResponse.class);
+            request.getSession().setAttribute(WebConstant.USER_SESSION_ATTRIBUTE_NAME, user);
+            responseMap = new ResponseMap().buildSucessResponse();
+            responseMap.append("user", response);
+        }else{
+            responseMap=new ResponseMap().append("message","认证失败！");
+        }
+
 
         return responseMap;
     }
@@ -143,7 +188,6 @@ public class UserController {
     }
 
     /* 发送邮箱验证码  忘记密码*/
-    //TODO 验证码还不能发送
     @RequestMapping(value = "/sendForgetPasswordEmail/{account}", method = RequestMethod.GET)
     @ResponseBody
     public ResponseMap sendForgetPasswordEmail(@PathVariable("account") String account) {

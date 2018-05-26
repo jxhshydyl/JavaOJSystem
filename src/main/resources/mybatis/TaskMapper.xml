@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2009-2012 the original author or authors. Licensed under the 
+	Apache License, Version 2.0 (the "License"); you may not use this file except 
+	in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 
+	Unless required by applicable law or agreed to in writing, software distributed 
+	under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
+	OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+	the specific language governing permissions and limitations under the License. -->
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.superman.web.dao.TaskDao">
+
+	<resultMap id="course" type="cn.superman.web.dto.CourseDTO">
+		<result property="sno" column="Sno"></result>
+		<result property="sname" column="Sname"></result>
+		<result property="classNo" column="Sclass"></result>
+		<result property="className" column="className"></result>
+		<result property="courseNo" column="courseNo"></result>
+		<result property="courseName" column="courseName"></result>
+		<result property="tid" column="Tid"></result>
+		<result property="taskName" column="Task_name"></result>
+		<result property="count" column="count"></result>
+	</resultMap>
+
+	<resultMap id="task" type="cn.superman.web.dto.TaskDTO">
+		<id column="Tid" property="tid"></id>
+		<result column="Task_name" property="taskName"></result>
+		<result column="Tappendixes" property="tappendixes"></result>
+		<result column="Tscore" property="tscore"></result>
+		<result column="Tno" property="tno"></result>
+		<result column="Tname" property="tname"></result>
+		<result column="SubTime" property="subtime"></result>
+		<result column="Ttype" property="ttype"></result>
+		<result column="Tstate" property="tstate"></result>
+		<result column="Cno" property="cno"></result>
+		<result column="Cname" property="cname"></result>
+		<result column="Tchapter" property="tchapter"></result>
+		<result column="startTime" property="Start_time"></result>
+		<result column="endTime" property="End_time"></result>
+	</resultMap>
+
+	<resultMap id="code" type="cn.superman.web.dto.CodeDTO">
+		<id column="Qid" property="qid"></id>
+		<result column="Qname" property="qname"></result>
+		<result column="Qdescribe" property="qdescribe"></result>
+		<result column="Input_describe" property="inputDescribe"></result>
+		<result column="Output_descripe" property="outputDescripe"></result>
+		<result column="Example_input" property="exampleInput"></result>
+		<result column="Example_output" property="exampleOutput"></result>
+		<result column="reference_answer" property="referenceAnswer"></result>
+		<result column="Qtype" property="qtype"></result>
+		<result column="Limit_time" property="limitTime"></result>
+		<result column="Limit_memory" property="limitMemory"></result>
+		<result column="Qdegree" property="qdegree"></result>
+		<result column="Total_submit_count" property="totalSubmitCount"></result>
+		<result column="Total_right_count" property="totalRightCount"></result>
+		<result column="Qchapter" property="qchapter"></result>
+		<result column="Qparagraph" property="qparagraph"></result>
+		<result column="Cname" property="cname"></result>
+		<result column="Score" property="score"></result>
+		<result column="Sanswer" property="answer"></result>
+		<result column="grade" property="grade"></result>
+	</resultMap>
+
+	<resultMap id="staskDetail" type="cn.superman.web.dto.StaskDetail">
+		<id column="id" property="id"></id>
+		<result column="Qid" property="qid"></result>
+		<result column="Sanswer" property="sanswer"></result>
+		<result column="Usertime" property="usertime"></result>
+		<result column="Usermemory" property="usermemory"></result>
+		<result column="Subcount" property="subcount"></result>
+		<result column="Lastsubtime" property="lastsubtime"></result>
+		<result column="Score" property="score"></result>
+		<result column="Sno" property="sno"></result>
+		<result column="Sname" property="sname"></result>
+	</resultMap>
+
+	<resultMap id="stask" type="cn.superman.web.dto.Stask">
+		<id column="id" property="id"></id>
+		<result column="Tid" property="tid"></result>
+		<result column="Sappendixes" property="sappendixes"></result>
+		<result column="Tstate" property="tstate"></result>
+		<result column="Sno" property="sno"></result>
+		<result column="Sdate" property="sdate"></result>
+		<result column="Grade" property="grade"></result>
+		<result column="Correct_rate" property="correctRate"></result>
+		<result column="Cno" property="cno"></result>
+	</resultMap>
+
+	<select id="getCourse" resultMap="course">
+		select si.Sno,si.Sname,si.Sclass,cl.Cname as className,c.Cno as courseNo,c.Cname as courseName ,t.Tid,t.Task_name,count(1) as count
+		from sinformation si,ccourse cc ,course c ,class cl, ctask ct ,task t
+		where si.Sno=#{sno} and si.Sclass= cc.Cno and c.Cno=cc.Mno and cl.Cno=si.Sclass and ct.Cno=si.Sclass
+		and t.Tid=ct.Tid and t.Cno=c.Cno  GROUP BY c.Cno
+	</select>
+
+	<select id="getTask" resultMap="task">
+		select t.*,ct.Start_time,ct.End_time from task t,ctask ct where t.Tid=ct.Tid and ct.Cno=#{classNo} and t.Cno=#{courseNo}
+	</select>
+
+
+	<select id="getDetailTask" resultMap="code">
+		select * from code where Qid in (select Qid from Tdetail where Tid=#{tid} and type=1)
+	</select>
+
+	<select id="queryStask" resultMap="stask">
+		select * from stask
+		<where>
+			<if test="tid!=null">
+				and Tid=#{tid}
+			</if>
+			<if test="sno!=null">
+				and Sno=#{sno}
+			</if>
+		</where>
+	</select>
+
+	<insert id="insertStask" useGeneratedKeys="true" keyProperty="newId">
+		insert into stask(Tid,Tstate,Sno,Sdate,Cno)
+		 VALUES (#{tid},#{tstate},#{sno},#{sdate},#{cno})
+	</insert>
+
+	<select id="queryStaskDetail" resultMap="staskDetail">
+		select * from stdetail_code
+		<where>
+			<if test="id !=null">
+				and id=#{id}
+			</if>
+			<if test="qid !=null">
+				and Qid=#{qid}
+			</if>
+		</where>
+	</select>
+
+	<insert id="insertStaskDetail">
+		insert into stdetail_code(id,Qid,Sanswer,Usertime,Usermemory,Subcount,Lastsubtime)
+		VALUES (#{id},#{qid},#{sanswer},#{usertime},#{usermemory},#{subcount},#{lastsubtime})
+	</insert>
+
+	<update id="updateStaskDetail">
+		UPDATE  stdetail_code
+		<set>
+			<if test="sanswer!=null">
+				Sanswer=#{sanswer},
+			</if>
+			<if test="usertime!=null">
+				Usertime=#{usertime},
+			</if>
+			<if test="usermemory!=null">
+				Usermemory=#{usermemory},
+			</if>
+			<if test="lastsubtime !=null">
+				Lastsubtime=#{lastsubtime},
+			</if>
+			subcount=subcount+1
+		</set>
+		where id=#{id} and Qid=#{qid}
+	</update>
+
+	<select id="getSimCode" resultMap="staskDetail">
+		select stdetail_code.*,sinformation.Sno,sinformation.Sname from stdetail_code,stask,sinformation
+		where stdetail_code.id not in(select id from stask where sno=#{sno})
+		and sinformation.Sno=stask.Sno and stdetail_code.id=stask.id and stdetail_code.Qid = #{qid}
+	</select>
+
+</mapper>

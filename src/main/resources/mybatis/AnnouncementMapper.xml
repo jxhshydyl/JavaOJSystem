@@ -13,7 +13,6 @@
 
 <mapper namespace="cn.superman.web.dao.AnnouncementDao">
 
-	<cache />
 	<sql id="Base_Column_List">
 		announcement_id,announcement_title,announcement_introduction,announcement_content,announcement_create_manager_id,announcement_create_time,announcement_publish_time,is_publish
 	</sql>

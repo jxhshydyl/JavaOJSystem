@@ -219,7 +219,42 @@ public class CPlusPlusCompare extends Compare {
 	public static void main(String[] args) throws IOException {
 
 		CPlusPlusCompare cmp = new CPlusPlusCompare();
-		File dic = new File("F:\\solution_directory");
+		String s = DelComments.delComments("import java.util.*;  \n" +
+				"public class Main{  \n" +
+				"    public static void main(String[] args) {  \n" +
+				"  \n" +
+				"        Scanner scan=new Scanner(System.in);  \n" +
+				"        while(scan.hasNext())  \n" +
+				"        {  \n" +
+				"            int count=scan.nextInt();  \n" +
+				"            int[] nums=new int[count];  \n" +
+				"            int m=0;//记录负数个数  \n" +
+				"            int n=0;//记录整数数组下标  \n" +
+				"            int x=0;//记录0的个数  \n" +
+				"            for(int i=0;i<count;i++){  \n" +
+				"                int num=scan.nextInt();  \n" +
+				"                if(num>0){  \n" +
+				"                    nums[n]=num;n++;  \n" +
+				"                }else if(num<0){  \n" +
+				"                    m++;  \n" +
+				"                }else{  \n" +
+				"                    x++;  \n" +
+				"                }  \n" +
+				"            }  \n" +
+				"            //计算正数的平均数  \n" +
+				"            int sum=0;  \n" +
+				"            for(int i=0;i<count-m;i++){  \n" +
+				"                sum+=nums[i];  \n" +
+				"            }  \n" +
+				"            double average=(double)sum/(double)(count-m-x);  \n" +
+				"            System.out.println(m+\" \"+String.format(\"%.1f\", average));  \n" +
+				"        }  \n" +
+				"    }  \n" +
+				"}  ");
+		System.out.println(s);
+		s = s.replaceAll("\\s", "");
+		System.out.println(s);
+/*		File dic = new File("F:\\solution_directory");
 		String names[] = { "3695.cpp"};
 		System.out.println(dic.listFiles().length);
 		for (String name : names) {
@@ -261,7 +296,7 @@ public class CPlusPlusCompare extends Compare {
 			}
 			bw.close();
 
-		}
+		}*/
 
 	}
 

@@ -22,6 +22,7 @@ public class User implements Serializable {
     // 改用户一共解决的问题总价值
     private Integer totalSolveValue;
     private Date lastSubmitTime;
+    private String isStudent;
 
     public Integer getUserId() {
         return userId;
@@ -121,6 +122,14 @@ public class User implements Serializable {
 
     public void setLastSubmitTime(Date lastSubmitTime) {
         this.lastSubmitTime = lastSubmitTime;
+    }
+
+    public String getIsStudent() {
+        return isStudent;
+    }
+
+    public void setIsStudent(String isStudent) {
+        this.isStudent = isStudent;
     }
 
     @Override

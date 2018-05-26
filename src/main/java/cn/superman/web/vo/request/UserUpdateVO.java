@@ -4,6 +4,7 @@ import org.hibernate.validator.constraints.NotBlank;
 
 public class UserUpdateVO {
     private String password;
+    private String sno;
     private String nickname;
     private String email;
     @NotBlank(message = "邮件的验证码不能为空")
@@ -41,4 +42,11 @@ public class UserUpdateVO {
         this.emailVerificationCode = emailVerificationCode;
     }
 
+    public String getSno() {
+        return sno;
+    }
+
+    public void setSno(String sno) {
+        this.sno = sno;
+    }
 }

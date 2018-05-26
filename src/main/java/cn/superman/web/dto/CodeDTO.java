@@ -24,6 +24,7 @@ public class CodeDTO {
     private Float score;//题目分数
     private String answer;//学生答案
     private Float grade;//学生得到的分数
+    private String typeName;
 
     public BigInteger getQid() {
         return qid;
@@ -183,6 +184,14 @@ public class CodeDTO {
 
     public void setGrade(Float grade) {
         this.grade = grade;
+    }
+
+    public String getTypeName() {
+        return typeName;
+    }
+
+    public void setTypeName(String typeName) {
+        this.typeName = typeName;
     }
 
     @Override

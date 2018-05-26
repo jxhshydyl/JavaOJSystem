@@ -9,9 +9,9 @@
 }
 </style>
 <div id="leaderboardContent" ng-controller="leaderboardCtr">
-	<div class="col-md-4 radius">
+	<div class="col-md-6 radius">
 		<div class="panel panel-primary ">
-			<div class="panel-heading">一共解决的题目总数TOP50(每天早上6点更新)</div>
+			<div class="panel-heading">一共解决的题目总数TOP50</div>
 			<div class="panel-body">
 				<table class="table  table-striped">
 					<thead>
@@ -20,7 +20,7 @@
 							<th class="col-md-2">邮箱</th>
 							<th class="col-md-2">做过的</th>
 							<th class="col-md-2">做对的</th>
-							<th class="col-md-2">总价值</th>
+							<!--<th class="col-md-2">总价值</th>-->
 						</tr>
 					</thead>
 					<tbody>
@@ -29,16 +29,16 @@
 							<td class="col-md-2">{{haveDone.email}}</td>
 							<td class="col-md-2">{{haveDone.rightProblemCount}}</td>
 							<td class="col-md-2">{{haveDone.haveDoneProblem}}</td>
-							<td class="col-md-2">{{haveDone.totalSolveValue}}</td>
+							<!--<td class="col-md-2">{{haveDone.totalSolveValue}}</td>-->
 						</tr>
 					</tbody>
 				</table>
 			</div>
 		</div>
 	</div>
-	<div class="col-md-4 radius">
+	<div class="col-md-6 radius">
 		<div class="panel panel-primary">
-			<div class="panel-heading">一共做对的题目总数TOP50(每天早上6点更新)</div>
+			<div class="panel-heading">一共做对的题目总数TOP50</div>
 			<div class="panel-body">
 				<table class="table  table-striped">
 					<thead>
@@ -47,7 +47,7 @@
 							<th class="col-md-2">邮箱</th>
 							<th class="col-md-2">做过的</th>
 							<th class="col-md-2">做对的</th>
-							<th class="col-md-2">总价值</th>
+							<!--<th class="col-md-2">总价值</th>-->
 						</tr>
 					</thead>
 					<tbody>
@@ -56,16 +56,16 @@
 							<td class="col-md-2">{{rightProblem.email}}</td>
 							<td class="col-md-2">{{rightProblem.rightProblemCount}}</td>
 							<td class="col-md-2">{{rightProblem.haveDoneProblem}}</td>
-							<td class="col-md-2">{{rightProblem.totalSolveValue}}</td>
+							<!--<td class="col-md-2">{{rightProblem.totalSolveValue}}</td>-->
 						</tr>
 					</tbody>
 				</table>
 			</div>
 		</div>
 	</div>
-	<div class="col-md-4 radius">
+<!--	<div class="col-md-4 radius">
 		<div class="panel panel-primary">
-			<div class="panel-heading">一共解决的题目总价值TOP50(每天早上6点更新)</div>
+			<div class="panel-heading">一共解决的题目总价值TOP50</div>
 			<div class="panel-body">
 				<table class="table  table-striped">
 					<thead>
@@ -89,5 +89,5 @@
 				</table>
 			</div>
 		</div>
-	</div>
+	</div>-->
 </div>

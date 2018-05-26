@@ -3,16 +3,12 @@ package cn.superman.web.po;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Announcement implements Serializable {
-    /**
-     *
-     */
-    private static final long serialVersionUID = 7487328014735250860L;
+public class Announcement  {
     private Integer announcementId;
     private String announcementTitle;
     private String announcementIntroduction;
     private String announcementContent;
-    private Integer announcementCreateManagerId;
+    private String announcementCreateManagerId;
     private Date announcementCreateTime;
     private Date announcementPublishTime;
     private Boolean isPublish;
@@ -49,11 +45,11 @@ public class Announcement implements Serializable {
         this.announcementContent = announcementContent;
     }
 
-    public Integer getAnnouncementCreateManagerId() {
+    public String getAnnouncementCreateManagerId() {
         return announcementCreateManagerId;
     }
 
-    public void setAnnouncementCreateManagerId(Integer announcementCreateManagerId) {
+    public void setAnnouncementCreateManagerId(String announcementCreateManagerId) {
         this.announcementCreateManagerId = announcementCreateManagerId;
     }
 

@@ -13,6 +13,7 @@ import cn.superman.system.util.CompilerAndRunUtil;
 import cn.superman.web.dto.CodeDTO;
 import cn.superman.web.dto.MyRecord;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Base64Utils;
 
@@ -64,7 +65,7 @@ public class AnswerSubmitService {
      * @param dto
      * @return
      */
-    public String dealCode(ProblemAnswerDTO dto){
+    public Map<String, Object> dealCode(ProblemAnswerDTO dto,CodeDTO codeDTO1){
     	String code=dto.getCode();//得到代码
         //得到题目的测试数据
 		CodeDTO codeDTO = problemDao.findExample(dto.getSubmitProblemId());
@@ -88,54 +89,59 @@ public class AnswerSubmitService {
             fileWriter.close();
             //编译文件
             String compileCommand ="javac  -encoding gbk -d e:\\class  e:\\test\\"+className+".java";
-            message= CompilerAndRunUtil.compileCode(compileCommand);
-            //运行文件
-            if(message==null||"".equals(message)){
+			Map<String, Object> map = CompilerAndRunUtil.compileCode(compileCommand);
+			//运行文件
+            if(map.get("message")==null||"".equals(map.get("message"))){
                 String runCommand ="java -cp e:\\class "+className+"";
-                message= CompilerAndRunUtil.runCode(runCommand,codeDTO);
-				SubmitRecord submitRecord=new SubmitRecord();
-				if(message!=null && message.indexOf("测试数据通过率：100")!=-1){
-					submitRecord.setIsAccepted(1);
-					submitRecord.setAcceptedTime(3000);
-				}else{
-					submitRecord.setIsAccepted(0);
-					submitRecord.setAcceptedTime(-1);
-				}
-				submitRecord.setSubmitTime(DateUtil.formatToYYYYMMddHHmm(new Date()));
-				submitRecord.setSubmitProblemId(dto.getSubmitProblemId());
-				submitRecord.setSubmitUserId(dto.getUser().getUserId());
-				submitRecord.setScore(0.0);
-				submitRecord.setDetails("");
-				submitRecord.setCodeLanguage(dto.getCodeLanguage());
-				submitRecord.setCode(dto.getCode());
-				submitRecord.setSubmitRecordTableName("submit_record0");
-				submitRecord.setIsCompetition(dto.getCompetitionId());
-				submitRecord.setCompetitionPeoblemNumber(dto.getCompetitionPeoblemNumber());
-				submitRecord.setSubmitCount(1);
-				submitRecordDao.add(submitRecord);
-				return message;
+				map = CompilerAndRunUtil.runCode(runCommand, codeDTO);
+				//增加记录
+				insert(dto,map);
+				return map;
             }
-			SubmitRecord submitRecord=new SubmitRecord();
-			submitRecord.setIsAccepted(0);
-			submitRecord.setAcceptedTime(-1);
-			submitRecord.setSubmitTime(DateUtil.formatToYYYYMMddHHmm(new Date()));
-			submitRecord.setSubmitProblemId(dto.getSubmitProblemId());
-			submitRecord.setSubmitUserId(dto.getUser().getUserId());
-			submitRecord.setScore(0.0);
-			submitRecord.setDetails("");
-			submitRecord.setCodeLanguage(dto.getCodeLanguage());
-			submitRecord.setCode(dto.getCode());
-			submitRecord.setSubmitRecordTableName("submit_record0");
-			submitRecord.setIsCompetition(dto.getCompetitionId());
-			submitRecord.setCompetitionPeoblemNumber(dto.getCompetitionPeoblemNumber());
-			submitRecord.setSubmitCount(1);
-			submitRecordDao.add(submitRecord);
-            return message;
+            //增加记录
+			insert(dto,map);
+            return map;
+
         }catch (IOException e){
         	e.printStackTrace();
             return null;
         }
     }
+
+    @Async
+    public void insert(ProblemAnswerDTO dto,Map<String,Object> map){
+		SubmitRecord submitRecord=new SubmitRecord();
+		if(map.get("message")!=null && ((String)map.get("message")).indexOf("测试数据通过率：100")!=-1){
+			submitRecord.setIsAccepted(1);
+			submitRecord.setAcceptedTime(((Long)map.get("time")).intValue());
+		}else{
+			submitRecord.setIsAccepted(0);
+			submitRecord.setAcceptedTime(-1);
+		}
+		submitRecord.setSubmitTime(DateUtil.formatToYYYYMMddHHmm(new Date()));
+		submitRecord.setSubmitProblemId(dto.getSubmitProblemId());
+		submitRecord.setSubmitUserId(dto.getUser().getUserId());
+		submitRecord.setScore(0.0);
+		submitRecord.setDetails("");
+		submitRecord.setCodeLanguage(dto.getCodeLanguage());
+		submitRecord.setCode(dto.getCode());
+		submitRecord.setSubmitRecordTableName("submit_record0");
+		submitRecord.setIsCompetition(dto.getCompetitionId());
+		submitRecord.setCompetitionPeoblemNumber(dto.getCompetitionPeoblemNumber());
+		submitRecord.setSubmitCount(1);
+    	if(-1!=dto.getCompetitionId()){
+			List<SubmitRecord> submitRecords = submitRecordDao.queryRecord(dto.getUser().getUserId(), dto.getCompetitionId(), dto.getCompetitionPeoblemNumber());
+			System.out.println(submitRecords);
+			if(submitRecords != null && submitRecords.size()>0){
+				submitRecordDao.updateRecord(submitRecord);
+			}else{
+				submitRecordDao.add(submitRecord);
+			}
+		}else{
+			submitRecordDao.add(submitRecord);
+		}
+	}
+
 	/**
 	 *
 	 * @param dto(包括问题的id，提交的用户，提交的答案，提交的语言类型)
@@ -205,10 +211,10 @@ public class AnswerSubmitService {
 			throw new ServiceLogicException("不能拥有package语句");
 		}
 
-		matcher = classNamePattern.matcher(code);
+/*		matcher = classNamePattern.matcher(code);
 		if (!matcher.find()) {
 			throw new ServiceLogicException("主类名必须是Main");
-		}
+		}*/
 
 		matcher = mainMethodPattern.matcher(code);
 		if (!matcher.find()) {

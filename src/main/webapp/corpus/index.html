@@ -1,0 +1,36 @@
+<style>
+#competitionContent {
+	margin: 50px;
+}
+
+#competitionContent p {
+	word-break: break-all;
+	display: inline-block;
+}
+
+#applyDialog .modal-dialog {
+	width: 90%;
+}
+
+#applyDialog textarea {
+	width: 90%;
+}
+</style>
+<div id="corpusCtr" ng-controller="corpusCtr">
+	<div ng-if="userData == null">
+		请登录
+	</div>
+	<div ng-if="userData == null">
+		<br>
+		<div  class="col-md-4">
+			<div class="panel panel-success" ng-repeat="corpus in corpus">
+				<div class="panel-heading">
+					资料名称：{{corpus.name}}
+					&nbsp;&nbsp;<a href="{{corpus.path}}">下载</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div>

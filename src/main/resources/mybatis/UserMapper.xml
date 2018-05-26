@@ -14,8 +14,21 @@
 <mapper namespace="cn.superman.web.dao.UserDao">
 
 	<cache />
+
+	<resultMap id="students" type="cn.superman.web.dto.Students">
+		<id column="Sno" property="sno"></id>
+		<result column="Sname" property="sname"></result>
+		<result column="Ssex" property="ssex"></result>
+		<result column="Syear" property="syear"></result>
+		<result column="Email" property="email"></result>
+		<result column="Phone" property="phone"></result>
+		<result column="Sacademy" property="sacademy"></result>
+		<result column="Smajor" property="smajor"></result>
+		<result column="Sclass" property="sclass"></result>
+	</resultMap>
+
 	<sql id="Base_Column_List">
-		user_id,account,password,nickname,source_file_root_path,right_problem_count,have_done_problem,email,submit_record_table_name,is_ban,total_solve_value,last_submit_time
+		user_id,account,password,nickname,source_file_root_path,right_problem_count,have_done_problem,email,submit_record_table_name,is_ban,total_solve_value,last_submit_time,is_student
 	</sql>
 
 
@@ -57,6 +70,9 @@
 			</if>
 			<if test="lastSubmitTime != null">
 				and last_submit_time = #{lastSubmitTime}
+			</if>
+			<if test="isStudent != null">
+				and is_student = #{isStudent}
 			</if>
 		</trim>
 	</sql>
@@ -275,5 +291,15 @@
 		submit_record_table_name varchar(150) comment
 		'方便操作的需要,用个字段记住表名好了'
 		)
+	</update>
+
+	<select id="queryStudent" resultMap="students">
+		select * from sinformation where Sno=#{sno}
+	</select>
+
+	<update id="updateConfirmStudents">
+		update user
+		 set is_student=#{sno}
+		 where user_id=#{userId}
 	</update>
 </mapper>

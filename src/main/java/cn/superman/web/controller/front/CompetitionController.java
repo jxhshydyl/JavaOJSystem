@@ -12,9 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
-
-import cn.superman.web.dto.CodeDTO;
-import cn.superman.web.dto.ProblemAnswerDTO;
+import cn.superman.web.dto.*;
 import cn.superman.web.po.User;
 import cn.superman.web.service.front.AnswerSubmitService;
 import org.apache.commons.lang3.StringUtils;
@@ -32,8 +30,6 @@ import cn.superman.util.Log4JUtil;
 import cn.superman.web.bean.ResponseMap;
 import cn.superman.web.constant.WebConstant;
 import cn.superman.web.controller.PageController;
-import cn.superman.web.dto.CompetitionApplyDTO;
-import cn.superman.web.dto.CompetitionProblemAnswerDTO;
 import cn.superman.web.exception.ServiceLogicException;
 import cn.superman.web.po.Competition;
 import cn.superman.web.po.CompetitionAccount;
@@ -46,7 +42,6 @@ import cn.superman.web.vo.request.BeginCompetitionVO;
 import cn.superman.web.vo.request.CompetitionApplyVO;
 import cn.superman.web.vo.request.CompetitionProblemAnswerVO;
 import cn.superman.web.vo.response.CompetitionResponse;
-import cn.superman.web.vo.response.ProblemResponse;
 
 @Controller
 @RequestMapping("/CompetitionController")
@@ -261,6 +256,14 @@ public class CompetitionController extends PageController<Competition, Competiti
         return responseMap;
     }
 
+    //比赛排名
+    @RequestMapping("/queryCompetitionRanking")
+    @ResponseBody
+    public List<CompetitionRanking> queryCompetitionRanking(Long competitionId){
+        List<CompetitionRanking> competitionRankings = competitionService.queryCompetitionRanking(competitionId);
+        return competitionRankings;
+    }
+
     @RequestMapping(value = "/submitCompetitionProblemAnswer", method = RequestMethod.POST)
     @ResponseBody
     public ResponseMap submitCompetitionProblemAnswer(@Valid CompetitionProblemAnswerVO vo, HttpSession session) {
@@ -287,18 +290,17 @@ public class CompetitionController extends PageController<Competition, Competiti
         problemAnswerDTO.setSubmitProblemId(BigInteger.valueOf(Long.valueOf(vo.getProblemId())));
         problemAnswerDTO.setCompetitionPeoblemNumber(vo.getCompetitionPeoblemNumber());
         System.out.println(problemAnswerDTO);
-        String message = answerSubmitService.dealCode(problemAnswerDTO);
+        Map<String, Object> map = answerSubmitService.dealCode(problemAnswerDTO, null);
         //competitionService.submitCompetitionProblemAnswer(dto);
-        System.out.println(message);
         ResponseMap responseMap = new ResponseMap();
-        if(message != null && message != ""){
-            if(message.indexOf("测试数据通过率：100")==-1){
-                responseMap.append("message",message);
+        if(map.get("message") != null && map.get("message")  != ""){
+            if(((String)map.get("message")).indexOf("测试数据通过率：100")==-1){
+                responseMap.append("message",map.get("message") );
             }else{
                 responseMap.append("message","测试通过");
             }
         }else{
-            responseMap.append("message",message);
+            responseMap.append("message",map.get("message") );
         }
         return responseMap;
     }
@@ -334,6 +336,7 @@ public class CompetitionController extends PageController<Competition, Competiti
             }
         }, 0, 5, TimeUnit.MINUTES);
     }
+
 
     @SuppressWarnings("unused")
     private static class Token {

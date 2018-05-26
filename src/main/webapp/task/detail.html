@@ -31,24 +31,20 @@
 }
 
 </style>
-<div id="competitionAnswerCtr" ng-controller="competitionAnswerCtr">
-	<ul id="myTab" class="nav nav-tabs" style="margin: 0.5% 0.5%;">
-		<li class="active"><a href="/#competitionProblem" ng-click="detail()"  data-toggle="tab"  target="_self">比赛题目</a></li>
-		<li><a href="/#competitionRanking" ng-click="competitionRanking()" data-toggle="tab"  target="_self">比赛排名</a></li>
-	</ul>
-	<div id="myTabContent" class="tab-content" style="margin-right: 1%">
+<div id="taskDetailCtr" ng-controller="taskDetailCtr">
+	<div ng-if="userData == null">
+		请登录
+	</div>
+	<div ng-if="userData != null">
+		<br>
 		<div class="tab-pane fade in active" id="competitionProblem" style="margin-right: 1%">
 			<div class="col-md-4">
 				<div class="panel panel-info ">
 					<div class="panel-heading">基本信息</div>
 					<div class="panel-body">
-						<p>比赛编号：{{loginObj.competitionId}}</p>
-						<p>比赛名称：{{loginObj.competitionName}}</p>
-						<p>比赛结束时间：{{loginObj.competitionEndTime|
-							stringDateFormat:'yyyy-MM-dd HH:mm:ss'}}</p>
-						<p>登录账号：{{loginObj.account}}</p>
-						<p>账号备注信息：{{competitionData.accountRemark}}</p>
-						<button class="btn btn-danger" type="button" ng-click="logout()">退出登录</button>
+						<p>作业名称：{{taskData.taskName}}</p>
+						<p>开始时间：{{taskData.startTime}}</p>
+						<p>结束时间：{{taskData.endTime}}</p>
 					</div>
 				</div>
 
@@ -59,11 +55,11 @@
 							 ng-if="isLoadingData">加载数据中，请稍等</div>
 						<div class="list-group" ng-if="!isLoadingData">
 							<a href="javascript:;" class="list-group-item"
-							   ng-repeat="problem in competitionData.competitionProblems"
+							   ng-repeat="taskDetail in taskDetailData"
 							   ng-click="detail($index)">
 								<h3 style="display: inline-block;">{{$index+1}}.</h3>
 								<h4 class="list-group-item-heading" style="display: inline-block;">
-									{{problem.qname}} <label ng-if="problem.isHaveSubmit">(已提交)</label>
+									{{taskDetail.qname}}
 								</h4>
 							</a>
 						</div>
@@ -77,7 +73,6 @@
 						<div class="alert alert-success alert-dismissable"
 							 ng-if="isLoadingData">加载数据中，请稍等</div>
 						<div ng-if="!isLoadingData && detailProblemObj != null">
-							<p>内存限制：{{detailProblemObj.limitMemory}}KB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;时间限制：{{detailProblemObj.limitTime}}ms</p>
 							<br />
 							<div>
 								<div style="border: 1px solid rgba(34,36,38,.15);margin-right: 1%">
@@ -153,6 +148,8 @@
 										<div style="margin: 1% 1%">
 											<strong>评测详情</strong>
 										</div>
+										<div style="margin: 0% 1%;" id="sim">
+										</div>
 										<div style="margin: 0% 1%;" id="message">
 										</div>
 									</div>
@@ -165,26 +162,5 @@
 				</div>
 			</div>
 		</div>
-		<div class="tab-pane fade"  id="competitionRanking" style="margin: 1% 1%">
-			<table class="table table-bordered" id="table">
-				<colgroup>
-					<col>
-					<col>
-					<col>
-				</colgroup>
-				<thead id="thead">
-				<tr id="totalTR">
-					<th>名次</th>
-					<th>用户名</th>
-					<th>通过题目数量</th>
-				</tr>
-				</thead>
-				<tbody id="tbody">
-				</tbody>
-			</table>
-
-		</div>
 	</div>
-
-
 </div>

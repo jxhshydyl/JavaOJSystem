@@ -17,6 +17,7 @@ public class MyRecord {
     private Integer totalSubmitCount;
     private Integer rightSubmitCount;
     private Integer submitCount;
+    private String acceptedTime;
 
     public Long getSubmitId() {
         return submitId;
@@ -144,6 +145,14 @@ public class MyRecord {
 
     public void setSubmitCount(Integer submitCount) {
         this.submitCount = submitCount;
+    }
+
+    public String getAcceptedTime() {
+        return acceptedTime;
+    }
+
+    public void setAcceptedTime(String acceptedTime) {
+        this.acceptedTime = acceptedTime;
     }
 
     @Override

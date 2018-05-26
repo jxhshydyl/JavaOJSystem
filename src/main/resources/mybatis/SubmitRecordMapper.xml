@@ -171,4 +171,61 @@
 		</where>
 		ORDER BY submit_time desc
 	</select>
+
+	<select id="queryRecord" resultType="cn.superman.web.po.SubmitRecord">
+		select * from submit_record0
+		<where>
+			<if test="userId != null">
+				and submit_user_id = #{userId}
+			</if>
+			<if test="competitionId != null">
+				and is_competition = #{competitionId}
+			</if>
+			<if test="competitionPeoblemNumber != null">
+				and competition_peoblem_number = #{competitionPeoblemNumber}
+			</if>
+		</where>
+	</select>
+
+	<update id="updateRecord" parameterType="cn.superman.web.po.SubmitRecord">
+		update ${submitRecordTableName}
+		<set>
+			<if test="submitTime != null">
+				submit_time = #{submitTime},
+			</if>
+			<if test="score != null">
+				score = #{score},
+			</if>
+			<if test="isAccepted != null">
+				is_accepted = #{isAccepted},
+			</if>
+			<if test="details != null">
+				details = #{details},
+			</if>
+			<if test="codeLanguage != null">
+				code_language = #{codeLanguage},
+			</if>
+			<if test="code != null">
+				code = #{code},
+			</if>
+			<if test="submitRecordTableName != null">
+				submit_record_table_name = #{submitRecordTableName},
+			</if>
+			<if test="acceptedTime != null">
+				accepted_time = #{acceptedTime},
+			</if>
+			submit_count = submit_count +1
+		</set>
+		<where>
+			<if test="submitUserId != null">
+				and submit_user_id = #{submitUserId}
+			</if>
+			<if test="isCompetition != null">
+				and is_competition = #{isCompetition}
+			</if>
+			<if test="competitionPeoblemNumber != null">
+				and competition_peoblem_number = #{competitionPeoblemNumber}
+			</if>
+		</where>
+	</update>
 </mapper>

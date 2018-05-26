@@ -83,8 +83,7 @@ app.factory('httpInterceptor', [ '$q', '$injector', '$rootScope',
 			return httpInterceptor;
 		} ]);
 
-app
-		.config(function($httpProvider, $routeProvider) {
+app.config(function($httpProvider, $routeProvider) {
 			// 添加对应的 Interceptors
 			$httpProvider.interceptors.push("httpInterceptor");
 			if (!$httpProvider.defaults.headers.get) {
@@ -117,10 +116,12 @@ app
                 templateUrl : 'classification/index.html'
             }).when('/classification/classification', {
                 templateUrl : 'classification/classification.html'
-            }).when('/class/index', {
-                templateUrl : 'class/index.html'
-            }).otherwise({
-                redirectTo : '/welcome'
+            }).when('/task/index', {
+                templateUrl : 'task/index.html'
+            }).when('/task/detail', {
+                templateUrl : 'task/detail.html'
+            }).when('/corpus/index', {
+                templateUrl : 'corpus/index.html'
             });
 		});
 
